@@ -1,0 +1,246 @@
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+.slider.autoplay {
+    height: 370px;
+    overflow: hidden;    
+}
+.slider.autoplay .slick-arrow, .brandss .slick-arrow{
+    position: absolute;
+    top: 150px;
+    border: none;
+    background-image: url(../img/sprite.png);
+    width: 49px; height: 55px;
+    z-index: 99;
+    background-color: transparent;
+}
+.slider.autoplay  .slick-prev {
+left: 0;background-position: -55px -52px;
+}
+
+.slider.autoplay  .slick-next {
+ right: 0;background-position: -3px -52px;
+}
+
+
+.brandss {
+    margin: 28px 0;
+}
+.brandss .slick-prev {
+    top: 30px;
+    background: url('../img/sprite.png') no-repeat -8px 0;
+    width: 26px;
+    height: 49px;
+    left: -50px;
+}
+.brandss .slick-next {
+    top: 30px;
+    background: url('../img/sprite.png') no-repeat -209px 0;
+    width: 26px;
+    height: 49px;
+    right: -50px;
+}
+
+.goods .slick-arrow {
+    position: absolute;
+    top: -50px;
+    right: 40px;
+    background: url('../img/sprite.png') no-repeat -116px -55px;
+    width: 11px;
+    height: 20px;
+    border: none;
+    z-index: 99;
+}
+.goods .slick-next {
+    background: url('../img/sprite.png') no-repeat -143px -55px;
+    right: 0;
+}
+
+.goods .slick-slide{
+    min-height: 300px;
+    margin: 10px;
+    text-align: center;  
+    -webkit-transition: .4s;
+     -o-transition: .4s;
+     transition: .4s; 
+     padding-bottom: 10px;
+}
+.goods .slick-slide:hover {
+    box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.08);
+}
+.goods .slick-slide img {
+    display: block;
+    margin: 15px auto 0;
+}
+.goods .slick-slide h1 {
+    font-size: 13.3px;
+    font-weight: normal;
+    
+}
+.goods .slick-slide h1 a {color: #000}
+.goods .slick-slide h2 {
+    font-size: 13px;
+    font-weight: normal;
+    
+}
+.goods .slick-slide h2 span {
+    color: rgb(100, 183, 235);
+}
+.price_s h3 {
+     font-size: 21px;
+     color: rgb(62, 62, 62);
+     float: left;
+     margin: 15px 0 0 8px;
+     font-weight: normal;
+     position: relative;
+}
+.price_s h3:after {
+    content: '';
+    background: url('../img/sprite.png') no-repeat -177px -55px;
+    width: 10px;
+    height: 13px;
+    position: absolute;
+   right: -14px;
+   top: 9px;
+}
+.price_s .shop_btn_goods {
+    background-color: #a21c26;
+    float: right;
+    width: 33px;
+  height: 29px;
+  border: none;
+  position: relative;
+  margin: 15px 10px 0 0;
+}
+.price_s .shop_btn_goods:after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 5px;
+    background: url('../img/sprite.png') no-repeat -311px 0;
+    width: 17px;
+    height: 17px;
+}
+.goods .tick {
+    background: url('../img/sprite.png') no-repeat -348px 0;
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}

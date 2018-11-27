@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+	<title>Академия Натальи Власовой</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<section id="b1">
+		<div class="container">
+						<div class="b1_left"><h2 class="title_s">АКАДЕМИЯ<br><p>Натальи Власовой</p></h2></div>
+			
+			<div class="informer__form">
+
+			<h1 class="title">
+				ИЩИТЕ ПРИБЫЛЬНУЮ<br>ФРАНШИЗУ?
+			</h1>
+			<h3 class="description">Безубыточный бизнес с доходом<br class="ad"> до 1 500 000р./год</h3>
+			<div class="text_inf">
+				<p>Первым 3-м франчайзи <span>скидка</span></p>
+				<p>до <span class="ru69"></span> на паушальный взнос</p>
+			</div>
+				<div class="abzac size_fixed colelem" id="u1775">
+     <p class='onescreen animated fadeIn it1 ad3 adu4 '><span>5 действующих филиалов</span></p>
+    </div>
+    <div class="gonderme">
+    	<div class="form_title">«ПОЛУЧИТЕ ПРЕЗЕНТАЦИЮ И<br>ФИНАНСОВУЮ МОДЕЛЬ ФРАНШИЗЫ!»</div>
+    	<form action="" class="feedback">
+   							<input class="vvod" type="text" name="name" placeholder="Имя" required>
+              
+                            <input class="vvod" type="email" name="mail" placeholder="Почта" required>
+                     
+                            <input class="vvod" type="tel" name="phone" placeholder="Телефон" required>
+                            <button>Получить информацию</button>
+
+                            <div class="form-group">
+                            <div class="input_checkbox"><input checked="" required="" id="accept" name="acceptform" type="checkbox">
+                             <span></span></div>
+                            <label for="accept">Даю согласие на обработку персональных данных и<br>соглашаюсь с условиями Политики конфиденциальности</label>
+                        </div>
+
+    	</form>
+    </div>
+		</div>
+		</div>
+	</section>	
+	<footer>
+		<div class="container">
+			<img src="img/logo.png" alt="" class="logo">
+			<span>Все права защищены. Копирование информации запрещено. 2018</span>
+		</div>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	 <script>
+        $(document).ready(function(){
+            $('#btn_submit').click(function(){
+                // собираем данные с формы
+                var user_name    = $('#user_name').val();
+                var user_email   = $('#user_email').val();
+                var text_comment = $('#text_comment').val();
+                // отправляем данные
+                $.ajax({
+                    url: "action.php", // куда отправляем
+                    type: "post", // метод передачи
+                    dataType: "json", // тип передачи данных
+                    data: { // что отправляем
+                        "user_name":    user_name,
+                        "user_email":   user_email,
+                        "text_comment": text_comment
+                    },
+                    // после получения ответа сервера
+                    success: function(data){
+                        $('.messages').html(data.result); // выводим ответ сервера
+                    }
+                });
+            });
+        });
+    </script>
+	<script>var Typed=function(el,options){this.el=$(el);this.options=$.extend({},$.fn.typed.defaults,options);this.isInput=this.el.is("input");this.attr=this.options.attr;this.showCursor=this.isInput?false:this.options.showCursor;this.elContent=this.attr?this.el.attr(this.attr):this.el.text();this.contentType=this.options.contentType;this.typeSpeed=this.options.typeSpeed;this.startDelay=this.options.startDelay;this.backSpeed=this.options.backSpeed;this.backDelay=this.options.backDelay;this.strings= this.options.strings;this.strPos=0;this.arrayPos=0;this.stopNum=0;this.loop=this.options.loop;this.loopCount=this.options.loopCount;this.curLoop=0;this.stop=false;this.cursorChar=this.options.cursorChar;this.build()};Typed.prototype={constructor:Typed,init:function(){var self=this;self.timeout=setTimeout(function(){self.typewrite(self.strings[self.arrayPos],self.strPos)},self.startDelay)},build:function(){if(this.showCursor===true){this.cursor=$('<span class="typed-cursor">'+this.cursorChar+"</span>"); this.el.after(this.cursor)}this.init()},typewrite:function(curString,curStrPos){if(this.stop===true)return;var humanize=Math.round(Math.random()*(100-30))+this.typeSpeed;var self=this;self.timeout=setTimeout(function(){var charPause=0;var substr=curString.substr(curStrPos);if(substr.charAt(0)==="^"){var skip=1;if(/^\^\d+/.test(substr)){substr=/\d+/.exec(substr)[0];skip+=substr.length;charPause=parseInt(substr)}curString=curString.substring(0,curStrPos)+curString.substring(curStrPos+skip)}if(self.contentType=== "html"){var curChar=curString.substr(curStrPos).charAt(0);if(curChar==="<"||curChar==="&"){var tag="";var endTag="";if(curChar==="<")endTag=">";else endTag=";";while(curString.substr(curStrPos).charAt(0)!==endTag){tag+=curString.substr(curStrPos).charAt(0);curStrPos++}curStrPos++;tag+=endTag}}self.timeout=setTimeout(function(){if(curStrPos===curString.length){self.options.onStringTyped(self.arrayPos);if(self.arrayPos===self.strings.length-1){self.options.callback();self.curLoop++;if(self.loop===false|| self.curLoop===self.loopCount)return}self.timeout=setTimeout(function(){self.backspace(curString,curStrPos)},self.backDelay)}else{if(curStrPos===0)self.options.preStringTyped(self.arrayPos);var nextString=curString.substr(0,curStrPos+1);if(self.attr)self.el.attr(self.attr,nextString);else if(self.isInput)self.el.val(nextString);else if(self.contentType==="html")self.el.html(nextString);else self.el.text(nextString);curStrPos++;self.typewrite(curString,curStrPos)}},charPause)},humanize)},backspace:function(curString, curStrPos){if(this.stop===true)return;var humanize=Math.round(Math.random()*(100-30))+this.backSpeed;var self=this;self.timeout=setTimeout(function(){if(self.contentType==="html")if(curString.substr(curStrPos).charAt(0)===">"){var tag="";while(curString.substr(curStrPos).charAt(0)!=="<"){tag-=curString.substr(curStrPos).charAt(0);curStrPos--}curStrPos--;tag+="<"}var nextString=curString.substr(0,curStrPos);if(self.attr)self.el.attr(self.attr,nextString);else if(self.isInput)self.el.val(nextString); else if(self.contentType==="html")self.el.html(nextString);else self.el.text(nextString);if(curStrPos>self.stopNum){curStrPos--;self.backspace(curString,curStrPos)}else if(curStrPos<=self.stopNum){self.arrayPos++;if(self.arrayPos===self.strings.length){self.arrayPos=0;self.init()}else self.typewrite(self.strings[self.arrayPos],curStrPos)}},humanize)},reset:function(){var self=this;clearInterval(self.timeout);var id=this.el.attr("id");this.el.after('<span id="'+id+'"/>');this.el.remove();if(typeof this.cursor!== "undefined")this.cursor.remove();self.options.resetCallback()}};$.fn.typed=function(option){return this.each(function(){var $this=$(this),data=$this.data("typed"),options=typeof option=="object"&&option;if(!data)$this.data("typed",data=new Typed(this,options));if(typeof option=="string")data[option]()})};$.fn.typed.defaults={strings:["These are the default values...","You know what you should do?","Use your own!","Have a great day!"],typeSpeed:0,startDelay:0,backSpeed:0,backDelay:500,loop:false,loopCount:false, showCursor:true,cursorChar:"|",attr:null,contentType:"html",callback:function(){},preStringTyped:function(){},onStringTyped:function(){},resetCallback:function(){}};$(function(){$("#u1775 span").typed({strings:["5 действующих филиалов", "Средний размер чека на 1 клиента = 13 000 рублей", "От запуска до первых денег всего 30 дней!", "Окупаемость вложений всего 4 месяца", "Обеспечим заполняемость классов на 100%!", "У Вас не будет стоять вопрос о преподавательском составе. Кадры мы всегда найдем!", "Рентабельность бизнеса составляет 126%", "25 000 человек – минимальное количество населения в городе, в котором успешно работает Академия красоты", "Учебный центр в индустрии красоты без конкурентов в РФ"],typeSpeed:30,backDelay:1500,loop:true,contentType:'html',showCursor: true,cursorChar:"|"});});</script>
+</body>
+</html>

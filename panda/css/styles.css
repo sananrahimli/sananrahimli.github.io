@@ -1,0 +1,476 @@
+@font-face {
+font-family: 'Open Sans Regular';
+src: url('../fonts/OpenSans-Regular.eot');
+src: url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+url('../fonts/OpenSans-Regular.woff') format('woff'),
+url('../fonts/OpenSans-Regular.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Roboto Thin';
+src: url('../fonts/Roboto-Thin.eot');
+src: url('../fonts/Roboto-Thin.eot?#iefix') format('embedded-opentype'),
+url('../fonts/Roboto-Thin.woff') format('woff'),
+url('../fonts/Roboto-Thin.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Roboto Medium';
+src: url('../fonts/Roboto-Medium.eot');
+src: url('../fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+url('../fonts/Roboto-Medium.woff') format('woff'),
+url('../fonts/Roboto-Medium.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Montserrat Semibold';
+src: url('../fonts/Montserrat-SemiBold.eot');
+src: url('../fonts/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+url('../fonts/Montserrat-SemiBold.woff') format('woff'),
+url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Montserrat Medium';
+src: url('../fonts/Montserrat-Medium.eot');
+src: url('../fonts/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+url('../fonts/Montserrat-Medium.woff') format('woff'),
+url('../fonts/Montserrat-Medium.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Montserrat Light';
+src: url('../fonts/Montserrat-Light.eot');
+src: url('../fonts/Montserrat-Light.eot?#iefix') format('embedded-opentype'),
+url('../fonts/Montserrat-Light.woff') format('woff'),
+url('../fonts/Montserrat-Light.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Roboto Bold';
+src: url('../fonts/Roboto-Bold.eot');
+src: url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+url('../fonts/Roboto-Bold.woff') format('woff'),
+url('../fonts/Roboto-Bold.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Roboto Light';
+src: url('../fonts/Roboto-Light.eot');
+src: url('../fonts/Roboto-Light.eot?#iefix') format('embedded-opentype'),
+url('../fonts/Roboto-Light.woff') format('woff'),
+url('../fonts/Roboto-Light.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+*{
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: 0;
+	list-style: none;
+	position: relative;
+}
+a, a.studio:before {
+	-webkit-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s;
+}
+a:hover, a:active, a:link {
+	text-decoration: none;
+}
+body {
+	overflow-x: hidden;
+	min-height: 1px;
+	background-color: #fff;
+}
+.container {
+	width: 1200px;height: auto;
+	margin: 0 auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+header:after {
+	content: '';
+	background-image: -moz-linear-gradient( -180deg, rgb(21,208,172) 0%, rgb(191,228,40) 100%);
+  background-image: -webkit-linear-gradient( -180deg, rgb(21,208,172) 0%, rgb(191,228,40) 100%);
+  background-image: -ms-linear-gradient( -180deg, rgb(21,208,172) 0%, rgb(191,228,40) 100%);
+  height: 7.5px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+header {
+	width: 100%;
+	padding: 30px 0 0;
+}
+.header_logo, nav, .header_contacts_num_and_soc_links, .header_contacts_num_and_soc_links ul li {
+	display: inline-block;
+}
+nav {
+top: -34px;
+left: 20px;
+}
+nav a {
+	font-family: 'Open Sans Regular';
+	font-size: 20px;
+	color: rgb(25, 27, 41);
+	padding: 10px;
+	border-radius: 5px;
+	margin-right: 30px;
+}
+nav a:hover {background-color: rgb(15, 208, 82);}
+.header_contacts_num_and_soc_links {
+	font-family: 'Roboto Bold';
+	font-size: 16px;
+	left: 55px;
+}
+.header_contacts_num_and_soc_links a {color: #000}
+.header_contacts_num_and_soc_links p:nth-child(2) {top:5px;}
+.header_contacts_num_and_soc_links ul {top: 10px;
+left: 25px;}
+.header_contacts_num_and_soc_links ul li:nth-child(1) a{
+background: url('../img/css_sprites.png') no-repeat -180px -10px;
+	width: 35px;
+	height: 34px;
+	display: inline-block;	
+}
+.header_contacts_num_and_soc_links ul li:nth-child(2) a{
+background: url('../img/css_sprites.png') no-repeat -215px -10px;
+	width: 35px;
+	height: 34px;
+	display: inline-block;	
+}
+.header_title {
+	text-align: center;
+	font-family: 'Roboto Thin';
+	font-size: 60px;
+	margin: 140px 0 70px;
+}
+.header_title p {font-family: 'Roboto Medium';}
+form.header_form {
+	text-align: center;
+	font-family: 'Roboto Medium';
+}
+form.header_form input {
+	text-transform: uppercase;	
+	padding: 16px 18px;
+	border-radius: 5px;
+	border: 1px solid rgb(25, 27, 41);
+	font-size: 18px;
+	margin-left: 15px;
+}
+form.header_form button {
+	padding: 17px 13px;
+	background-color: rgb(15, 208, 82);
+	border-radius: 5px;
+	font-size: 18px;
+	text-transform: uppercase;
+	margin-left: 10px;
+	cursor: pointer;
+	
+	}
+form.header_form button:hover {
+background-color: rgb(15, 208, 82);
+color: #fff;
+text-shadow: 0 1px 2px rgba(0,0,0,.3)
+}
+form.header_form p {font-family: 'Open Sans Regular';font-size: 18px;margin-top: 15px;}
+section#about {
+	background-color: rgb(25, 27, 41);
+	min-height: 360px;
+	margin-top: 300px;
+	font-family: 'Roboto Light';
+	padding-bottom: 60px;
+}
+ul.about_left, .about_iphone, ul.about_right {display: inline-block;}
+ul.about_left, ul.about_right {width: 30%;}
+ul.about_left {
+	margin-left: 50px;
+	top: 120px;
+}
+.about_right {
+    top: 100px;
+    left: 45px;
+}
+ul.about_left li h3, ul.about_right li h3 {
+font-size: 36px;
+padding-left: 79px;
+color: #fff;
+padding-top: 10px;
+}
+ul.about_left li p, ul.about_right li p {
+	font-size: 16px;
+	color: #9d9fbf;
+	margin: 35px 0 90px;
+}
+ul.about_left li h3:after, ul.about_right li h3:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: url('../img/css_sprites.png') no-repeat;
+	width: 65px;
+	height: 65px;
+}
+ul.about_left li:nth-child(1) h3:after {background-position: -95px -10px;}
+ul.about_left li:nth-child(2) h3:after {background-position: -10px -95px;width: 63px;height: 65px;}
+
+
+ul.about_right li:nth-child(1) h3:after {background-position: -10px -10px;}
+ul.about_right li:nth-child(2) h3:after {background-position: -93px -95px;width: 61px;height: 55px;}
+.about_iphone {
+	background-image: url(../img/iphone.png);
+	width: 387px;height: 725px;
+	vertical-align: text-top;
+	margin-top: -500px;	
+}
+section#price {
+	margin-top: 100px;
+	font-family: 'Roboto Bold';
+	font-size: 18px;
+}
+.price_bottom_text {
+	font-family: 'Open Sans Regular';
+	font-size: 13px;
+	text-align: center;
+	margin: 15px 0;
+	display: block !important;
+}
+.price_bottom_text span {color: red}
+
+section#map {
+	margin-top: 80px;
+}
+
+
+.contacts_left, .contacts_right {
+	display: inline-block;
+	width: 58%;
+	vertical-align: text-top;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	
+}
+.contacts_left {padding-right: 100px;}
+ .contacts_right {
+ 	width: 40%;
+ }
+.contacts_right a {color: #000}
+section#contacts h3 {
+ 	font-family: 'Montserrat Semibold';
+ 	font-size: 36px;
+ 	margin: 45px 0 35px;
+ }
+form.contacts_post {
+    padding: 0 15px;
+}
+form.contacts_post input, form.contacts_post textarea {
+font-family: 'Montserrat Light';
+font-size: 15px;
+display: inline-block;
+width: 45%;
+margin-right: 3%;
+border: 1px solid rgb(149, 149, 149);
+padding: 12px 15px;
+border-radius: 5px;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+box-sizing: border-box;
+
+ }
+form.contacts_post textarea {width: 100%;margin: 30px 0 0;}
+form.contacts_post button {
+	font-family: 'Montserrat Semibold';
+	margin-top: 20px;
+	background-color: rgb(33, 33, 33);
+	border-radius: 3px;
+	font-size: 16px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	padding: 20px 105px;
+	cursor: pointer;
+	-webkit-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s;
+}
+form.contacts_post button:hover {opacity: .9}
+.contacts_right h4 {
+ 	font-family: 'Montserrat Semibold';
+ 	font-size: 17px;
+margin-bottom: 10px;
+ }
+ .contacts_right p {
+ 	font-family: 'Open Sans Regular';
+ 	font-size: 15px;
+ }
+ .contacts_right div {margin-bottom: 30px;}
+
+ .contacts_soc_links {display: block;
+ }
+ .contacts_soc_links a {
+ 	width: 49px;
+	height: 49px;
+	background-image: url('../img/css_sprites.png');
+	background-position: -180px -64px;
+	display: inline-block;
+margin-right: 10px;	
+ }
+ .contacts_soc_links a.vk {
+ 	background-position: -10px -180px;
+ }
+.contact_informer {
+	font-family: 'Roboto Thin';
+	text-align: center;
+	padding: 35px 25px;
+	font-weight: 600;
+}
+ footer {
+ 	background-color: #333;
+ 	line-height: 75px;	
+ 	color: #fff;
+ 	font-family: 'Roboto Thin';
+ 	display: -webkit-flex;
+ 	display: -moz-flex;
+ 	display: -ms-flex;
+ 	display: -o-flex;
+ 	display: flex;
+ }
+ a.studio {
+ 	float: right;
+ 	background: url('../img/css_sprites.png') no-repeat -97px -260px;
+	width: 283px;
+	height: 61px;
+	margin-top: -65px;
+ }
+  a.studio:before {
+  	content: '';
+  	position: absolute;
+  	left: 0;
+  	top: 0;
+  	background: url('../img/css_sprites.png') no-repeat -97px -183px;
+	width: 0;
+	height: 61px;
+  }
+  a.studio:hover:before {
+   	width: 283px;
+   }
+ .inst:hover, .vk:hover, .header_contacts_num_and_soc_links a:hover {
+  	opacity: .8;
+  }
+
+.header_menu_mobile {display: none;}
+
+
+
+@media (max-width: 1200px) {
+	.container {max-width: 100%;padding: 0 15px}
+	.header_contacts_num_and_soc_links {left: 0;}
+	nav {margin-right: 25px;	}
+	.about_iphone {
+		width: 287px;
+		height: 625px;
+		-webkit-background-size: 100%;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		margin-top: -350px;
+	}
+	nav a {font-size: 	100%;margin-right: 10px;	}
+}
+@media (max-width: 950px) {
+	.header_logo {max-width: 170px;}
+	.about_iphone {
+		width: 187px;
+		height: 525px;
+		margin-top: -250px;
+	}
+	form.contacts_post input {margin-right: 0;width: 49%;}
+	[data-panes] table {font-size: 80% !important}
+}
+@media (max-width: 700px) {
+	header {text-align: center;}
+	nav {top: 0;margin: 20px 0}
+	.header_contacts_num_and_soc_links ul {left: 10px;}
+	.header_title {font-size: 250%;
+margin: 80px 0 70px;}
+form.header_form input {width: 43%;margin-left: 0;}
+form.header_form button {margin-left: 0;
+width: 100%;
+margin-top: 15px;}
+section#about {margin-top: 50px;}
+.about_iphone {display: none;}
+ul.about_left, ul.about_right {width: 100%;}
+.about_right, ul.about_left {left: 0;margin-left: 0;}
+.pod_ctg {font-size: 80% !important}
+}
+@media (max-width: 600px) {
+	.contacts_left, .contacts_right {width: 100%;padding: 0;}
+	form.header_form input {width: 100%;
+	margin: 5px 0;-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;}
+	nav {display: none;}
+	header {text-align: justify;}
+	.header_contacts_num_and_soc_links {float: right;}
+	.header_contacts_num_and_soc_links ul {left: 0;
+	float: right;}
+}
+@media (max-width: 650px) {
+	footer {
+		display: block;
+		text-align: center;
+		line-height: 45px;
+		padding-bottom: 10px;
+	}
+	a.studio {
+		float: none;
+		display: block;
+		margin: 0 auto;
+	}
+
+
+.header_menu_mobile {
+	background-color: #444;
+	display: block;
+margin: 25px 0;
+padding: 10px;
+text-transform: uppercase;
+font-family: 'Open Sans Regular';
+ box-shadow: 0px 0px 10px 0px #000000 inset;
+}
+.header_menu_mobile a {
+color: #fff;}
+
+.header_menu_mobile #box a {
+text-align: left;
+text-transform: capitalize;
+display: block;
+border-bottom: 1px solid rgba(255, 255, 255, .2);
+padding: 5px 0
+}
+.header_menu_mobile #box a:nth-child(5) {border-bottom: none;}
+}
+@media (max-width: 350px) {
+	.container {padding: 0 10px}
+	form.contacts_post button {width: 100%;
+	padding: 20px 0;}
+	iframe {height: 250px;}
+	header {text-align: center;}
+	.header_contacts_num_and_soc_links, .header_contacts_num_and_soc_links ul {float: none;}
+	.header_title {font-size: 200%;margin: 60px 0 40px;}
+	ul.about_left li h3, ul.about_right li h3 {font-size: 170%}
+}

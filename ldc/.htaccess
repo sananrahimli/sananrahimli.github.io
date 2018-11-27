@@ -1,0 +1,7 @@
+AddDefaultCharset utf-8
+DirectoryIndex index.php
+
+RewriteEngine On
+
+# Редиректы
+RewriteRule ^page/([0-9]+)(/?)$ index.php [L]

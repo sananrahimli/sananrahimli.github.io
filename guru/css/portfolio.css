@@ -1,0 +1,65 @@
+.boundingBox {
+margin: 0 auto;
+}
+/* Content */
+
+/* Content - Portfolio Listing */
+
+ul#portfolio-filter {
+margin: 50px 0 0;
+padding: 0;
+height: 64px;
+line-height: 64px;
+text-align: center;
+}
+ul#portfolio-filter li {
+display: inline;
+}
+ul#portfolio-filter a {
+margin-right: 0.5em;
+padding: 11px 20px;
+background: transparent;
+color: #AAA;
+font-size: 18px;
+color: #222222;
+text-decoration: none;
+border: 1px solid #373737;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+}
+ul#portfolio-filter a:hover, ul#portfolio-filter a.current {
+color: #222222;
+}
+ul#portfolio-filter a.current {
+background-color: #222222;
+color: #fff;
+}
+ul#portfolio-list {
+margin: 36px 0 0 0;
+padding: 0;
+list-style: none;
+}
+ul#portfolio-list li {
+width: 300px;
+min-height: 370;
+display: block;
+float: left;
+margin-right: 18px;
+overflow: hidden;
+text-align: center;
+margin-bottom: 20px;
+}
+ul#portfolio-list li  h1 {
+	font-weight: normal;
+	font-size: 20px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+ul#portfolio-list li a {
+display: block;
+height: 300px;
+width: 300px;
+overflow: hidden;
+}
+ul#portfolio-list li p {color: #646464;}

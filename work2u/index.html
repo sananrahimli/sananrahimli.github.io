@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/animate.css">
+	<script src="wow.min.js"></script>
+</head>
+<body>
+<header>
+	<div class="wp">
+		<div class="top_hd">
+		<a href="/" class="logo"></a>
+		<nav>
+			<a href="#">Главная</a>
+			<a href="#advantage_block">Преимущества</a>
+			<a href="#employment_block">Трудоустройства</a>
+			<a href="#about">О нас</a>
+		</nav>
+		</div>
+		<div class="title_hd">
+			<h1>Работа</h1>
+			<h2>Которой завидуют</h2>
+			<p>Необходимо выполнять простые действия, первая зарплата в течении недели. 
+Напиши нам.</p>
+			<a href="#advantage_block" class="btn_1 wow fadeInLeft">Подробнее</a><a href="#employment_block" class="btn_1 wow fadeInRight">Трудоустройство</a><br>
+			<a href="https://telegram.org" class="btn_2 wow fadeInUp">Установить приложение</a>
+		</div>
+	</div>
+</header>
+<section id="block2">
+<div class="wp">
+	<a name="advantage_block"></a>
+	<h1 class="title_block">ПРЕИМУЩЕСТВА</h1>
+	<p class="des_block">Наша работа исправляет современную несправедливость и рушит все<br>
+поставленные рамки.</p>
+	<ul id="advantage">
+		<li>
+			<div class="icon wow zoomIn"></div>
+			<h2>ВЫСОКАЯ ЗАРПЛАТА</h2>
+			<p>От 50.000 рублей в первый месяц 
+работы. Карьерный рост до миллиона в год.</p>
+		</li>
+		<li>
+			<div class="icon wow zoomIn"></div>
+			<h2>РЕАЛЬНАЯ РАБОТА</h2>
+			<p>Это не ставки и прочий развод.
+Работа руками. От тебя
+не требуется никаких вложений.</p>
+		</li>
+		<li>
+			<div class="icon wow zoomIn"></div>
+			<h2>БЫСТРЫЙ СТАРТ</h2>
+			<p>Ты начнешь работу в течение
+недели. Мы обучим.</p>
+		</li>
+		<li>
+			<div class="icon wow zoomIn"></div>
+			<h2>КОМФОРТ</h2>
+			<p>Удобный график, карьерный рост
+за 2 месяца, интересная
+и не скучная работа.</p>
+		</li>
+	</ul>
+<a href="https://t.me/work2u_bot" class="btn_bl2 wow zoomInUp">НАЧАТЬ РАБОТАТЬ</a>
+</div>
+</section>
+<hr>
+<section id="block3">
+	<div class="wp">
+		<a name="employment_block"></a>
+		<h1 class="title_block">Трудоустройство</h1>
+	<p class="des_block">Зарегистрируйтесь, устновите приложение, найтиде в поиске нашего<br>
+поиощника и он найдет вам подходящую работу</p>
+	<img src="images/phone.png" alt="" class="phone wow zoomIn">
+	<ul class="employment">
+		<li class="wow bounceInRight">
+			<div class="images"></div>
+			<h1>РЕГИСТРАЦИЯ</h1>
+			<p>Установите и зарегистрируйтесь в мессенджере 
+Telegram. Официальный сайт - <a href="https://telegram.org/">telegram.org</a></p>
+		</li>
+		<li class="wow bounceInRight">
+			<div class="images"></div>
+			<h1>ПОИСК</h1>
+			<p>Найдите нашего помощника в глобальном поиске. 
+Логин помощника - <a href="https://t.me/work2u_bot">@work2u_bot</a></p>
+		</li>
+		<li class="wow bounceInRight">
+			<div class="images"></div>
+			<h1>ОЗНАКОМЛЕНИЕ</h1>
+			<p>Следуйте указаниям помощника, он все расскажет
+и перенаправит вас.</p>
+		</li>
+	</ul>
+	</div>
+</section>
+<footer>
+<a name="about"></a>
+	<div class="wp">
+		<h1 class="title_block wow fadeInDown">О НАС</h1>
+		<div class="text_footer wow flipInX">
+			В 16 лет думал, что во взрослой жизни будешь богатым? Ставил себе планку <br>
+"миллионер". Но мир оказался сложнее и планка понизилиась до 300 000 в месяц? Но и с<br>
+300 не сложилось? Планка упала до 30 тысяч?<br><br>
+
+Если попал сюда значит ты в поисках лучшей жизни. Здесь заработки от 200 000 в <br>
+месяц, работа руками. Подвоха нет. Тебе не надо<br>
+вкладывать свои деньги, не надо никому про нас рассказывать, не надо ничего продавать. <br>
+Ты просто написал нам, узнал суть работы, сделал свой выбор. Напиши сейчас.
+		</div>
+		<a href="#employment_block" class="btn_bl2 wow bounceInUp">НАПИСАТЬ НАМ</a>
+	</div>
+</footer>
+<script>
+$(document).ready(function(){
+	$("a[href*=#]").bind("click", function(e){
+		var anchor = $(this);
+		var name = anchor.attr("href").replace(new RegExp("#", "gi"), "");
+		$('html, body').stop().animate({
+			scrollTop: $("a[name=" + name + "]").offset().top
+		}, 500);
+		e.preventDefault();
+		return false;
+	});
+});
+new WOW().init();
+</script>
+</body>
+</html>

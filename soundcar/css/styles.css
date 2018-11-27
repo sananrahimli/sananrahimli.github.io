@@ -1,0 +1,238 @@
+ul {
+	margin: 0;
+	padding: 0;
+}
+section#top_h {
+	background-color: #000;
+	padding: 10px 0;
+	width: 100%;
+	height: auto;
+	display: inline-block;
+	color: #fff;
+	font-size: 14px
+}
+section#top_h a {
+	color: #fff;
+}
+section#top_h a:hover {
+	color: #a21c26;
+	font-family: ProximaNovaBold;
+}
+.header_block {
+	padding: 35px 0;
+}
+.h_number {
+	font-size: 28px;
+	color: #3e3e3d;
+	text-align: right;
+	
+}
+.h_number a {
+	display: block;
+	color: #a21c26;
+	font-size: 14px;
+	float: right;
+	border-bottom: 1px solid #ead4d5;
+	margin-top: -5px;
+}
+.h_number:before {
+	content: '';
+	position: absolute;
+	left: 35px;
+	top: 3px;
+	background: url('../img/sprite.png') no-repeat -153px 0;
+	width: 36px;
+	height: 36px;
+}
+header .shop {
+	background: url('../img/sprite.png') no-repeat -93px 0;
+	width: 40px;
+	height: 35px;
+	display: block;
+	float: left;
+	margin: 10px 20px;
+}
+header .profile {
+	background: url('../img/sprite.png') no-repeat -255px 0;
+	width: 36px;
+	height: 36px;
+	display: block;
+	float: left;
+	margin: 10px 0;
+}
+nav {
+	display: inline-block;
+	width: 100%;
+	height: auto;
+	min-height: 45px;
+	background-color: rgb(237, 237, 237);
+	margin-top: 35px;
+	margin-bottom: -6px;
+}
+nav ul li {
+	list-style: none;
+	display: inline-block;	
+	padding: 16px 35px 16px 0;
+	position: relative;	
+}
+ul.dropdown {
+	display: none;
+}
+nav ul li:hover .dropdown {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 57px;
+	min-width: 300px;
+	background-color: #282828;
+	z-index: 999;
+	padding: 10px 0;
+}
+ul.dropdown li {
+	padding: 5px 5px 5px 15px !important;
+	width: 100%;
+}
+ul.dropdown li:hover {
+	background-color: #000
+}
+ul.dropdown li a {
+	 font-size: 14px !important;
+	 color: #fff !important;
+	 text-transform: capitalize !important;
+}
+ul.dropdown li a:hover {
+	font-family: ProximaNovaRegular;
+}
+nav ul li a {
+	color: #3d3d3d;
+	font-size: 18px;
+	text-transform: uppercase;
+	
+}
+nav ul li a:hover {
+	color: #a21c26;
+	font-family: ProximaNovaBold;
+}
+form#search_h {
+	position: relative;
+}
+form#search_h input {
+ margin: 10px 0;
+ border: none;
+ width: 100%;
+ font-size: 18px;
+ padding: 5px;
+}
+form#search_h button {
+	position: absolute;
+	right: 12px;
+	top: 17px;
+	background: url('../img/sprite.png') no-repeat -54px 0;
+	width: 19px;
+	height: 19px;
+	border: none;
+}
+
+ul.menu li {
+	list-style: none;
+	height: 40px;
+	line-height: 40px;
+}
+ul.menu li a{
+	font-size: 16px;
+	color: rgb(61, 61, 61);
+	width: 100%;
+	height: 40px;
+	display: block;
+	padding-left: 10px;
+	background-color: rgb(246, 246, 246);
+	-webkit-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+}
+ul.menu li:nth-child(odd) a {
+	background-color: rgb(251, 251, 251)
+}
+ul.menu li a span {
+	float: right;
+	margin-right: 10px;
+}
+ul.menu li a:hover {
+	background-color: rgb(162, 28, 38);
+	color: #fff;
+}
+section#filter {
+	background-color: rgb(162, 28, 38);
+	min-height: 44px;
+	width: 100%;
+	display: inline-block;
+	color: #fff;
+	font-size: 14px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 12px;
+}
+section#filter input {
+	width: 100%;
+	border: none;
+	font-size: 17px;
+	color: #000;
+	margin-top: -2px;
+}
+h1.title_bb {
+	 font-size: 30px;
+	 font-weight: normal;
+	 text-transform: uppercase;
+	 margin: 35px 0;
+}
+ul.rating li {
+	list-style: none;
+	display: inline-block;
+	background: url('../img/sprite.png') no-repeat -143px -93px;
+	width: 13px;
+	height: 11px;
+}
+
+section#t_footer {
+	min-height: 70px;
+	background-color: #000;
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+	line-height: 70px;
+}
+section#t_footer a {
+	font-size: 18px;
+	color: #fff;
+	text-transform: uppercase;
+	margin: 0 10px;
+}
+footer {
+	display: inline-block;
+	width: 100%;
+	min-height: 40px;
+	background-color: rgb(162, 28, 38);
+	text-align: center;
+	color: #fff;
+	line-height: 40px;
+	margin: -10px 0;
+	font-size: 11px
+}
+@media screen and (max-width:780px) {
+	section#top_h {text-align: center;}
+	.h_number {padding: 0 25px;margin: 15px 0;}
+	.h_number a {float: none;}
+	.mob__hd_sh_pr {text-align: center;} header .shop, header .profile {float: none;margin: 0 5px;display: inline-block;} 
+	nav {text-align: center;margin-top: 20px;}
+	nav ul li {padding: 20px;}
+	.slider.autoplay {    height: auto !important;
+    width: 100% !important;}
+	.slider.autoplay .slick-arrow {top: 25px;}
+	.brandss .slick-arrow {display: none !important;}
+	.logo {
+		width: 70%;
+		margin: 0 auto;
+		display: block;
+	}
+}

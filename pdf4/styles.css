@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Yanone+Kaffeesatz');
+h1.title {
+	border-bottom: 5px solid #a51e21;
+	font-weight: 400;
+	font-size: 3em;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+}
+ol {
+	padding: 0 18px;
+	margin-bottom: 0;
+}
+span.pers_inf {
+	text-transform: uppercase;
+	font-weight: 600;
+	margin-bottom: 20px;
+	display: block;
+	border-top: 2px solid rgba(0,0,0,.4);
+	padding-top: 4px;
+	margin-top: 10px;
+}
+.input_style input[type="text"], .input_style textarea{
+	width: 100%;
+	border: 3px solid #ccc;
+	padding: 5px;
+	outline: 0;
+}
+.input_text_div {display: block;}
+.input_text_div_rdi_chec {margin-bottom: 6px;}
+.input_text_div label {
+	color: #888;
+	font-weight: 500;
+	font-size: 13px;
+	vertical-align: top;
+	
+}
+.input_text_div span.top_red {
+	float: right;
+	color: #a51e21;
+	font-size: 14px;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+
+}
+span.radio_span {
+	margin-right: 10px;
+	font-size: 15px;
+	vertical-align: baseline;
+
+}
+.ots {
+	display: block;
+	margin: 10px 0
+}
+.informer_red {
+		float: right;
+	color: #a51e21;
+	font-size: 13px;
+}
+.block4 span.radio_span {margin-right: 35px;}
+.block4 span.radio_span:last-child {margin-right: 0;}
+span.radio_span:last-child {margin-right: 0;}
+.block7 {
+	margin-top: 15px;
+}
+.trave_plans_radio {
+	display: block;
+	margin-bottom: 10px;
+}
+.details_input {
+    width: 350px !important;
+    margin-left: 15px;
+}
+.block8_input {
+	width: 24%;
+	display: inline-block;
+}
+.text_center_red {
+	text-align: center;
+	font-size: 11.5px;
+	font-weight: 600;
+	color: #a51e21;
+}
+h2.family {
+	color: #000;
+	margin: 0;
+	margin-bottom: 5px;
+	font-weight: 500;
+	font-size: 16px
+}
+span.number_plans {
+	border-bottom: 2px solid #999;
+	border-right: 2px solid #999;
+	padding: 5px 10px;
+		font-weight: 600;
+	font-size: 18px;
+	display: inline-block;
+}
+.check_plans {
+    text-align: center;
+}
+.check_plans input[type="checkbox"] {left: 0;margin-right: 0;}
+.check_plans span{
+   display: block;
+   font-size: 18px;
+	color: #a51e21;
+}
+.footer_text {
+	margin-top: 25px;
+	padding-top: 20px;
+	border-top: 2px solid rgba(0,0,0,.4);
+	font-size: 12px;
+}
+.block8_input input[type="checkbox"] {vertical-align: top;-moz-transform: scale(1.05) translate(0px, 5px);
+-webkit-transform: scale(1.05) translate(0px, 5px);
+-o-transform: scale(1.05) translate(0px, 5px);
+-ms-transform: scale(1.05) translate(0px, 5px);
+transform: scale(1.05) translate(0px, 5px);
+}
+.block8_input span.radio_span, .trave_plans_radio span.radio_span {display: inline-block;
+width: 80%;    vertical-align: text-top;	}
+.trave_plans_radio input[type="checkbox"], .block8_input input[type="checkbox"] {
+	     -moz-transform: scale(1.9) translate(0px, 3px);
+-webkit-transform: scale(1.9) translate(0px, 3px);
+-o-transform: scale(1.9) translate(0px, 3px);
+-ms-transform: scale(1.9) translate(0px, 3px);
+transform: scale(1.9) translate(0px, 3px);
+}
+.block44 span.radio_span {font-size: 13px;margin-right: 10px;}
+.block44 input[type="radio"] {margin-bottom: 15px;top: 2px;}
+@media print{ 
+body {-moz-transform: scale(0.9);
+-webkit-transform: scale(0.9);
+-o-transform: scale(0.9);
+-ms-transform: scale(0.9);
+transform: scale(0.9);
+page-break-inside:auto
+}
+.block44 {margin-top: 150px;}
+.ashagi_print {margin-top: 55px;}
+.ashagi_print2 {margin-top: 100px;}
+}

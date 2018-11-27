@@ -1,0 +1,11 @@
+AddDefaultCharset utf-8
+DirectoryIndex index.php
+
+RewriteEngine On
+
+# Редиректы
+RewriteRule ^page/([0-9]+)(/?)$ index.php [L]
+
+<ifModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
+</ifModule>

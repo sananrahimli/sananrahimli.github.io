@@ -1,0 +1,25 @@
+AddDefaultCharset utf-8
+DirectoryIndex index.html
+
+RewriteEngine On
+
+# –едиректы
+RewriteRule ^page/([0-9]+)(/?)$ index.html [L]
+
+# кеширование в браузере на стороне пользователя
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access 7 days"
+ExpiresByType img/gif "access plus 1 year"
+ExpiresByType img/jpeg "access plus 1 year"
+ExpiresByType img/png "access plus 1 year"
+ExpiresByType img/jpg "access plus 1 year"
+ExpiresByType img/x-icon "access 1 year"
+ExpiresByType application/x-shockwave-flash "access 1 year"
+</IfModule>
+<ifModule mod_headers.c>
+# 30 дней
+<filesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|swf)$">
+Header set Cache-Control "max-age=2592000, public"
+</filesMatch>
+</ifModule>

@@ -1,0 +1,400 @@
+@font-face {
+  font-family: 'SFUIDisplay-Light';
+  src: url('../fonts/SFUIDisplay-Light.eot?#iefix') format('embedded-opentype'),  url('SFUIDisplay-Light.otf')  format('opentype'),
+	     url('../fonts/SFUIDisplay-Light.woff') format('woff'), url('../fonts/SFUIDisplay-Light.ttf')  format('truetype'), url('../fonts/SFUIDisplay-Light.svg#SFUIDisplay-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFUIDisplay-Bold';
+  src: url('../fonts/SFUIDisplay-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/SFUIDisplay-Bold.otf')  format('opentype'),
+	     url('../fonts/SFUIDisplay-Bold.woff') format('woff'), url('../fonts/SFUIDisplay-Bold.ttf')  format('truetype'), url('../fonts/SFUIDisplay-Bold.svg#SFUIDisplay-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFUIDisplay-Medium';
+  src: url('../fonts/SFUIDisplay-Medium.eot?#iefix') format('embedded-opentype'),  url('../fonts/SFUIDisplay-Medium.otf')  format('opentype'),
+	     url('../fonts/SFUIDisplay-Medium.woff') format('woff'), url('../fonts/SFUIDisplay-Medium.ttf')  format('truetype'), url('../fonts/SFUIDisplay-Medium.svg#SFUIDisplay-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	outline: 0;
+	text-decoration: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	
+}
+img {max-width: 100%}
+body {
+	background-color: #fff;
+	overflow-x: hidden;
+	padding-top: 100px;
+	font-family: 'SFUIDisplay-Light';
+}
+nav {
+	height: 50px;
+	width: 100%;
+	background-color: #000;
+	position: fixed;
+	left: 0;
+	top: 0;
+	color: #fff;
+	font-family: 'SFUIDisplay-Light';
+	z-index: 998;
+}
+nav img {
+	width: 158px;
+height: 46px;
+margin-left: 20px;
+vertical-align: middle;
+}
+.phone {
+    vertical-align: baseline;
+    font-size: 15px;
+    margin-left: 10px;
+}
+.menu {
+	float: right;
+	line-height: 46px
+}
+.menu a {
+	color: #fff;
+	text-decoration: none;
+	padding: 0 10px;
+	margin: 0 15px;
+	text-transform: uppercase;
+	-webkit-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+	border-radius: 2px;
+	font-size: 14px;
+}
+.menu a:hover {
+	background-color: #808080;
+}
+h1.title {
+	font-weight: 500;
+text-align: center;
+letter-spacing: 1px;
+color: #000000;
+font-family: 'SFUIDisplay-Medium';
+	font-size: 72px;
+line-height: 72px;
+}
+.container {
+	width: 100%;
+	height: auto;
+	min-height: 0;
+	display: inline-block;
+	
+}
+.slider.autoplay {
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 70px;
+}
+.block_left {
+	float: left;
+	width: 75vw;
+	text-align: left;
+	padding-left: 25px;	
+}
+.block_right {
+	float: right;
+	width: 20vw;
+	text-align: left;
+	font-family: 'SFUIDisplay-Light';
+	font-size: 18px;
+}
+.block_left h2, .reviews_text h2 {
+	font-family: 'SFUIDisplay-Medium';
+	margin-bottom: 30px;
+	font-size: 30px;
+}
+.block_left p, .reviews_text p {
+	font-family: 'SFUIDisplay-Light';
+	line-height: 42px;
+	font-size: 30px
+}
+.block_right p.ot {
+line-height: 25px;
+}
+.block_right p.time {
+	font-family: 'SFUIDisplay-Medium';
+	font-size: 50px;
+line-height: 70px;
+}
+.block_right p.i {
+	line-height: 25px;
+}
+
+.container#price, #reviews_script {
+background-color: #F2F2F2;
+box-shadow: 0px 0px 10px rgba(0,0,0,0.21);
+padding: 100px 0 70px;
+margin: 150px 0 0;
+}
+h3.desc {
+	color: #262626;
+	font-size: 30px;
+line-height: 42px;
+text-align: center;
+	font-family: 'SFUIDisplay-Light';
+	font-weight: 300;
+	margin-top: 20px;
+}
+.price_list {
+	margin: 70px auto 0;
+	max-width: 750px;
+	width: 100%;
+	height: auto;
+}
+.price_list .goods {
+	width:350px;
+	height: 220px	;
+	float: left;
+	margin: 15px 10px;
+	overflow: hidden;
+	-webkit-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s;
+	text-align: center;
+	line-height: 220px;
+}
+.price_list .goods:hover {
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.8);
+}
+.price_list .goods img {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 9;
+}
+.price_list .goods .title_g {
+	position: relative;
+	z-index: 11;
+	text-decoration: none;
+	color: #fff;
+	font-family: 'SFUIDisplay-Light';
+	font-size: 20px;
+	text-shadow: 0px 0px 10px rgba(0,0,0,0.8);
+}
+.price_list .goods:before {
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 0;
+	height: 0;
+	background-color: rgba(0,0,0,0.6);
+	-webkit-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s;
+	z-index: 10;	
+	opacity: 0;
+}
+.price_list .goods:hover:before {
+	left: 0;
+	width: 100%;
+	top: 0;
+	height: 100%;
+	opacity: 1;
+}
+.reviews_text {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 900px;
+}
+#reviews {
+	padding: 70px 0;
+}
+#reviews_script {margin-bottom: 100px;}
+#reviews_script div {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1000px;
+	background-color: #fff;
+}
+
+.container#map {margin-top: 100px;}
+.container#map iframe {
+	width: 100%;
+}
+.container#map .adress {
+	position: absolute;
+	right: 5vw;
+	top: 5vh;
+	width: auto;
+	height: auto;
+	padding: 25px 20px;
+	background-color: #fff;
+	z-index: 99;
+	-webkit-box-shadow:0 0 9px rgba(0,0,0,.7);
+	box-shadow:0 0 9px rgba(0,0,0,.7);
+	font-family: 'SFUIDisplay-Light';
+	font-size: 19px
+}
+.container#map .adress p {
+	margin: 3px 0;
+}
+.container#map .adress p.bold {
+	font-family: 'SFUIDisplay-Bold';
+	font-size: 20px
+}
+
+#order iframe {
+	width: 100% !important;
+}
+
+form.feedback {
+	width: 500px;
+}
+form.feedback input {
+	background-color: #F2F2F2;
+	border: 1px solid #C4C4C4;
+	padding: 5px 8px;
+	width: 49.5%;
+	display: inline-block;
+	margin-top: 10px;
+	font-family: 'SFUIDisplay-Light';
+	font-size: 16px;
+}
+form.feedback input:focus, form.feedback textarea:focus {
+	background-color: #fff;
+	border: 1px solid #666;
+	color: #666;
+}
+form.feedback textarea {
+	display: block;
+	width: 100%;
+	background-color: #F2F2F2;
+	border: 1px solid #C4C4C4;
+	margin-top: 15px;
+	padding: 5px 8px;	font-family: 'SFUIDisplay-Light';
+	font-size: 16px;
+}
+form.feedback button {
+	border: 1px solid #666;
+	color: #666;
+	padding: 5px 20px;
+	margin-top: 10px;
+	background-color: #fff;
+	border-radius: 2px;
+	letter-spacing: 2px;
+	font-size: 15px
+}
+#remonline-widget-frame {
+    height: 170px;
+    width: 350px;
+}
+.table_left_name_price {
+	float: left;
+	width: 60%;
+}
+.table_right_price_cen {
+	float: right;
+	width: 40%;
+	text-align: right;
+	
+}
+.name_table_price, #u5977-2 {
+	font-family: 'SFUIDisplay-Bold';
+}
+.table_right_price_cen, .table_left_name_price {
+	margin-bottom: 10px;
+}
+span.table_inf_c {text-align: center;display: block;
+width: 100%;margin-bottom: 10px;}
+
+#price_1 .popup-content, #price_2 .popup-content, #price_3 .popup-content, #price_4 .popup-content {
+	width: 80%;
+}
+
+@media (max-width: 1000px) {
+	.block_right {width: 25vw;}
+	.block_left {width: 70vw;}
+	.menu a {margin: 0;}
+	#reviews { padding: 50px 15px;}
+#reviews_script {margin: 50px 0 50px;padding: 15px;}
+}
+@media (max-width: 800px) {
+	#reviews_script iframe {
+		height: auto;
+	}
+	nav img {margin-left: 5px;}
+	.menu a {padding: 0 5px;}
+	.menu {line-height: 48px}
+	.phone {line-height: 50px}
+	.block_left p, .reviews_text p {line-height: 35px;}
+	.block_left p br, .reviews_text p br {display: none;}
+	.container#map iframe {height: 400px;}
+}
+
+@media (max-width: 700px) {
+	nav img {width: 110px;height: auto;}
+	.phone {font-size: 13px;margin-left: 5px;}
+	.menu a {padding: 3px;font-size: 13px}
+	.menu {padding-right: 5px;}
+	.price_list .goods {width: 47%;}
+	#price_1 .popup-content, #price_2 .popup-content, #price_3 .popup-content, #price_4 .popup-content {width: 95%;}
+	.pod_ctg { font-size: 14px !important;}
+	h1.title {font-size: 62px}
+}
+
+@media (max-width: 600px) {
+	.menu {display: none;}
+	nav img {width: 128px;margin-top: 8px;}
+	.phone {font-size: 15px;float: right;margin-right: 15px;}
+	h1.title { font-size: 52px;}
+	.price_list .goods {
+    width: 47%;
+    margin: 1.5%;
+    height: 180px;
+    line-height: 180px}
+    h3.desc {
+    font-size: 23px;
+    line-height: 28px;}
+}
+
+@media (max-width: 500px) {
+	body {padding-top: 60px;}
+	h1.title {font-size: 30px;line-height: 35px;padding: 0 10px;-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;}
+	.block_left p, .reviews_text p {font-size: 22px;line-height: 27px;}
+	.block_left h2, .reviews_text h2 {margin-bottom: 10px;}
+	.block_right {margin-top: 20px;}
+	h1.title br, h3.desc br {display: none;}
+	.block_left, .block_right {
+    width: 100%;
+    padding: 0 10px;
+}
+.container#price, #reviews_script {margin: 50px 0 0;padding: 50px 0;}
+.price_list .goods {width: 97%;}
+.popup .popup-content {padding: 15px;}
+.container#map .adress {position: static;top: 0;
+right: 0;
+-webkit-box-shadow: none;
+box-shadow: none;}
+#order_status {
+	display: block;
+position: relative;
+opacity: 1;
+visibility: visible;
+height: 350px;
+margin-top: 20px;
+}
+.container#map { margin-top: 50px;}
+}

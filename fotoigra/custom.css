@@ -1,0 +1,30 @@
+.navbar a.active {text-decoration: underline;}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+      max-width: 500px!important;
+      margin: 1.75rem auto; } }
+@media (min-width: 768px) {
+  .modal-dialog {
+      max-width: 700px!important;
+      margin: 1.75rem auto; } }
+@media (min-width: 992px) {
+  .modal-dialog {
+      max-width: 900px!important;
+      margin: 1.75rem auto; }  }
+
+      .bg {
+          /* The image used */
+          background-image: url("./img/238.jpg");
+
+          /* Full height */
+          height: 100%;
+
+          /* Center and scale the image nicely */
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+      }
+body {
+  /*padding-top: 70px;*/
+}

@@ -719,8 +719,8 @@ footer .footer_menu .menu__links-item {margin-right: 15px;}
 @media screen and (max-width: 799px) {
 	footer .footer_menu, section#feedback .feedback_content, .bar2 .logo p {display: none;}
 	section {
-		border-top: 45px solid transparent;
-		margin-top: -45px;
+		border-top: 65px solid transparent;
+		margin-top: -65px;
 	}
 	.bar2 .logo {padding-top: 5px;}
 	footer .footer_content, footer .footer_map {

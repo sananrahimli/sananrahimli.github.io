@@ -20,6 +20,8 @@ body {
 	width: 100%;
 	max-width: 1172px;
 	font-weight: 300;
+	overflow-x: hidden;
+	
 }
 header {
 	background-color: rgb(250, 250, 250);

@@ -12,10 +12,11 @@
 	<header id="header">
 		<div class="container">
 		<div class="language">
-			<select name="" id="" class="lang">
-				<option value="Русский">Русский</option>
-				<option>English</option>
-			</select>
+  <select name="webmenu" id="webmenu">
+    <option value="rus" selected="selected" title="images/rus.png"></option>
+    <option value="rus" title="images/rus.png"></option>
+    <option value="rus" title="images/rus.png"></option>
+  </select>
 		</div>
 		<div class="bar">
 			<div class="fixed_mobile">
@@ -293,6 +294,7 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="js/slick.min.js"></script>
+  <script type="text/javascript" src="http://www.marghoobsuleman.com/mywork/jcomponents/image-dropdown/samples/js/msdropdown/jquery.dd.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/slick.css"/>
 
 
@@ -319,9 +321,7 @@ return false;
       breakpoint: 600,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2,
-        infinite: true,
-        dots: true
+        slidesToScroll: 2
       }
     },
     {
@@ -358,6 +358,7 @@ $(window).scroll(function() {
         $(".bar").removeClass("bar2");
     }
 });
+$("body select").msDropDown();
 </script>
 </body>
 </html>

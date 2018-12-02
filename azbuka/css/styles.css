@@ -20,8 +20,6 @@ body {
 	width: 100%;
 	max-width: 1172px;
 	font-weight: 300;
-	overflow-x: hidden;
-	
 }
 header {
 	background-color: rgb(250, 250, 250);
@@ -820,4 +818,21 @@ padding: 10px 30px;
 	.more_text h3 p {font-size: 18px;margin-bottom: 10px;}
 	.about_content {width: 100%;padding-right: 0;}
 	section#fiz_lico .fiz_lico_content, section#ur_lico .ur_lico_content {padding:30px 0;}
+}
+@media screen and (max-width: 400px) {
+	.bar2 .menu__icon {top: -5px;}
+h1.title {font-size: 200%}
+.advantages_item figure {
+	width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.advantages_item figure img {max-width: 40%;}
+.services_content .item { margin-right: 0;}
+section#certificates .certificates_content .item {width: 49%;}
+section#feedback .feedback_content h4, section#feedback .feedback_form h4 {font-size: 150%}
+section#feedback .feedback_content p, section#feedback .feedback_form p {font-size: 115%}
+footer .footer_content, footer .footer_map {padding: 0;}
+footer .footer_content div:nth-child(3) a {font-size: 100%;margin-bottom: 10px;}
+.menu.menu_state_open .menu__icon span:nth-child(3), .menu.menu_state_open .menu__icon span:nth-child(2) {top: 7px;}
 }

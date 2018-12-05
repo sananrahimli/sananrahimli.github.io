@@ -11,13 +11,6 @@
 <body>
 	<header id="header">
 		<div class="container">
-		<div class="language">
-  <select name="webmenu" id="webmenu">
-    <option value="rus" selected="selected" title="images/rus.png"></option>
-    <option value="rus" title="images/rus.png"></option>
-    <option value="rus" title="images/rus.png"></option>
-  </select>
-		</div>
 		<div class="bar">
 			<div class="fixed_mobile">
 			<div class="logo">
@@ -288,77 +281,18 @@
         			<a class="menu__links-item" href="#contacts">Контакты</a>
     			</div>
 			</div>
+
+		<div class="language">
+			<a href="">English</a>
+			<a href="">Русский</a>
+		</div>
 		</div>
 	</footer>
 
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="js/slick.min.js"></script>
-  <script type="text/javascript" src="http://www.marghoobsuleman.com/mywork/jcomponents/image-dropdown/samples/js/msdropdown/jquery.dd.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
   <link rel="stylesheet" type="text/css" href="css/slick.css"/>
-
-
-<script type="text/javascript">
-
-$(document).ready(function(){
-$('a[href*=#]').bind("click", function(e){
-var anchor = $(this);
-$('html, body').stop().animate({
-scrollTop: $(anchor.attr('href')).offset().top
-}, 1000);
-e.preventDefault();
-});
-return false;
-});
-
-    $(document).ready(function(){
-      $('.multiple-items').slick({
-  infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 3,
-  responsive: [
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 400,
-      settings: {
-        slidesToShow: 1	,
-        slidesToScroll: 1	
-      }
-    }
-    ]
-});
-    });
-	(function($){
-  $(function() {
-    $('.menu__icon').on('click', function() {
-      $(this).closest('.menu')
-        .toggleClass('menu_state_open');
-    });
-    
-    $('.menu__links-item').on('click', function() {
-      // do something
-
-      $(this).closest('.menu')
-        .removeClass('menu_state_open');
-    });
-  });
-})(jQuery);
-$(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
-
-    if (scroll >= 150) {
-        $(".bar").addClass("bar2");
-    } else {
-        $(".bar").removeClass("bar2");
-    }
-});
-$("body select").msDropDown();
-</script>
 </body>
 </html>

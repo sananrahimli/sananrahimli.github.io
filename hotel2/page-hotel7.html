@@ -2,10 +2,11 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="page_hotel">
+<body class="page_hotel hotel_7">
 <section id="header_menu">
 	<div class="container">
 		<a href="">Номера и цены</a>
@@ -19,7 +20,7 @@
 
 <section id="header_content_informer">
 	<div class="container">
-		<div class="logo_page_hotel"><img src="images/logo_hotel2.png" alt=""></div>
+		<div class="logo_page_hotel"><img src="images/logo_hotel1.png" alt=""></div>
 		<div class="href_map">
 			<a href="">
 			<p class="address">г.Нижний Новгород ул. Володарского, 38а</p>
@@ -29,7 +30,7 @@
 		<div class="choice_btn">
 		<a href="mail:piligrimhotelnn@gmail.com" class="mail">piligrimhotelnn@gmail.com</a>
 		<a href="tel:+78314232346" class="tel">+7 (831) 423-23-46</a>
-		<a href="#popup_feedback" class="btn_feedback fancybox">Заказать звонок</a>
+		<a href="#popup_feedback" class="btn_feedback fancybox">заказать телефон</a>
 		</div>
 	</div>
 </section>
@@ -42,105 +43,21 @@
 			<div class="booking_left_form">
 				<h3>Выберите даты</h3>
 				<div class="booking_date_arrival">
-				<h4>Дата заездв</h4>
-				<select id="day" class="class_day">
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-<option value="6">6</option>
-<option value="7">7</option>
-<option value="8">8</option>
-<option value="9">9</option>
-<option value="10">10</option>
-<option value="11">11</option>
-<option value="12">12</option>
-<option value="13">13</option>
-<option value="14">14</option>
-<option value="15">15</option>
-<option value="16">16</option>
-<option value="17">17</option>
-<option value="18">18</option>
-<option value="19">19</option>
-<option value="20">20</option>
-<option value="21">21</option>
-<option value="22">22</option>
-<option value="23">23</option>
-<option value="24">24</option>
-<option value="25">25</option>
-<option value="26">26</option>
-<option value="27">27</option>
-<option value="28">28</option>
-<option value="29">29</option>
-<option value="30">30</option>
-<option value="31">31</option>
-</select>
-<select id="months">
-    <option value="1">Январь</option>
-    <option value="2">Февраль</option>
-    <option value="3">Март</option>
-    <option value="4">Апрель</option>
-    <option value="5">Май</option>
-    <option value="6">Июнь</option>
-    <option value="7">Июль</option>
-    <option value="8">Август</option>
-    <option value="9">Сентябрь</option>
-    <option value="10">Октябрь</option>
-    <option value="11">Ноябрь</option>
-    <option value="12">Декабрь</option>
-</select>
-			
+				<h4>Дата заезда</h4>
+				<input type="text" class="from-input" readonly>
+				<div class="from-date">
+					<p class="date"></p>
+					<p class="month"></p>
+				</div>
+
 				</div>
 				<div class="booking_date_departure">
 				<h4>Дата выезда</h4>
-<select id="day_plus" class="class_day_plus">
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-<option value="6">6</option>
-<option value="7">7</option>
-<option value="8">8</option>
-<option value="9">9</option>
-<option value="10">10</option>
-<option value="11">11</option>
-<option value="12">12</option>
-<option value="13">13</option>
-<option value="14">14</option>
-<option value="15">15</option>
-<option value="16">16</option>
-<option value="17">17</option>
-<option value="18">18</option>
-<option value="19">19</option>
-<option value="20">20</option>
-<option value="21">21</option>
-<option value="22">22</option>
-<option value="23">23</option>
-<option value="24">24</option>
-<option value="25">25</option>
-<option value="26">26</option>
-<option value="27">27</option>
-<option value="28">28</option>
-<option value="29">29</option>
-<option value="30">30</option>
-<option value="31">31</option>
-</select>
-<select id="months_plus">
-    <option value="1">Январь</option>
-    <option value="2">Февраль</option>
-    <option value="3">Март</option>
-    <option value="4">Апрель</option>
-    <option value="5">Май</option>
-    <option value="6">Июнь</option>
-    <option value="7">Июль</option>
-    <option value="8">Август</option>
-    <option value="9">Сентябрь</option>
-    <option value="10">Октябрь</option>
-    <option value="11">Ноябрь</option>
-    <option value="12">Декабрь</option>
-</select>
+				<input type="text" class="dest-input" readonly>
+				<div class="dest-date">
+					<p class="date"></p>
+					<p class="month"></p>
+				</div>
 				</div>
 			</div>
 			<div class="booking_right_form">
@@ -154,6 +71,8 @@
 				<label for=""><button>Забронировать</button></label>
 			</div>
 		</form>
+
+		<a href="#" class="back_to_hotels">К выбору отеля</a>
 	</div>
 </header>
 
@@ -163,46 +82,6 @@
 		<h2 class="title_hotel_page">Номера и цены</h2>
 		<h3 class="desc_hotel_page">*Цены в празднечные дни уточняйте дополнительно</h3>
 		<div class="room_item">
-			<div class="item">
-				<div class="item_hover">
-					<div class="stock"></div>
-					<p class="text_hover">
-						УСПЕЙТЕ ЗАБРОНИРОВАТЬ НОМЕР ДО КОНЦА ОТСЧЕТА
-						И ПОЛУЧИТЕ СКИДКУ НА 
-						ПРОЖИВАНИЕ
-					</p>
-		<script src="http://megatimer.ru/s/ca0bf851cc1ba51526274af8ca610074.js"></script>
-					<a href="" class="btn_booking_red">Получить</a>
-				</div>
-			</div>
-
-			<div class="item">
-				<div class="item_ovhrf">
-				<h2>Небольшой Двухместный Номер <br>с Одной Кроватью</h2>
-				<div class="image_slider">
-					<div class="slider single-item">
-						<div><img src="images/hotel_img/1.png" alt=""></div>
-						<div><img src="images/hotel_img/2.png" alt=""></div>
-						<div><img src="images/hotel_img/3.png" alt=""></div>
-						<div><img src="images/hotel_img/4.png" alt=""></div>
-						<div><img src="images/hotel_img/5.png" alt=""></div>
-					</div>
-				</div>
-				<div class="informer">
-					<p class="title">В номере:</p>
-					<p class="text">
-						Двуспальняя кровать с ортопедическим
-						матрасом, санузел и душевая кабина, 
-						холодильник, кондиционер, фен, плазменный телевизор.</p>
-					<p class="title">В стоимость проживания входит:</p>
-					<p class="text">
-						Постельные и душевые принадлежности,
-						ежедневная уборка, Wi-Fi.</p>
-				</div>
-				</div>
-				<div class="price">от 2000р</div>
-				<a href="#" class="booking_link">Забронировать</a>
-			</div>
 			<div class="item">
 				<div class="item_ovhrf">
 				<h2>Небольшой Двухместный Номер <br>с Одной Кроватью</h2>
@@ -312,6 +191,20 @@
 				<a href="#" class="booking_link">Забронировать</a>
 			</div>
 		</div>
+			<div class="item_stocks">
+				<div class="item_hover">
+					<div class="stock"></div>
+					<div class="flr_stock">
+					<p class="text_hover">
+						УСПЕЙТЕ ЗАБРОНИРОВАТЬ НОМЕР ДО КОНЦА ОТСЧЕТА
+						И ПОЛУЧИТЕ СКИДКУ НА 
+						ПРОЖИВАНИЕ
+					</p>
+					<div class="stocks_num"><script src="http://megatimer.ru/s/7c59f367b5bdd2093b1d8e0ec82c27ca.js"></script></div>
+					<a href="" class="btn_booking_red">Забронировать</a>
+					</div>
+				</div>
+			</div>
 	</div>
 </main>
 
@@ -331,7 +224,7 @@
 			<div class="item item_6">Фен, полотенца</div>
 		</div>
 		<div class="services_item_blocks">
-			<div class="item item_7">Кондиционер</div>
+			<div class="item item_7">Полотенца</div>
 			<div class="item item_8">Гигиенические <br>принадлежности</div>
 			<div class="item item_9">Высокоскоростной интернет</div>
 		</div>
@@ -358,28 +251,27 @@
 
 <section id="advantages">
 	<div class="container">
-		<h2 class="title_hotel_page">Наши приемущества</h2>
-		<h3 class="title_hotel_page_desc">Качества объясняющие почему стоит выбрать именно нас</h3>
+		<h2 class="title_block">Приемущества отелей нашей сети</h2>
 		<div class="item_advantages">
 			<div class="item css_sprites">
 				<h3>ОПЛАТА  БАНКОВСКИМИ  КАРТАМИ</h3>
-				<p>Оплачивайте проживание любым удобным Вам способом</p>
+				<p>Оплачивайте <br>проживание любым <br>удобным Вам способом</p>
 			</div>
 			<div class="item css_sprites">
-				<h3>РЕГИСТРАЦИЯ ЗАЕЗДА  И ОБСЛУЖИВАНИЕ 24/7</h3>
-				<p>мы готовы помочь Вам в любое время</p>
+				<h3>РЕГИСТРАЦИЯ ЗАЕЗДА <br>И ОБСЛУЖИВАНИЕ 24/7</h3>
+				<p>мы готовы помочь Вам в <br>любое время</p>
 			</div>
 			<div class="item css_sprites">
 				<h3>ЗАВТРАК В НОМЕР</h3>
-				<p>Подадим завтрак в номер в указанное Вами время</p>
+				<p>Подадим завтрак в <br>номер в указанное <br>Вами время</p>
 			</div>
 			<div class="item css_sprites">
 				<h3>ВСЕ НЕОБХОДИМЫЕ  ДОКУМЕНТЫ</h3>
-				<p>Постараемся удовлетворить запрос любого делового путешественник</p>
+				<p>Постараемся <br>удовлетворить запрос <br>любого делового <br>путешественник</p>
 			</div>
 			<div class="item css_sprites">
-				<h3>УДОБНОЕ  РАСПОЛОЖЕНИЕ</h3>
-				<p>Мы находимся с самом "сердце" города.</p>
+				<h3>УДОБНОЕ <br>РАСПОЛОЖЕНИЕ</h3>
+				<p>Мы находимся с самом <br>"сердце" города.</p>
 			</div>
 		</div>
 	</div>
@@ -440,105 +332,21 @@
 			<div class="booking_left_form">
 				<h3>Выберите даты</h3>
 				<div class="booking_date_arrival">
-				<h4>Дата заездв</h4>
-				<select id="day" class="class_day">
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-<option value="6">6</option>
-<option value="7">7</option>
-<option value="8">8</option>
-<option value="9">9</option>
-<option value="10">10</option>
-<option value="11">11</option>
-<option value="12">12</option>
-<option value="13">13</option>
-<option value="14">14</option>
-<option value="15">15</option>
-<option value="16">16</option>
-<option value="17">17</option>
-<option value="18">18</option>
-<option value="19">19</option>
-<option value="20">20</option>
-<option value="21">21</option>
-<option value="22">22</option>
-<option value="23">23</option>
-<option value="24">24</option>
-<option value="25">25</option>
-<option value="26">26</option>
-<option value="27">27</option>
-<option value="28">28</option>
-<option value="29">29</option>
-<option value="30">30</option>
-<option value="31">31</option>
-</select>
-<select id="months2">
-    <option value="1">Январь</option>
-    <option value="2">Февраль</option>
-    <option value="3">Март</option>
-    <option value="4">Апрель</option>
-    <option value="5">Май</option>
-    <option value="6">Июнь</option>
-    <option value="7">Июль</option>
-    <option value="8">Август</option>
-    <option value="9">Сентябрь</option>
-    <option value="10">Октябрь</option>
-    <option value="11">Ноябрь</option>
-    <option value="12">Декабрь</option>
-</select>
-			
+				<h4>Дата заезда</h4>
+				<input type="text" class="from-input" readonly>
+				<div class="from-date">
+					<p class="date"></p>
+					<p class="month"></p>
+				</div>
+
 				</div>
 				<div class="booking_date_departure">
 				<h4>Дата выезда</h4>
-<select id="day_plus" class="class_day_plus">
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-<option value="6">6</option>
-<option value="7">7</option>
-<option value="8">8</option>
-<option value="9">9</option>
-<option value="10">10</option>
-<option value="11">11</option>
-<option value="12">12</option>
-<option value="13">13</option>
-<option value="14">14</option>
-<option value="15">15</option>
-<option value="16">16</option>
-<option value="17">17</option>
-<option value="18">18</option>
-<option value="19">19</option>
-<option value="20">20</option>
-<option value="21">21</option>
-<option value="22">22</option>
-<option value="23">23</option>
-<option value="24">24</option>
-<option value="25">25</option>
-<option value="26">26</option>
-<option value="27">27</option>
-<option value="28">28</option>
-<option value="29">29</option>
-<option value="30">30</option>
-<option value="31">31</option>
-</select>
-<select id="months_plus2">
-    <option value="1">Январь</option>
-    <option value="2">Февраль</option>
-    <option value="3">Март</option>
-    <option value="4">Апрель</option>
-    <option value="5">Май</option>
-    <option value="6">Июнь</option>
-    <option value="7">Июль</option>
-    <option value="8">Август</option>
-    <option value="9">Сентябрь</option>
-    <option value="10">Октябрь</option>
-    <option value="11">Ноябрь</option>
-    <option value="12">Декабрь</option>
-</select>
+				<input type="text" class="dest-input" readonly>
+				<div class="dest-date">
+					<p class="date"></p>
+					<p class="month"></p>
+				</div>
 				</div>
 			</div>
 			<div class="booking_right_form">
@@ -567,7 +375,7 @@
 <div class="choice_btn">
 		<a href="mail:piligrimhotelnn@gmail.com" class="mail">piligrimhotelnn@gmail.com</a>
 		<a href="tel:+78314232346" class="tel">+7 (831) 423-23-46</a>
-		<a href="#popup_feedback" class="btn_feedback fancybox">Заказать звонок</a>
+		<a href="#popup_feedback" class="btn_feedback fancybox">заказать телефон</a>
 		</div>
 	</div>
 </footer>
@@ -604,69 +412,43 @@
 <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>	
 <link rel="stylesheet" href="css/jquery.fancybox.css">
 <script src="js/jquery.fancybox.js"></script>
+<script src="js/jquery.datetimepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css"/ >
+<script src="js/main.js"></script>
 <script>
-var d = new Date(),
-    
-    n = d.getMonth(),
-    
-    y = d.getDate();
-    yp = d.getDate()+1;
-
-$('#months option:eq('+n+')').prop('selected', true);
-$('#months2 option:eq('+n+')').prop('selected', true);
-
-$('#day option[value="'+y+'"]').prop('selected', true);
-
-$('#months_plus option:eq('+n+')').prop('selected', true);
-$('#months_plus2 option:eq('+n+')').prop('selected', true);
-
-$('#day_plus option[value="'+yp+'"]').prop('selected', true);
-  
-
-$(document).ready(function(){
- $('.single-item').slick();
-});
-
-$('.carousel-items').slick({
-centerMode: true,
-  centerPadding: '0px',
-  slidesToShow: 3,
-});
+	
 ymaps.ready(function () {
     var myMap = new ymaps.Map('map', {
-            center: [56.319347, 44.01165739999999],
+            center: [56.324256, 43.99374599999999],
             zoom: 15,
             controls: []
         }, {
            
         }),
 
+        // Создаём макет содержимого.
         MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
             '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
         ),
-        myPlacemarkWithContent = new ymaps.Placemark([56.319347, 44.01165739999999], {
-            balloonContent: 'Отель Пилигрим Адрес:г.Нижний Новгород, ул.Володарского, 38а +7 (831) 423-23-46',
-            iconContent: '12'
+
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            balloonContent: 'Отель #7 Адрес: г.Нижний Новгород, ул.Добролюбова, 7 +7 (831) 423-23-46'
         }, {
             // Опции.
             // Необходимо указать данный тип макета.
-            iconLayout: 'default#imageWithContent',
+            iconLayout: 'default#image',
             // Своё изображение иконки метки.
-            iconImageHref: '/images/map_hotel_2.png',
+            iconImageHref: '/images/map_hotel_1.png',
             // Размеры метки.
             iconImageSize: [141, 166],
             // Смещение левого верхнего угла иконки относительно
             // её "ножки" (точки привязки).
-            iconImageOffset: [-65, -155],
-            // Макет содержимого.
-            iconContentLayout: MyIconContentLayout
-        });
+            iconImageOffset: [-70, -148]
+        })
+
 
     myMap.geoObjects
-        .add(myPlacemarkWithContent);
-});
-$(document).ready(function() {
-  $("a.fancybox").fancybox()
+        .add(myPlacemark)
 });
 </script>
 </body>

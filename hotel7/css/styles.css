@@ -1153,7 +1153,7 @@ position: absolute;
 	height: 19px;
 	position: absolute;
 	left: 0;
-	top: -2px;
+	top: -4px;
 }
 
 .checkbox input[type=checkbox]:checked + label:before { 
@@ -1163,7 +1163,7 @@ position: absolute;
 	height: 19px;
 	position: absolute;
 	left: 0;
-	top: -2px;
+	top: -4px;
 }
 .checkbox_btn label {width: 19px;height: 19px;position: absolute;left: 0;}
 .checkbox {margin-top: 20px;padding-left: 25px;}

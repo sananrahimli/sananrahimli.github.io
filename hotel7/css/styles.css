@@ -732,7 +732,7 @@ font-weight: 600;
 }
 a.booking_link {
 	position: absolute;
-	left: calc(50% - 124.5px);
+	left: calc(50% - 127px);
 	bottom: -20px;
 	padding: 15px 35px;
 	background-color: #d6ff68;

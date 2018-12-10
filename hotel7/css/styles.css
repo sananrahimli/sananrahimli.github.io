@@ -1132,7 +1132,8 @@ label.input_num input {
 }
 .checkbox_btn {
 	display: inline-block;
-	margin-right: 10px;
+	position: absolute;
+	left: 0;
 }
 .checkbox input[type=checkbox] { 
 	display: block;
@@ -1140,6 +1141,8 @@ width: 19px;
 height: 19px;
 opacity: 0; 
 z-index: 99;
+position: absolute;
+
 } 
 
 
@@ -1150,7 +1153,7 @@ z-index: 99;
 	height: 19px;
 	position: absolute;
 	left: 0;
-	top: -4px;
+	top: -2px;
 }
 
 .checkbox input[type=checkbox]:checked + label:before { 
@@ -1160,10 +1163,10 @@ z-index: 99;
 	height: 19px;
 	position: absolute;
 	left: 0;
-	top: -4px;
+	top: -2px;
 }
-
-.checkbox {margin-top: 20px;}
+.checkbox_btn label {width: 19px;height: 19px;position: absolute;left: 0;}
+.checkbox {margin-top: 20px;padding-left: 25px;}
 .checkbox span{
 	font-size: 9.2px;
 	color: #5279b2;

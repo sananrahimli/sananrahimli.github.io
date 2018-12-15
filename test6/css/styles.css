@@ -73,7 +73,7 @@ header:before {
 	top: calc(50% - 15vw);
 	width: 20vw;
 	height: 20vw;
-	background-image: url(../images/logo.svg);
+	background-image: url(../images/logo.png);
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -139,7 +139,7 @@ line-height: 2em;
 }
 
 section#event {
-	background-image: url(../images/bg_event.svg);
+	background-image: url(../images/bg_event.png);
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -191,7 +191,7 @@ section#location p.location_informer_span {
 	 margin-top: 1.125em
 }
 section#location .location_big_map {
-	background-image: url(../images/MapLocation.svg);
+	background-image: url(../images/MapLocation.png);
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-repeat: no-repeat;

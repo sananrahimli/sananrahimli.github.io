@@ -191,14 +191,13 @@ section#location p.location_informer_span {
 	 margin-top: 1.125em
 }
 section#location .location_big_map {
-	background-image: url(../images/MapLocation.png);
-	-webkit-background-size: cover;
-	background-size: cover;
-	background-repeat: no-repeat;
 	min-height: 51.25em;
 	height: 80vh;
 	width: 100%;
 	margin: 2.5em 0;
+}
+section#location .location_big_map img {
+	width: 100%;
 }
 .location_informer_map {
 	clear: both;
@@ -824,10 +823,6 @@ top: calc(50% - 216px);
 }
 .header_links_btn {text-align: center;
 width: 100%;}
-section#location .location_big_map {
-	height: auto;
-	min-height: 230px;
-}
 .conditions_item {border-bottom: 2px solid #e2e2e2 !important;}
 .program_item .item, ol.neter li {margin: 1%;width: 30%;}
 .entertainment_item .item {width: 47.5%;}
@@ -841,7 +836,6 @@ padding-bottom:30px;}
 }
 
 @media (max-width: 600px) {
-	section#location .location_big_map {display: none;}
 	.header_links_a a { width: 100%;  padding: .7em 2.125em 0 0;margin-top: 1em;}
 	.header_links {border-top: none;}
 	header::before {top: calc(50% - 64vw);}
@@ -875,4 +869,7 @@ top: auto !important;
 }
 .contact_center, .contact_right {width: 100%;}
 ol.neter li {padding-bottom: 100px;}
+section#location .location_big_map {
+	min-height: auto;
+	height: auto;}
 }

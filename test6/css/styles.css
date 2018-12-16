@@ -2,42 +2,11 @@
 html {
 	font-size: 62.5%;
 }
-body {
-	background-color: #f8f8f8;
-	overflow-x: hidden;
-	padding: 0;
-	margin: 0;
-	font-family: 'Graphik LCG Regular';
-	counter-reset: heading;
-}
-body *, :after, :before {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	box-sizing: border-box;
-	-webkit-transition: .5s;
-	-o-transition: .5s;
-	transition: .5s;
-	position: relative;
-	margin: 0;
-	padding: 0;
-	text-decoration: none;
-	font-weight: normal;
-	outline: 0;
-}
 a:hover, a:active {
 	outline: 0;
 }
 img {
 	max-width: 100%;
-}
-.container {
-	width: 100%;
-	max-width: 2440px;
-	margin: 0 auto;
-	display: block;
-	clear: both;
-	padding: 0 36px;
 }
 header#header_ts {
 	background-image: url(../images/bg_header.png);

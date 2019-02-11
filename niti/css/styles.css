@@ -19,7 +19,7 @@ header nav a {
 	color: #fff;
 	font-family: 'LatoWebSemibold';
 	padding: 0 0.1125em 0.625em;
-	margin-right: 1.6875em;
+	margin-right: 1.79em;
 	position: relative;
 	font-size: 1em;
 }
@@ -90,7 +90,7 @@ margin:2.04em 0 0;
 header p.description {
 	    font-family: 'LatoWeb';
 	    font-size: 1.5em;
-	    margin: .5em 0 3em;
+	    margin: .4em 0 3em;
 }
 
 header a.request {
@@ -98,15 +98,16 @@ header a.request {
 	font-size: 1.125em;
 	background-color: rgb(255, 213, 19);
 	border-radius: 0.25em;
-	padding: 1.4375em 3.125em;
-	margin-right: 1.675em;
+padding: 1.19em 2.6em;
+margin-right: 1.5em;
+margin-left: 1.5em;
 }
 header a.video_link {
 	color: #fff;
 	font-size: 1.125em;
 	padding-left: 4em;
 	position: relative;
-	
+	line-height: 30px;
 }
 header a.video_link:before {
 	background-position: -66px 0;
@@ -993,7 +994,7 @@ td.print-table-price-td_format span {
     text-align: center;
 padding: 2em 0;
 margin: 3.2em auto;
-max-width: 600px;
+max-width: 700px;
 width: 100%;
 }
 .price_downloand_block span.doc {
@@ -1120,8 +1121,7 @@ footer a.btn_footer_popup {
 	section#poshiv_block_6 .slick-slide {opacity: 1;}
 	section#poshiv_block_6 .slick-arrow {bottom: calc(50% - 2em) !important;}
 	img.print_tabs_item_image, section#page_sklad_contacts img {max-width: 100%;}
-	section#page_sklad_contacts img {margin-bottom: 1em;
-	width: 100%;}
+	section#page_sklad_contacts img {margin-bottom: 1em;width: 100%;}
 }
 
 @media (max-width:765px) {

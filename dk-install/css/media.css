@@ -1,0 +1,158 @@
+/* Portrait tablets and medium desktops */
+@media (max-width: 1199px) {
+.container {padding-left: 15px;padding-right: 15px;}
+nav {left: 15px;}
+.menu_link .container {padding: 0;}
+section#block1, section#block2 {padding-left: 0;}
+ul.block1__two_text_and_text li::after {
+    left: -5px;
+    width: 447px;
+    height: 116px;
+}
+.block3_slider .cont_text {width: 535px;}
+.block3_slider_img {
+    top: 0;
+    right: 0;
+    width: 45%;
+}
+.block4__left > .block4__item {width: 90%;}
+.block4__right > .block4__item {width: 100%;}
+.block1__one_text_and_img_text {padding: 50px 20px 50px 50px;}
+.block4__item img {width: 100%;}
+.block4__left_two_colon .block4__item {width: 45%;margin-right: 3% !important;}
+.block4__item div {padding-left: 2em;}
+.block4__left_two_colon .block4__item div, .block4__left_two_colon .block4__item:nth-child(2) div {padding-left: 0.8em;}
+.block4__item img {margin-top: -6.8em;}
+.block4__left.block4__left_two_colon {margin-top: 6.4em;}
+.block4__left_two_colon .block4__item:nth-child(3) { width: 95%;}
+.block4__left_two_colon .block4__item:nth-child(3) img {    height: 250px;
+    width: 40%;
+    display: inline-block;
+    margin-top: -4em;
+    margin-left: 10px;
+}
+.block4__left_two_colon .block4__item:nth-child(3) {text-align: justify;}
+.block4__left_two_colon .block4__item:nth-child(3) div {padding: 0 0 0 1em;width: 55%;}
+.block4__item.block4__item__big {margin-top: 7.5em;}
+.block4__item__big div {padding-bottom: 3.3em;margin-top: 0;}
+.image_vide_bg {width: 508px;height: 307px;-webkit-background-size: 100%;
+background-size: 100%;}
+.block__items_left .item a img {padding-right: .5em;}
+.block__items_right_item_big {
+    width: 100%;
+    height: 503px;
+    background-image: url(../img/block6/item_bg.png);
+    background-position: center top;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    padding-left: 8.5em;
+    padding-top: 4em;
+    background-repeat: no-repeat;
+}
+.block__items_right_item_big .title_big {margin:1em 0;}
+ol.block7__stages_item li.item {width: 220px;}
+ol.block7__stages_item li.item:nth-child(2), ol.block7__stages_item li.item:nth-child(3) , ol.block7__stages_item li.item:nth-child(4) {margin-left: 19px;right: 0;}
+section#block7 .container::before {left: -28em;}
+.block10_img img {width: 100%;}
+ul.block1__two_text_and_text li:nth-child(2)::before { left: 40px;}
+}
+
+/* Portrait tablets and small desktops */
+@media (max-width: 991px) {
+	header {padding-top: 15px;}
+.header__title {font-size: 45px}
+.header__tw_block__descp_two {margin-left: 275px;margin-top: -50px;}
+ul.menu_active_links {margin-top: 3.5em;}
+.clb.clb_right {left: 7.8em;padding-left: 0;}
+.block1__one_text_and_img {margin-top: 3.3em;}
+.block1__one_text_and_img img {
+    top: -40px;
+    right: -40px;
+    display: inline-block;
+    width: 50%;
+}
+ul.block1__two_text_and_text li {font-size: 15px;width: 45%;padding-left: 3.2em;}
+ul.block1__two_text_and_text li::before {width: 100%;}
+ul.block1__two_text_and_text li::after {
+    left: -5px;
+    width: 100%;
+    height: 86px;
+    top: -20px;
+}
+ul.block1__two_text_and_text li:nth-child(2) {
+    margin-left: 0;
+}
+ul.block1__two_text_and_text li:nth-child(2)::after {
+    top: -16px;left: 15px;
+}	
+ul.block2__inst_option li {width: 100%;height: 200px;padding-left: 158px !important;}
+ul.block2__inst_option li:nth-child(2)::before {left: -3px;}
+ul.block2__inst_option {padding-top: 50px;}
+section#block2 {padding-top: 100px;}
+section#block3 {padding-top: 0;}
+.block3_slider .cont_text {width: 100%;padding: 50px 35% 88px 45px;}
+section#block4 .block4__left h1.title_blocks {left: 30px;}
+.block4__left.block4__left_two_colon {margin-top: 8em;}
+.block4__item div h3 {font-size: 18px}
+.block4__item div h3 {margin: 1em 0;}
+.block4__item__big div p {
+
+    padding: 1.6em 0 22.35em;
+    line-height: 1.7em;
+    font-size: 16px;
+
+}
+.block5__left-block {padding-left: 4em;}
+.image_vide_bg {width: 340px;height: 200px;margin-top: 12em;}
+section#block6 h1.title_blocks, section#block7 h1.title_blocks { padding-left: 0;}
+.block__items_left .item a span {padding-right: 0;}
+.block__items_left .item a img {padding-right: 0;display: block;margin-bottom: .3em;}
+.block__items_left .item {margin-bottom: 1.7em;}
+.icon_big, .slick-arrow {display: none !important;}
+.block__items_right_item_big .text_big {width: 90%;}
+.block__items_right_item_big {padding-left: 5em;padding-top: 3em;}
+.block__items_right_item_big .title_big {margin: 1em 0 .1em;}
+section#block7 {padding-top: 0;}
+ol.block7__stages_item li.item {width: 23%;padding: 58px 0 0 15px;}
+ol.block7__stages_item li.item .item_front p {font-size: 16px}
+ol.block7__stages_item li.item .item_back p {font-size: 13px;line-height: 1.5em;padding: .5em;}
+.slider-works_item img {width: auto;height: 100%;left: 12%;}
+.slider-works_item {padding: 9.6em 9.8em}
+.slider-works ul.slick-dots {left: calc(50% - 100px);}
+.block10_img img {
+    width: 90%;
+    float: right;
+    margin-top: 6em;
+}
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+footer .line2 {font-size: 14px;}
+footer {margin-top: 0;}
+.block10__right, .block5__right-block {display: none;}
+.block10__left {width: 100%;padding-left: 0;}
+form.feedback_footer {width: 100%;}
+#block10 {padding-bottom: 6em;padding-top: 1em;}
+.block9__content_contacts {padding: 3.8em 2em 1.3em 2em;width: 100%;margin-top: 2em;}
+section#block9 {padding-top: 4.2em;}
+section#block9 .title_blocks, section#block8 h1.title_blocks, .block4__title_descp {padding-left: 0;}
+.slider-works_item img , section#block7 .container::before {display: none !important;}
+.slider-works_item {background-image: url(../img/slider/two/item_mobile.png);border-radius: 10px;overflow: hidden;padding: 2em;height: auto;top: 0;}
+.slider-works ul.slick-dots {left: 0;width: 100%;text-align: center;}
+ol.block7__stages_item li.item {width: 45%;margin: 0 !important;margin-bottom: 2.5em !important;}
+ol.block7__stages_item li.item:nth-child(2), ol.block7__stages_item li.item:nth-child(4), ol.block7__stages_item li.item:nth-child(6) {margin-left: 7% !important;}
+ol.block7__stages_item li.item:nth-child(6) {width: 45%;right: 0;padding: 1em 15px;}
+section#block8 {padding-top: 1em;}
+.block__items_left, .block__items_right, section#block4 .block4__left, section#block4 .block4__right, .block4__left > .block4__item {width: 100%;}
+.icon_big {display: block !important;}
+.block__items_right_item_big {padding-top: 6em;}
+.block6__items {margin-top: 2em;}
+section#block4 .block4__left h1.title_blocks {left: 0;}
+#block4 div[class*="item"] {width: 100%;margin-top: 6em;}
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+
+}

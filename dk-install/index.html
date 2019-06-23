@@ -13,7 +13,7 @@
 		<video class="video" loop="loop" autoplay="" muted="">
 		<source src="#" type="video/mp4" /> 
 		<source src="#" type="video/ogv" /> 
-		<source src="video/bg_video.mp24" type="video/webm" /> 
+		<source src="video/bg_video.mp4" type="video/webm" /> 
 	</video>
 	<div class="menu_link">
 		<div class="container">
@@ -560,7 +560,14 @@ $('.block7__stages_item .item').on('click', function() {
 $('.single-item').slick({
 	arrows: false,
 	 dots: true,
-  infinite: true
+  infinite: true,
+   responsive: [
+    {
+      breakpoint: 770,
+      settings: {        
+  adaptiveHeight: true
+      }
+    }]
 });
 $('.slider-works').slick({
 	arrows: true,

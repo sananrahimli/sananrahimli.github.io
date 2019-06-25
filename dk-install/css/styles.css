@@ -8,6 +8,8 @@ html, body {
 	font-weight: normal;
     font-style: normal;
     overflow-x: hidden;
+   	-webkit-text-size-adjust: none;
+   	-webkit-overflow-scrolling:touch;
 }
 * {
 	margin: 0;
@@ -44,6 +46,7 @@ header {
 	height: auto;
 	min-height: 0;
 	overflow: hidden;
+	-webkit-overflow-scrolling:touch;
 	background-image: url(../img/bg_video_poster.png);
 	padding-top: 54px;
 	padding-bottom: 100px;
@@ -591,6 +594,7 @@ ul.slick-dots li button{
 	color: transparent;
 	border: none;
 	overflow: hidden;
+	-webkit-overflow-scrolling:touch;
 	 border-radius: 50%;
   background-color: rgb(233, 191, 85);
   width: 8px;
@@ -807,14 +811,6 @@ padding-left: 0;
 	width: 608px;
 	height: 357px;
 	margin-top: 5em;
-}
-.image_vide_bg a#image_video_bg-btn {
-	background: url('../img/sprite.png') no-repeat -131px 0;
-	width: 76px;
-	height: 76px;
-	position: absolute;
-	left: calc(50% - 38px);
-	top: calc(50% - 38px);
 }
 
 
@@ -1355,6 +1351,7 @@ height: 185px;
 margin: 2em auto;
 padding: 1em;
 	overflow: hidden;
+	-webkit-overflow-scrolling:touch;
 }
 .good_send_yes_ovr {
 	width: 0;

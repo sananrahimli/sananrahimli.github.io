@@ -422,7 +422,7 @@ text-transform: uppercase;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #0B2349;
-  display: table;
+  display: block;
   letter-spacing: -.3px;
 }
 .block1__one_text_and_img_text {

@@ -10,12 +10,7 @@
 <body>
 
 <header>
-		<video class="video" preload="metadata" muted="muted" controls="true" autoplay playsinline loop>
-		<source src="video/bg_video.mp4" type="video/mp4" /> 
-		<source src="#" type="video/ogv" /> 
-		<source src="video/bg_video.mp4" type="video/webm" /> 
-		<source src="book.webm" type="video/webm"></source>
-	</video>
+
 	<div class="menu_link">
 		<div class="container">
 			<div class="menu_link_bg">
@@ -613,12 +608,6 @@ $(document).ready(function() {
  
 });
 
-$(".menu_active_links li a").click(function () {
-    var elementClick = $(this).attr("href");
-    var destination = $(elementClick).offset().top;
-    $('html, body').animate({ scrollTop: destination }, 600);
-    return false;
-});
 $('#play_button').click(function(){
 $('video')[0].play();
 })

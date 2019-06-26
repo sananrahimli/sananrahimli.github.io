@@ -83,9 +83,9 @@
 
 <section id="block1">
 	<div class="container">
-		<h1 class="title_blocks">
+		<p class="title_blocks">
 			Наполните дом комфортом
-		</h1>
+		</p>
 		<div class="block1__one_text_and_img">
 			<div class="block1__one_text_and_img_text">
 				Устав от повседневного стресса и <br>серьезных бизнес задач, мы <br>стремимся домой — в место отдыха, <br>наполненое спокойствием и уютом.
@@ -106,9 +106,9 @@
 
 <section id="block2">
 	<div class="container">
-		<h1 class="title_blocks">
+		<p class="title_blocks">
 			Инсталляционная <br>компания DK install 
-		</h1>
+		</p>
 		<div class="block2__text_one">
 			Наша цель — 
 		</div>
@@ -174,9 +174,9 @@
 	<div class="container">
 	<div class="clb block4__clb_1">
 		<div class="block4__left">
-		<h1 class="title_blocks">
+		<p class="title_blocks">
 			проектируем системы
-		</h1>
+		</p>
 		</div>
 		<div class="block4__right">
 			<div class="block4__title_descp">
@@ -252,9 +252,9 @@
 	<div class="container">
 		<div class="clb">
 		<div class="block5__left-block">
-		<h1 class="title_blocks">
+		<p class="title_blocks">
 			аккуратная <br>Установка
-		</h1>
+		</p>
 		<div class="block4__title_descp">
 			Мы работаем вперчаткахи <br>
 сменнойобуви.Накрываем все <br>
@@ -273,9 +273,9 @@
 
 <section id="block6">
 	<div class="container">
-		<h1 class="title_blocks">
+		<p class="title_blocks">
 			важное о DK install
-		</h1>
+		</p>
 		<div class="block6__items">
 			<div class="clb">
 				<div class="block__items_left">
@@ -305,9 +305,9 @@
 
 <section id="block7">
 	<div class="container">
-		<h1 class="title_blocks">
+		<p class="title_blocks">
 			Схема сотрудничества
-		</h1>
+		</p>
 		<ol class="block7__stages_item">
 			<li class="item">
 				<div class="item_front">
@@ -370,9 +370,9 @@
 
 <section id="block8">
 	<div class="container">
-		<h1 class="title_blocks">
+		<p class="title_blocks">
 			Примеры работ
-		</h1>
+		</p>
 		<div class="slider slider-works">
 				<div>
 					<div class="slider-works_item">
@@ -428,9 +428,9 @@
 
 <section id="block9">
 	<div class="container">
-		<h1 class="title_blocks">
+		<p class="title_blocks">
 			Связь с нами
-		</h1>
+		</p>
 		<div class="block9__content_contacts">
 			<div class="item adress">
 				<span>Адрес:</span>
@@ -454,9 +454,9 @@
 	<div class="container">
 		<div class="clb">
 		<div class="block10__left">
-		<h1 class="title_blocks">
+		<p class="title_blocks">
 			Оставьте заявку
-		</h1>
+		</p>
 		<form action="" class="feedback_footer">
 			<input type="hidden" name="project_name" value="Site Name">
   <input type="hidden" name="admin_email" value="admin@mail.com">
@@ -499,6 +499,14 @@
 <link rel="stylesheet" type="text/css" href="css/slick.css"/>
 
 <script type="text/javascript">
+history.pushState('', document.title, window.location.pathname);
+$('a[href^="#"]').bind("click", function(e){
+    var anchor = $(this);
+    $('html, body').stop().animate({
+        scrollTop: $(anchor.attr('href')).offset().top
+    }, 750);
+    e.preventDefault();
+});
         // Как только будет загружен API и готов DOM, выполняем инициализацию
         ymaps.ready(init);
 
@@ -611,6 +619,7 @@ $(document).ready(function() {
 $('#play_button').click(function(){
 $('video')[0].play();
 })
+
 </script>
 </body>
 </html>

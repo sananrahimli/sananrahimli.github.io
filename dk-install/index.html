@@ -592,17 +592,6 @@ $('.burger_btn_close, .close_menu_text, ul.menu_active_links li a').on('click', 
   $('.menu_link').removeClass("active");
   $('header .clb_3').removeClass("clb_right");
 });
-$('#play_button').click(function(){
-$('video')[0].play();
-})
-history.pushState('', document.title, window.location.pathname);
-$('ul.menu_active_links li a').bind("click", function(e){
-    var anchor = $(this);
-    $('html, body').stop().animate({
-        scrollTop: $(anchor.attr('href')).offset().top
-    }, 750);
-    e.preventDefault();
-});
 })
 $(document).ready(function() {
  

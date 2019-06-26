@@ -161,7 +161,7 @@ text-transform: uppercase;
 position: relative;
 cursor: pointer;
 }
-.menu_vert span {
+.menu_vert p {
 transform:matrix(-0.00,-1.00,1.00,-0.00,0,0);
 -ms-transform:matrix(-0.00,-1.00,1.00,-0.00,0,0);
 -webkit-transform:matrix(-0.00,-1.00,1.00,-0.00,0,0);
@@ -912,12 +912,12 @@ line-height: 1.5em;
 	width: 543px;
 	height: 503px;
 	background-image: url(../img/block6/item_bg.png);
-	background-position: center -18px;
+	background-position: center 0;
 	-webkit-background-size: 100%;
 	background-size: 100%;
 	background-repeat: no-repeat;
 	padding-left: 9.5em;
-padding-top: 4.5em;
+padding-top: 6.5em;
 }
 .block__items_right_item_big .title_big {
 	    font-family: 'Gotham Pro';

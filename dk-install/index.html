@@ -48,7 +48,7 @@
 		<span></span>
 	</div>
 	<div class="menu_vert">
-		<span>Смотрите меню</span>
+		<p>Смотрите меню</p>
 	</div>
 	</nav>
 	<div class="clb clb_3">
@@ -499,14 +499,7 @@
 <link rel="stylesheet" type="text/css" href="css/slick.css"/>
 
 <script type="text/javascript">
-history.pushState('', document.title, window.location.pathname);
-$('a[href^="#"]').bind("click", function(e){
-    var anchor = $(this);
-    $('html, body').stop().animate({
-        scrollTop: $(anchor.attr('href')).offset().top
-    }, 750);
-    e.preventDefault();
-});
+
         // Как только будет загружен API и готов DOM, выполняем инициализацию
         ymaps.ready(init);
 
@@ -543,6 +536,14 @@ $('a[href^="#"]').bind("click", function(e){
 				
 				
         }
+history.pushState('', document.title, window.location.pathname);
+$('ul.menu_active_links li a').bind("click", function(e){
+    var anchor = $(this);
+    $('html, body').stop().animate({
+        scrollTop: $(anchor.attr('href')).offset().top
+    }, 750);
+    e.preventDefault();
+});
     </script>
 <script>
 $(".block6__items .item a").on("click", function(e) {

@@ -545,14 +545,16 @@
 <script>
 $(document).ready(function(){
 $(".block6__items .item a").on("click", function(e) { 
+
   $('.block6__items .item a').removeClass("active");
   $(this).addClass("active");
   $('.icon_big_img').attr("src", $(this).data("icon"));
   $('.title_big').text($(this).data("title"));
   $('.text_big').text($(this).data("text"));
 
+
 });
-$('.block7__stages_item .item').on('click', function() {
+$('.block7__stages_item .item').on('click', function() {	
 		$(this).toggleClass('active');
 });
 $('.single-item').slick({
@@ -613,8 +615,6 @@ $(document).ready(function() {
   });
  
 });
-
-
 </script>
 </body>
 </html>

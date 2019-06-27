@@ -220,6 +220,7 @@ section#block2 {padding-top: 0;}
 .menu_link nav {bottom: -3em;}
 .header__bottom {z-index: 99;}
 .block__items_left .item a span {width: 87%;}
+header .video {width: auto;height: 100%;}
 }/* Landscape phones and smaller */
 @media (max-width: 480px) {
 	.header__tw_block__descp_two, a.btn_play, .header__title:after, ul.block2__inst_option li br, .block3_slider_img, .block3_slider .cont_text:after, #block4 div[class*="item"] p br, .block9__content_contacts .item p br, .block1__one_text_and_img_text br {display: none !important;}
@@ -281,6 +282,5 @@ border-top-right-radius: 30px;
 }
  footer .phone, footer .name {float: none; display: block;}
 .line2 {padding-top: 2em;}
-header .video {width: auto;height: 100%;}
 .block4__item img {margin-bottom: 0;}
 }

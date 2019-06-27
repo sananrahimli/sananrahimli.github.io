@@ -67,13 +67,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', e
 	z-index: 2;
 }
 header .video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 0;
-  width: 100%;
-  transform: translate(-50%, -50%);
-  opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(../img/bg_video_poster.png) no-repeat;
+    background-size: cover; 
 }
 .header__min_comp {
 	float: left;

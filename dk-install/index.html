@@ -502,6 +502,7 @@
 <link rel="stylesheet" type="text/css" href="css/slick.css"/>
 
 <script type="text/javascript">
+
 // Как только будет загружен API и готов DOM, выполняем инициализацию
         ymaps.ready(init);
 
@@ -542,20 +543,24 @@
     </script>
 <script>
 $(document).ready(function(){
-$(".block6__items .item a").on("click", function(e) { 
+  //E-mail Ajax Send
+  $("form").submit(function() { //Change
+    var th = $(this);
+    $.ajax({
+      type: "POST",
+      url: "mail.php", //Change
+      data: th.serialize()
+    }).done(function() {
+       $('.good_send').addClass("active");
+      setTimeout(function() {
+        // Done Functions
+        th.trigger("reset");
+      }, 1000);
+    });
+    return false;
+  });
 
-  $('.block6__items .item a').removeClass("active");
-  $(this).addClass("active");
-  $('.icon_big_img').attr("src", $(this).data("icon"));
-  $('.title_big').text($(this).data("title"));
-  $('.text_big').text($(this).data("text"));
-
-
-});
-$('.block7__stages_item .item').on('click', function() {	
-		$(this).toggleClass('active');
-});
-$('.single-item').slick({
+  $('.single-item').slick({
 	arrows: false,
 	 dots: true,
   infinite: true,
@@ -584,7 +589,8 @@ $('.slider-works').slick({
       }
     }]
 });
-$('.burger_btn, .menu_vert').on('click', function() {
+
+  $('.burger_btn, .menu_vert').on('click', function() {
   $('.menu_link').addClass("active");
   $('header .clb_3').addClass("clb_right");
 });
@@ -592,27 +598,40 @@ $('.burger_btn_close, .close_menu_text, ul.menu_active_links li a').on('click', 
   $('.menu_link').removeClass("active");
   $('header .clb_3').removeClass("clb_right");
 });
-})
-$(document).ready(function() {
- 
-  //E-mail Ajax Send
-  $("form").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: "mail.php", //Change
-      data: th.serialize()
-    }).done(function() {
-       $('.good_send').addClass("active");
-      setTimeout(function() {
-        // Done Functions
-        th.trigger("reset");
-      }, 1000);
-    });
-    return false;
-  });
- 
+
+
+$(".block6__items .item a").on("click", function(e) { 
+
+  $('.block6__items .item a').removeClass("active");
+  $(this).addClass("active");
+  $('.icon_big_img').attr("src", $(this).data("icon"));
+  $('.title_big').text($(this).data("title"));
+  $('.text_big').text($(this).data("text"));
+
+
 });
+$('.block7__stages_item .item').on('click', function() {	
+		$(this).toggleClass('active');
+});
+$('a').click(function(e){
+
+	var anch = this.hash.slice(0);
+
+	if(!anch || !anch[0] === "#") return;
+
+	e.preventDefault();
+
+	window.location.hash = '';
+
+	var offset = $(anch).offset();
+
+	$("html, body").animate({scrollTop:$(anch).offset().top},100);
+
+	if(history.pushState) { history.pushState({}, null, window.location.pathname); }
+
+});
+})
+
 </script>
 </body>
 </html>

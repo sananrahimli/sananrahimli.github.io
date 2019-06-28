@@ -619,12 +619,7 @@ $(this).toggleClass('active');
 });
 $(document).ready(function() {
 	$(document).on("click","ul.menu_active_links li a",function(e) {
-		$("html, body").animate({
-			scrollTop: $($(this).attr("href")).offset().top + "px"
-		}, {
-			duration: 500,
-			easing: "swing"
-		});
+		$("html, body").animate({scrollTop: scrollingDistance}, 800);
 		return false;
 	});
 });

@@ -614,14 +614,13 @@ var get_id = $(this).attr("data-item");
 
 });
 
-$(document).on("click",".block7__stages_item li a",function(e) {
-$(this).toggleClass('active');
-});
-$(document).ready(function() {
-	$(document).on("click","ul.menu_active_links li a",function(e) {
-		$("html, body").animate({scrollTop: scrollingDistance}, 800);
-		return false;
-	});
+$(document).ready(function(){
+    $('a[href^="#"], *[data-href^="#"]').on('click', function(e){
+        e.preventDefault();
+        var t = 1000;
+        var d = $(this).attr('data-href') ? $(this).attr('data-href') : $(this).attr('href');
+        $('html,body').stop().animate({ scrollTop: $(d).offset().top }, t);
+    });
 });
 
 })

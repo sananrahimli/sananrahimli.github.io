@@ -918,15 +918,15 @@ line-height: 1.5em;
 	-webkit-background-size: 100%;
 	background-size: 100%;
 	background-repeat: no-repeat;
-	padding-left: 9.5em;
-padding-top: 6.5em;
+	padding-left: 9em;
+padding-top: 5em;
 }
 .block__items_right_item_big .title_big {
 	    font-family: 'Gotham Pro';
 	        font-weight: bold;
     font-style: normal;
     font-size: 18px;
-    margin: 2em 0 1.5em;
+    margin: 1em 0;
     width: 200px;
 }
 .block__items_right_item_big .text_big {

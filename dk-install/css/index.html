@@ -529,13 +529,11 @@ $('.slider-works').slick({
     }]
 });
 
-$(".block__items_left .item a").on("click", function(e) {
+$(document).on(".block__items_left .item a",function(e){
   e.preventDefault();
-
   $('.block__items_left .item a').removeClass("active");
   $(this).addClass("active");
-
-  $('.icon_big_img').attr("src", $(this).data("icon"));
+  $('.icon_big_img').attr("src", $(this).data("icon"))
   $('.title_big').text($(this).data("title"));
   $('.text_big').text($(this).data("text"));
 
@@ -553,10 +551,7 @@ $(document).on("click","ol.block7__stages_item li.item_togg",function(e) {
 });
 var mql = window.matchMedia('all and (max-width: 479px)');
 if (mql.matches) {
-$(".block__items_left .item a").on("click", function(e) {
-  e.preventDefault();
-$('body').animate({ scrollTop: '+=' + window.innerHeight }, '5000');
-}); 
+
     // размер окна 479px или меньше
 } else {
 

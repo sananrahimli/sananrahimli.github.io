@@ -279,7 +279,7 @@
 			<div class="clb">
 				<div class="block__items_left">
 					<div class="block__items_left__left">
-						<div class="item"><a href="" data-href="#block9" data-icon="img/block6/item_big_1.png" data-title="Ответственность" data-text="Мы высоко ценим ваше и свое время, поэтому с самого начала проекта мы всегда находится на связи, готовы ответить на ваши вопросы." class="active"><img src="img/block6/item_min_1.png" alt=""><span>Ответственность</span></a></div>
+						<div class="item"><a href="#block_sr" data-icon="img/block6/item_big_1.png" data-title="Ответственность" data-text="Мы высоко ценим ваше и свое время, поэтому с самого начала проекта мы всегда находится на связи, готовы ответить на ваши вопросы." class="active"><img src="img/block6/item_min_1.png" alt=""><span>Ответственность</span></a></div>
 						<div class="item"><a href="#block_sr" data-item="bloc_sr" data-icon="img/block6/item_big_5.png" data-title="Компетентный персонал" data-text="Наш сотрудник, работающий с вами будет обладать необходимой квалификацией. Если на некоторые вопросы сотрудник не сможет дать точный ответ сразу, то в кратчайшие сроки он будет найден."><img src="img/block6/item_min_5.png" alt=""><span>Компетентный <br>персонал</span></a></div>
 						<div class="item"><a href="#block_sr" data-icon="img/block6/item_big_3.png" data-title="Сроки" data-text="Мы ценим время. Поэтому уделяем особое внимание планированию. Готовы пойти на уступки при возникновении дополнительных пожеланий, и сохранить сроки."><img src="img/block6/item_min_3.png" alt=""><span>Сроки</span></a></div>
 						<div class="item"><a href="#block_sr" id="click" data-icon="img/block6/item_big_4.png" data-title="Качество" data-text="Мы строго придерживаемся своих ценностей, поэтому перфекционизм по умолчанию на высшем уровне. Мы предлагаем своим клиентам только те решения, в надежности которых полностью уверены."><img src="img/block6/item_min_4.png" alt=""><span>Качество</span></a></div>
@@ -499,30 +499,7 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
-$(".block__items_left .item a").on("click", function() {
-
-  $('.block__items_left .item a').removeClass("active");
-  $(this).addClass("active");
-
-  $('.icon_big_img').attr("src", $(this).data("icon"));
-  $('.title_big').text($(this).data("title"));
-  $('.text_big').text($(this).data("text"));
-
-});
-jQuery(document).ready(function($){   
-    $('a[href^="#"]').on('click', function(e) {
-
-        var target = $( $(this).attr('href') );
-
-        if( target.length ) {
-            e.preventDefault();
-            $('html, body').animate({
-                scrollTop: target.offset().top
-            }, 1000);
-        }   
-    });  
-});
-  $('.single-item').slick({
+$('.single-item').slick({
   arrows: false,
    dots: true,
   infinite: true,
@@ -552,6 +529,78 @@ $('.slider-works').slick({
     }]
 });
 
+$(".block__items_left .item a").on("click", function() {
+
+  $('.block__items_left .item a').removeClass("active");
+  $(this).addClass("active");
+
+  $('.icon_big_img').attr("src", $(this).data("icon"));
+  $('.title_big').text($(this).data("title"));
+  $('.text_big').text($(this).data("text"));
+
+});
+$(document).on("click",".burger_btn, .menu_vert",function(e) {
+  $('.menu_link').addClass("active");
+  $('header .clb_3').addClass("clb_right");
+});
+$(document).on("click",".burger_btn_close, .close_menu_text, ul.menu_active_links li a",function(e) {
+  $('.menu_link').removeClass("active");
+  $('header .clb_3').removeClass("clb_right");
+});
+$(document).on("click","ol.block7__stages_item li.item_togg",function(e) {
+  $(this).toggleClass("active");
+});
+
+$("a").click(function () {
+    var elementClick = $(this).attr("href");
+    var destination = $(elementClick).offset().top;
+    $('html, body').animate({ scrollTop: destination }, 600);
+    return false;
+});
+var mql = window.matchMedia('all and (max-width: 479px)');
+if (mql.matches) {
+    // размер окна 479px или меньше
+} else {
+
+$('.block__items_left .item a').removeAttr("href");
+
+}
+
+        ymaps.ready(init);
+
+        function init () {
+            // Создание экземпляра карты и его привязка к контейнеру с
+            // заданным id ("map")
+            var myMap = new ymaps.Map('map', {
+                    // При инициализации карты, обязательно нужно указать
+                    // ее центр и коэффициент масштабирования
+                    center: [55.774472068965174,37.5997855], 
+                    zoom: 17,
+                    controls: []
+                });
+            myMap.setCenter([55.77432693303304,37.59650247616577], 17, {
+    checkZoomRange: true
+});
+        
+        // Создание метки 
+        var myPlacemark = new ymaps.Placemark(
+        // Координаты метки
+        [55.774472068965174,37.5997855] , {
+                    // Свойства
+                    // Текст метки
+                    hintContent: 'DK install Москва, ул. Фадеева 4, офис 2345'
+                }, {
+                    iconImageHref: 'img/map.png', // картинка иконки
+                    iconImageSize: [67, 67], // размеры картинки
+                    iconImageOffset: [-33.5, -33.5] // смещение картинки
+                    });     
+    
+
+        // Добавление метки на карту
+        myMap.geoObjects.add(myPlacemark);
+        
+        
+        }
 });
 </script>
 </body>

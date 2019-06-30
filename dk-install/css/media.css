@@ -142,7 +142,7 @@ section#block9 .title_blocks, section#block8 h1.title_blocks, .block4__title_des
 .slider-works ul.slick-dots {left: 0;width: 100%;text-align: center;}
 ol.block7__stages_item li.item {width: 45%;margin: 0 !important;margin-bottom: 2.5em !important;}
 ol.block7__stages_item li.item:nth-child(2), ol.block7__stages_item li.item:nth-child(4), ol.block7__stages_item li.item:nth-child(6) {margin-left: 7%;}
-ol.block7__stages_item li.item:nth-child(6) {width: 45%;right: 0;padding: 1em 15px;}
+ol.block7__stages_item li.item:nth-child(6) {width: 75%;right: 0;padding: 1em 15px;}
 section#block8 {padding-top: 1em;}
 .block__items_left, .block__items_right, section#block4 .block4__left, section#block4 .block4__right, .block4__left > .block4__item {width: 100%;}
 .icon_big {display: block !important;}

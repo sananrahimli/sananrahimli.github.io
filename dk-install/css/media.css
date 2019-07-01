@@ -365,4 +365,5 @@ transform: rotate(-45deg);
 }
 ol.block7__stages_item li.item:nth-child(6) {width: 75%;}
 .block9__content_contacts .item p {color: #000;}
+header {background-size: 200% 100%;}
 }

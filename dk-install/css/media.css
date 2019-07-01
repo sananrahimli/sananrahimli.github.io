@@ -355,7 +355,9 @@ ul.menu_active_links {width: calc(100% - 5.45em);padding-right: 0;}
 -webkit-transform: rotate(45deg);
 -o-transform: rotate(45deg);
 -ms-transform: rotate(45deg);
-transform: rotate(45deg);top: 10px;}
+transform: rotate(45deg);
+top: 10px;}
+
 .burger_btn.burger_btn_close span:nth-child(3) {
 -moz-transform: rotate(-45deg);
 -webkit-transform: rotate(-45deg);
@@ -364,6 +366,6 @@ transform: rotate(45deg);top: 10px;}
 transform: rotate(-45deg);
 }
 ol.block7__stages_item li.item:nth-child(6) {width: 75%;}
-.block9__content_contacts .item p {color: #000;}
+.block9__content_contacts .item a {color: #000;}
 header {background-size: 200% 100%;}
 }

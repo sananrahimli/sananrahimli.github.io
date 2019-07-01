@@ -378,7 +378,23 @@
 						<img src="img/slider/two/item_1.png" alt="">
 						<h3>Небольшое название <br>проекта или примера</h3>
 						<p>Мы остаемся с вами на связи 24/7 для предоставления <br>экспертных консультаций, технического <br>обслуживания и последующей модернизации <br>оборудования. </p>
-						<a href="" class="btn">Подробнее</a>
+						<a href="#" class="btn">Подробнее</a>
+					</div>
+				</div>
+				<div>
+					<div class="slider-works_item slider-works_item_bottom">
+						<img src="img/slider/two/item_2.png" alt="">
+						<h3>Небольшое название <br>проекта или примера</h3>
+						<p>Мы остаемся с вами на связи 24/7 для предоставления <br>экспертных консультаций, технического <br>обслуживания и последующей модернизации <br>оборудования. </p>
+						<a href="#" class="btn">Подробнее</a>
+					</div>
+				</div>
+				<div>
+					<div class="slider-works_item">
+						<img src="img/slider/two/item_1.png" alt="">
+						<h3>Небольшое название <br>проекта или примера</h3>
+						<p>Мы остаемся с вами на связи 24/7 для предоставления <br>экспертных консультаций, технического <br>обслуживания и последующей модернизации <br>оборудования. </p>
+						<a href="#" class="btn">Подробнее</a>
 					</div>
 				</div>
 				<div>
@@ -394,7 +410,7 @@
 						<img src="img/slider/two/item_1.png" alt="">
 						<h3>Небольшое название <br>проекта или примера</h3>
 						<p>Мы остаемся с вами на связи 24/7 для предоставления <br>экспертных консультаций, технического <br>обслуживания и последующей модернизации <br>оборудования. </p>
-						<a href="" class="btn">Подробнее</a>
+						<a href="#" class="btn">Подробнее</a>
 					</div>
 				</div>
 				<div>
@@ -402,23 +418,7 @@
 						<img src="img/slider/two/item_2.png" alt="">
 						<h3>Небольшое название <br>проекта или примера</h3>
 						<p>Мы остаемся с вами на связи 24/7 для предоставления <br>экспертных консультаций, технического <br>обслуживания и последующей модернизации <br>оборудования. </p>
-						<a href="" class="btn">Подробнее</a>
-					</div>
-				</div>
-				<div>
-					<div class="slider-works_item">
-						<img src="img/slider/two/item_1.png" alt="">
-						<h3>Небольшое название <br>проекта или примера</h3>
-						<p>Мы остаемся с вами на связи 24/7 для предоставления <br>экспертных консультаций, технического <br>обслуживания и последующей модернизации <br>оборудования. </p>
-						<a href="" class="btn">Подробнее</a>
-					</div>
-				</div>
-				<div>
-					<div class="slider-works_item slider-works_item_bottom">
-						<img src="img/slider/two/item_2.png" alt="">
-						<h3>Небольшое название <br>проекта или примера</h3>
-						<p>Мы остаемся с вами на связи 24/7 для предоставления <br>экспертных консультаций, технического <br>обслуживания и последующей модернизации <br>оборудования. </p>
-						<a href="" class="btn">Подробнее</a>
+						<a href="#" class="btn">Подробнее</a>
 					</div>
 				</div>
 		</div>
@@ -432,20 +432,21 @@
 		</p>
 		<div class="block9__content_contacts">
 			<div class="item adress">
-				<span>Адрес:</span>
+				<span>Приезжайте:</span>
 				<p>Москва, ул. Фадеева 4, <br>офис 2345  </p>
 			</div>
 			<div class="item call">
-				<span>Телефон:</span>
+				<span>Звоните:</span>
 				<p>+7 (911) 119-6-911</p>
 			</div>
 			<div class="item email">
-				<span>E-mail:</span>
+				<span>Пишите:</span>
 				<p>mail@mail.ru</p>
 			</div>
 		</div>
 			</div>	
 		<div id="map"></div>
+		<div id="map_mobile"></div>
 
 </section>
 
@@ -579,6 +580,16 @@ $('.block__items_left .item a').removeAttr("href");
                     controls: []
                 });
             myMap.setCenter([55.77432693303304,37.59650247616577], 17, {
+    checkZoomRange: true
+});
+            var myMap2 = new ymaps.Map('map_mobile', {
+                    // При инициализации карты, обязательно нужно указать
+                    // ее центр и коэффициент масштабирования
+                    center: [55.774472068965174,37.5997855], 
+                    zoom: 17,
+                    controls: []
+                });
+            myMap2.setCenter([55.77432693303304,37.59650247616577], 17, {
     checkZoomRange: true
 });
         

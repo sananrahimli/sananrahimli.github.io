@@ -6,6 +6,89 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="css/media.css">
+		
+<script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		var mql = window.matchMedia('all and (max-width: 479px)');
+if (mql.matches) {
+        ymaps.ready(init);
+
+        function init () {
+            // Создание экземпляра карты и его привязка к контейнеру с
+            // заданным id ("map")
+            var myMap = new ymaps.Map('map_mobile', {
+                    // При инициализации карты, обязательно нужно указать
+                    // ее центр и коэффициент масштабирования
+                    center: [55.7196,37.5971], 
+                    zoom: 16,
+                    controls: []
+                });
+            myMap.setCenter([55.7196,37.5971], 16, {
+    checkZoomRange: true
+});
+                 
+        // Создание метки 
+        var myPlacemark = new ymaps.Placemark(
+        // Координаты метки
+        [55.7196,37.5971] , {
+                    // Свойства
+                    // Текст метки
+                    hintContent: 'DK install Москва,Ленинский проспект, 12 Москва, Россия'
+                }, {
+                    iconImageHref: 'img/map.png', // картинка иконки
+                    iconImageSize: [67, 67], // размеры картинки
+                    iconImageOffset: [-33.5, -33.5] // смещение картинки
+                    });     
+    
+
+        // Добавление метки на карту
+        myMap.geoObjects.add(myPlacemark);
+        
+        
+        }
+	$("video").remove()
+    // размер окна 479px или меньше
+} else {
+
+$('.block__items_left .item a').removeAttr("href");
+        ymaps.ready(init);
+
+        function init () {
+            // Создание экземпляра карты и его привязка к контейнеру с
+            // заданным id ("map")
+            var myMap = new ymaps.Map('map', {
+                    // При инициализации карты, обязательно нужно указать
+                    // ее центр и коэффициент масштабирования
+                    center: [55.7196,37.5971], 
+                    zoom: 16,
+                    controls: []
+                });
+            myMap.setCenter([55.7185,37.5891], 16, {
+    checkZoomRange: true
+});
+                 
+        // Создание метки 
+        var myPlacemark = new ymaps.Placemark(
+        // Координаты метки
+        [55.7196,37.5971] , {
+                    // Свойства
+                    // Текст метки
+                    hintContent: 'DK install Москва,Ленинский проспект, 12 Москва, Россия'
+                }, {
+                    iconImageHref: 'img/map.png', // картинка иконки
+                    iconImageSize: [67, 67], // размеры картинки
+                    iconImageOffset: [-33.5, -33.5] // смещение картинки
+                    });     
+    
+
+        // Добавление метки на карту
+        myMap.geoObjects.add(myPlacemark);
+        
+        
+        }
+
+}
+	</script>
 </head>
 <body>
 
@@ -492,7 +575,6 @@
 	</div>
 </footer>
 
-<script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/slick.js"></script>
 <script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
 
@@ -558,85 +640,7 @@ $("a").click(function () {
     $('html, body').animate({ scrollTop: destination }, 600);
     return false;
 });
-var mql = window.matchMedia('all and (max-width: 479px)');
-if (mql.matches) {
-        ymaps.ready(init);
 
-        function init () {
-            // Создание экземпляра карты и его привязка к контейнеру с
-            // заданным id ("map")
-            var myMap = new ymaps.Map('map_mobile', {
-                    // При инициализации карты, обязательно нужно указать
-                    // ее центр и коэффициент масштабирования
-                    center: [55.7196,37.5971], 
-                    zoom: 16,
-                    controls: []
-                });
-            myMap.setCenter([55.7196,37.5971], 16, {
-    checkZoomRange: true
-});
-                 
-        // Создание метки 
-        var myPlacemark = new ymaps.Placemark(
-        // Координаты метки
-        [55.7196,37.5971] , {
-                    // Свойства
-                    // Текст метки
-                    hintContent: 'DK install Москва,Ленинский проспект, 12 Москва, Россия'
-                }, {
-                    iconImageHref: 'img/map.png', // картинка иконки
-                    iconImageSize: [67, 67], // размеры картинки
-                    iconImageOffset: [-33.5, -33.5] // смещение картинки
-                    });     
-    
-
-        // Добавление метки на карту
-        myMap.geoObjects.add(myPlacemark);
-        
-        
-        }
-	$("video").remove()
-    // размер окна 479px или меньше
-} else {
-
-$('.block__items_left .item a').removeAttr("href");
-        ymaps.ready(init);
-
-        function init () {
-            // Создание экземпляра карты и его привязка к контейнеру с
-            // заданным id ("map")
-            var myMap = new ymaps.Map('map', {
-                    // При инициализации карты, обязательно нужно указать
-                    // ее центр и коэффициент масштабирования
-                    center: [55.7196,37.5971], 
-                    zoom: 16,
-                    controls: []
-                });
-            myMap.setCenter([55.7185,37.5891], 16, {
-    checkZoomRange: true
-});
-                 
-        // Создание метки 
-        var myPlacemark = new ymaps.Placemark(
-        // Координаты метки
-        [55.7196,37.5971] , {
-                    // Свойства
-                    // Текст метки
-                    hintContent: 'DK install Москва,Ленинский проспект, 12 Москва, Россия'
-                }, {
-                    iconImageHref: 'img/map.png', // картинка иконки
-                    iconImageSize: [67, 67], // размеры картинки
-                    iconImageOffset: [-33.5, -33.5] // смещение картинки
-                    });     
-    
-
-        // Добавление метки на карту
-        myMap.geoObjects.add(myPlacemark);
-        
-        
-        }
-
-}
 
 
 });

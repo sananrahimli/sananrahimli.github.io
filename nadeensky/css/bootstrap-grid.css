@@ -7,7 +7,9 @@
 @-ms-viewport {
   width: device-width;
 }
-
+body{
+    min-width:1200px;
+}
 html {
   box-sizing: border-box;
   -ms-overflow-style: scrollbar;

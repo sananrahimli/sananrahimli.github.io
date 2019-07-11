@@ -31,37 +31,16 @@ html {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  width: 1200px !important;
 }
 .no-padding {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1170px !important;
-  }
-}
 
 .container-fluid {
   width: 100%;
+  min-width: 1266px !important;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -940,7 +919,6 @@ html {
   }
 }
 
-@media (min-width: 1200px) {
   .col-xl {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
@@ -1139,7 +1117,7 @@ html {
   .offset-xl-11 {
     margin-left: 91.666667%;
   }
-}
+
 
 .d-none {
   display: none !important;

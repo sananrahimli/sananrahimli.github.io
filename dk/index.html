@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/media.css">
+		
+<script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
+<script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+<script src="js/jquery.vide.js"></script>  
+	<script type="text/javascript">
+		var mql = window.matchMedia('all and (max-width: 479px)');
+if (mql.matches) {
+        ymap.ready(init);
+
+        function init () {
+            // Создание экземпляра карты и его привязка к контейнеру с
+            // заданным id ("map")
+            var myMap = new ymap.Map('map_mobile', {
+                    // При инициализации карты, обязательно нужно указать
+                    // ее центр и коэффициент масштабирования
+                    center: [55.7196,37.5971], 
+                    zoom: 16,
+                    controls: []
+                });
+            myMap.setCenter([55.7196,37.5971], 16, {
+    checkZoomRange: true
+});
+                 
+        // Создание метки 
+        var myPlacemark = new ymapPlacemark(
+        // Координаты метки
+        [55.7196,37.5971] , {
+                    // Свойства
+                    // Текст метки
+                    hintContent: 'DK install Москва,Ленинский проспект, 12 Москва, Россия'
+                }, {
+                    iconImageHref: 'img/map.png', // картинка иконки
+                    iconImageSize: [67, 67], // размеры картинки
+                    iconImageOffset: [-33.5, -33.5] // смещение картинки
+                    });     
+    
+
+        // Добавление метки на карту
+        myMap.geoObjects.add(myPlacemark);
+        
+        
+        }
+    // размер окна 479px или меньше
+} else {
+
+$('.block__items_left .item a').removeAttr("href");
+        ymaps.ready(init);
+
+        function init () {
+            // Создание экземпляра карты и его привязка к контейнеру с
+            // заданным id ("map")
+            var myMap = new ymaps.Map('map', {
+                    // При инициализации карты, обязательно нужно указать
+                    // ее центр и коэффициент масштабирования
+                    center: [55.7196,37.5971], 
+                    zoom: 16,
+                    controls: []
+                });
+            myMap.setCenter([55.7185,37.5891], 16, {
+    checkZoomRange: true
+});
+                 
+        // Создание метки 
+        var myPlacemark = new ymaps.Placemark(
+        // Координаты метки
+        [55.7196,37.5971] , {
+                    // Свойства
+                    // Текст метки
+                    hintContent: 'DK install Москва,Ленинский проспект, 12 Москва, Россия'
+                }, {
+                    iconImageHref: 'img/map.png', // картинка иконки
+                    iconImageSize: [67, 67], // размеры картинки
+                    iconImageOffset: [-33.5, -33.5] // смещение картинки
+                    });     
+    
+
+        // Добавление метки на карту
+        myMap.geoObjects.add(myPlacemark);
+        
+        
+        }
+
+}
+	</script>
+</head>
+<body>
+
+<header data-vide-bg="video/video">
+	<div class="menu_link">
+		<div class="container">
+			<div class="menu_link_bg">
+			<div class="header__min_comp"></div>
+			<ul class="menu_active_links">
+				<li><a href="#block1">Наше предложение</a></li>
+				<li><a href="#block2">О компании</a></li>
+				<li><a href="#block3">Выбирайте систему</a></li>
+				<li><a href="#block4">Установка</a></li>
+				<li><a href="#block5">Преимущества</a></li>
+				<li><a href="#block6">Сотруднечество</a></li>
+				<li><a href="#block7">Примеры работы</a></li>
+				<li><a href="#block8">Контакты</a></li>
+			</ul>
+				<nav>
+	<div class="burger_btn burger_btn_close">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<div class="close_menu_text">Скрыть меню</div>
+	</nav>
+	</div>
+		</div>
+	</div>
+	<div class="container">
+	<div class="clb">
+	<div class="header__min_comp"></div>
+	<div class="header__phone_comp"><a href="tel:+79111196911">+7 (911) 119-6-911</a></div>
+	</div>
+	<nav>
+	<div class="burger_btn">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<div class="menu_vert">
+	Смотрите меню
+	</div>
+	</nav>
+	<div class="clb clb_3">
+	<div class="header__title">
+			Инсталляционная <br>компания <br>DK install
+	</div>
+	</div>
+	<div class="clb clb_3">
+	<div class="header__tw_block">
+		<div class="header__tw_block__descp">
+			проектирование/монтаж <br>аудит/обслуживание <br>Аудио-Видео
+		</div>
+		<div class="header__tw_block__descp_two">
+			комфорт <br>в деталях
+		</div>
+	</div>
+	</div>
+	<div class="clb clb_3">
+	<div class="header__bottom">
+		<div class="header_bottom_btn">
+			<a href="#block10">Выберите расчёт стоимости</a>
+		</div>
+		<div class="header_bottom_soc">
+			<a href="https://www.instagram.com/dk_install/">dk_install</a>
+		</div>
+	</div>
+	</div>
+	</div>
+</header>
+
+
+<section id="block1">
+	<div class="container">
+		<p class="title_blocks">
+			Наполните дом комфортом
+		</p>
+		<div class="block1__one_text_and_img">
+			<div class="block1__one_text_and_img_text">
+				Устав от повседневного стресса и <br>серьезных бизнес задач, мы <br>стремимся домой — в место отдыха, <br>наполненое спокойствием и уютом.
+			</div>
+			<img src="img/block1_img_1.png" alt="">
+		</div>
+		<ul class="block1__two_text_and_text">
+			<li>
+			Расскажите нам, каким вы видите <br>	свой новый дом
+
+			</li>
+			<li>
+			Приготовим расчёт за 24 <br>часа и проект за 7 дней
+			</li>
+		</ul>
+	</div>
+</section>
+
+<section id="block2">
+	<div class="container">
+		<p class="title_blocks">
+			Инсталляционная <br>компания DK install 
+		</p>
+		<ul class="block2__inst_option">
+			<li>
+				Вам не придется изучать массу <br>технической информации.
+			</li>
+			<li>
+				Озвучьте нам свои пожелания, и мы <br>подберем комплект технических.
+			</li>
+		</ul>
+	</div>
+</section>
+
+<section id="block3">
+	<div class="container">
+		<div class="slider single-item">
+				<div>
+				<div class="block3_slider">
+					<div class="cont_text">
+						<div class="block3_slider__cont_text_icon"><img src="img/slider/one/one_icon_1.png" alt=""></div>
+						<div class="block3_slider__cont_text_text">Инсталляционная компания DK install - это сервис по <br>проектированию и установке ТЕХНИЧЕСКИХ СИСТЕМ.</div>
+					</div>
+					<img class="block3_slider_img" src="img/slider/one/one_1.png" alt="">
+				</div>
+				</div>
+				<div>
+				<div class="block3_slider">
+					<div class="cont_text">
+						<div class="block3_slider__cont_text_icon"><img src="img/slider/one/one_icon_2.png" alt=""></div>
+						<div class="block3_slider__cont_text_text">Уже более десятилетия мы изучаем и осваиваем передовые технологии, чтобы предоставлять вам инновационные решения и делать вашу жизнь максимально комфортной. </div>
+					</div>
+					<img class="block3_slider_img" src="img/slider/one/one_2.png" alt="">
+				</div>
+				</div>
+				<div>
+				<div class="block3_slider">
+					<div class="cont_text">
+						<div class="block3_slider__cont_text_icon"><img src="img/slider/one/one_icon_3.png" alt=""></div>
+						<div class="block3_slider__cont_text_text">Экспертный уровень инженеров, широкие технические возможности и сотрудничество с поставщиками оборудования профессионального уровня позволяют нам решать даже такие сложные и нестандартные задачи, с которыми не могут справиться большинство из наших коллег. </div>
+					</div>
+					<img class="block3_slider_img" src="img/slider/one/one_3.png" alt="">
+				</div>
+				</div>
+				<div>
+				<div class="block3_slider">
+					<div class="cont_text">
+						<div class="block3_slider__cont_text_icon"><img src="img/slider/one/one_icon_3.png" alt=""></div>
+						<div class="block3_slider__cont_text_text">Экспертный уровень инженеров, широкие технические возможности и сотрудничество с поставщиками оборудования профессионального уровня позволяют нам решать даже такие сложные и нестандартные задачи, с которыми не могут справиться большинство из наших коллег. </div>
+					</div>
+					<img class="block3_slider_img" src="img/slider/one/one_4.png" alt="">
+				</div>
+				</div>
+			</div>
+
+			<div class="block3_btn_offer">
+				<a href="#block10">Заказать проект</a>
+			</div>
+	</div>
+</section>
+
+<section id="block4">
+	<div class="container">
+	<div class="clb block4__clb_1">
+		<div class="block4__left">
+		<p class="title_blocks">
+			проектируем системы
+		</p>
+		</div>
+		<div class="block4__right">
+			<div class="block4__title_descp">
+				и мы подготовим индивидуальное <br>решение специально для вас
+			</div>
+		</div>
+	</div>
+	<div class="clb">
+		<div class="block4__left">
+			<div class="block4__item">
+				<img src="img/blokc4__item_1.png" alt="">
+				<div>
+				<h3>Системы умный дом</h3>
+				<p>Новейшие разработки для обеспечения комфорта, <br>безопасности, климат-контроля <br>и  энергоэффективности вашего дома </p>
+				</div>
+			</div>
+		</div>
+		<div class="block4__right">
+			
+			<div class="block4__item">
+				<img src="img/blokc4__item_2.png" alt="">
+				<div>
+				<h3>Домашние кинотеатры</h3>
+				<p>Инновационные модели <br>обоaрудования для полного <br>погружения в мир качественного кино. </p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="clb">
+		<div class="block4__left block4__left_two_colon">
+			<div class="block4__item">
+				<img src="img/blokc4__item_3.png" alt="">
+				<div>
+				<h3>Системы  <br>освещения</h3>
+				<p>Свет, который <br>подстраивается под <br>уровень естественного <br>освещения, экономит  <br>ресурсы и понимает вас <br>с одного движения.</p>
+				</div>
+			</div>
+
+			<div class="block4__item">
+				<img src="img/blokc4__item_4.png" alt="">
+				<div>
+				<h3>Стереосистемы <br>и караоке</h3>
+				<p>Профессиональная <br>техника для тех, кто знает <br>толк в музыке и искренне <br>любит исполнять хиты в <br>караоке. </p>
+				</div>
+			</div>
+
+			<div class="block4__item">
+				<img src="img/blokc4__item_5.png" alt="">
+				<div>
+				<h3>Wi-Fi</h3>
+				<p>Надежный беспроводной <br>интернет обеспечит мгновенную <br>загрузку даже самых «тяжелых» <br>файлов в каждой комнате и по <br>всей территории участка вашего <br>загородного дома.</p>
+				</div>
+			</div>
+		</div>
+		<div class="block4__right">
+			
+			<div class="block4__item block4__item__big">
+				<img src="img/blokc4__item_6.png" alt="">
+				<div>
+				<h3>Техобслуживание <br>и модернизация</h3>
+				<p>Прогресс не стоит на месте. Мы <br>
+сделаем все, чтобы ваш дом был <br>
+готов к новым технологиям и всегда <br>соответствовал передовым <br>стандартам.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</section>
+
+<section id="block5">
+	<div class="container">
+		<div class="clb">
+		<div class="block5__left-block">
+		<p class="title_blocks">
+			аккуратная <br>Установка
+		</p>
+		<div class="block4__title_descp">
+			Мы работаем в перчаткахи <br>
+сменной обуви. Накрываем все <br>
+поверхности для защиты от <br>
+повреждений. Не мусорим - Вам не <br>
+придется убирать за нами.
+		</div>
+		</div>
+		<div class="block5__right-block">
+		<div class="image_vide_bg"></div>
+		</div>
+		</div>
+	</div>
+</section>
+
+
+<section id="block6">
+	<div class="container">
+		<p class="title_blocks">
+			важное о DK install
+		</p>
+		<div class="block6__items">
+			<div class="clb">
+				<div class="block__items_left">
+					<div class="block__items_left__left">
+						<div class="item"><a href="#block_sr" data-icon="img/block6/item_big_1.png" data-title="Ответственность" data-text="Мы высоко ценим ваше и свое время, поэтому с самого начала проекта мы всегда находится на связи, готовы ответить на ваши вопросы." class="active"><img src="img/block6/item_min_1.png" alt=""><span>Ответственность</span></a></div>
+						<div class="item"><a href="#block_sr" data-item="bloc_sr" data-icon="img/block6/item_big_5.png" data-title="Компетентный персонал" data-text="Наш сотрудник, работающий с вами будет обладать необходимой квалификацией. Если на некоторые вопросы сотрудник не сможет дать точный ответ сразу, то в кратчайшие сроки он будет найден."><img src="img/block6/item_min_5.png" alt=""><span>Компетентный <br>персонал</span></a></div>
+						<div class="item"><a href="#block_sr" data-icon="img/block6/item_big_3.png" data-title="Сроки" data-text="Мы ценим время. Поэтому уделяем особое внимание планированию. Готовы пойти на уступки при возникновении дополнительных пожеланий, и сохранить сроки."><img src="img/block6/item_min_3.png" alt=""><span>Сроки</span></a></div>
+						<div class="item"><a href="#block_sr" id="click" data-icon="img/block6/item_big_4.png" data-title="Качество" data-text="Мы строго придерживаемся своих ценностей, поэтому перфекционизм по умолчанию на высшем уровне. Мы предлагаем своим клиентам только те решения, в надежности которых полностью уверены."><img src="img/block6/item_min_4.png" alt=""><span>Качество</span></a></div>
+					</div>
+					<div class="block__items_left__right">
+						<div class="item"><a href="#block_sr" data-icon="img/block6/item_big_9.png" data-title="Готовность устранять ошибки" data-text="Мы строго придерживаемся своих ценностей, поэтому перфекционизм по умолчанию на высшем уровне. Мы предлагаем своим клиентам только те решения, в надежности которых полностью уверены."><img src="img/block6/item_min_9.png" alt=""><span>Готовность <br>устранять ошибки</span></a></div>
+						<div class="item"><a href="#block_sr" data-icon="img/block6/item_big_6.png" data-title="Прозрачность" data-text="Мы ведем честный бизнес, поэтому все наши сметы прозрачны и максимально понятны. Стоимость проекта всегда рассчитывается заранее, все изменения в счет вносятся только с Вашего согласия, после согласования которых мы приступаем к реализации. "><img src="img/block6/item_min_6.png" alt=""><span>Прозрачность</span></a></div>
+						<div class="item"><a href="#block_sr" data-icon="img/block6/item_big_2.png" data-title="Консультации" data-text="Мы не упускаем возможность совершенствоваться, изучать новые технологии. Наша главная задача – услышать вас и ваши пожелания. После этого мы предлагаем оптимальные решения для вашего проекта."><img src="img/block6/item_min_2.png" alt=""><span>Консультации</span></a></div>
+					</div>
+				</div>
+				<div class="block__items_right" id="block_sr">
+					<div class="block__items_right_item_big">
+						<div class="icon_big"><img class="icon_big_img" src="img/block6/item_big_1.png" alt=""></div>
+						<div class="title_big">Ответственность</div>
+						<div class="text_big">Мы высоко ценим ваше и свое время, поэтому с самого начала проекта мы всегда находится на связи, готовы ответить на ваши вопросы.</div>
+					</div>
+				</div>
+				</div>
+			</div>	
+	</div>
+</section>
+
+<section id="block7">
+	<div class="container">
+		<p class="title_blocks">
+			Схема сотрудничества
+		</p>
+		<ol class="block7__stages_item">
+			<li class="item item_togg">
+				<div class="item_front">
+					<div class="item_front__icon"><img src="img/block7/item_1.png" alt=""></div>
+					<p>Консультация </p>
+				</div>
+				<div class="item_back">
+				<p>Вы сообщаете нам задачу, 
+а мы ищем лучшее решение 
+и бесплатно  разрабатываем проект.</p>
+				</div>
+			</li>
+			<li class="item item_togg">
+				<div class="item_front">
+					<div class="item_front__icon"><img src="img/block7/item_2.png" alt=""></div>
+					<p>Проектирование</p>
+				</div>
+				<div class="item_back">
+					<p>После утверждения <br>проекта мы заключаем <br>договор и вы вносите <br>предоплату на закупку <br>расходных материалов.</p>
+				</div>
+			</li>
+			<li class="item item_togg">
+				<div class="item_front">
+					<div class="item_front__icon"><img src="img/block7/item_3.png" alt=""></div>
+					<p>Строительные <br>работы</p>
+				</div>
+				<div class="item_back">
+					<p>Прокладываем <br>внутренние <br>кабельные системы.</p>
+				</div>
+			</li>
+			<li class="item item_togg">
+				<div class="item_front">
+					<div class="item_front__icon"><img src="img/block7/item_4.png" alt=""></div>
+					<p>Монтаж <br>систем</p>
+				</div>
+				<div class="item_back">
+					<p>Мы бережно доставляем <br>оборудование, аккуратно <br>устанавливаем его <br>производим точную <br>настройку. </p>
+				</div>
+			</li>
+			<li class="item item_togg">
+				<div class="item_front">
+					<div class="item_front__icon"><img src="img/block7/item_5.png" alt=""></div>
+					<p>Демонстрация <br>обучение</p>
+				</div>
+				<div class="item_back">
+					<p>Вы утверждаете успешный <br>результат нашей работы и <br>рекомендуете нас своим <br>друзьям</p>
+				</div>
+			</li>
+			<li class="item">
+				<div class="item_front">
+					<p>Продолжаем <br>сотрудничество</p>
+					<span>
+						Мы остаемся с вами на связи 24/7 для <br>предоставления экспертных консультаций, <br>технического обслуживания и последующей <br>модернизации оборудования. 
+					</span>
+				</div>
+			</li>
+		</ol>
+	</div>
+</section>
+
+<section id="block8">
+	<div class="container">
+		<p class="title_blocks">
+			Примеры работ
+		</p>
+		<div class="slider slider-works">
+				<div>
+					<div class="slider-works_item">
+						<img src="img/slider/two/item_1.png" alt="">
+						<h3>Небольшое название <br>проекта или примера</h3>
+						<p>Мы остаемся с вами на связи 24/7 для предоставления <br>экспертных консультаций, технического <br>обслуживания и последующей модернизации <br>оборудования. </p>
+						<a href="#" class="btn">Подробнее</a>
+					</div>
+				</div>
+				<div>
+					<div class="slider-works_item slider-works_item_bottom">
+						<img src="img/slider/two/item_2.png" alt="">
+						<h3>Небольшое название <br>проекта или примера</h3>
+						<p>Мы остаемся с вами на связи 24/7 для предоставления <br>экспертных консультаций, технического <br>обслуживания и последующей модернизации <br>оборудования. </p>
+						<a href="#" class="btn">Подробнее</a>
+					</div>
+				</div>
+				<div>
+					<div class="slider-works_item">
+						<img src="img/slider/two/item_1.png" alt="">
+						<h3>Небольшое название <br>проекта или примера</h3>
+						<p>Мы остаемся с вами на связи 24/7 для предоставления <br>экспертных консультаций, технического <br>обслуживания и последующей модернизации <br>оборудования. </p>
+						<a href="#" class="btn">Подробнее</a>
+					</div>
+				</div>
+				<div>
+					<div class="slider-works_item slider-works_item_bottom">
+						<img src="img/slider/two/item_2.png" alt="">
+						<h3>Небольшое название <br>проекта или примера</h3>
+						<p>Мы остаемся с вами на связи 24/7 для предоставления <br>экспертных консультаций, технического <br>обслуживания и последующей модернизации <br>оборудования. </p>
+						<a href="" class="btn">Подробнее</a>
+					</div>
+				</div>
+				<div>
+					<div class="slider-works_item">
+						<img src="img/slider/two/item_1.png" alt="">
+						<h3>Небольшое название <br>проекта или примера</h3>
+						<p>Мы остаемся с вами на связи 24/7 для предоставления <br>экспертных консультаций, технического <br>обслуживания и последующей модернизации <br>оборудования. </p>
+						<a href="#" class="btn">Подробнее</a>
+					</div>
+				</div>
+				<div>
+					<div class="slider-works_item slider-works_item_bottom">
+						<img src="img/slider/two/item_2.png" alt="">
+						<h3>Небольшое название <br>проекта или примера</h3>
+						<p>Мы остаемся с вами на связи 24/7 для предоставления <br>экспертных консультаций, технического <br>обслуживания и последующей модернизации <br>оборудования. </p>
+						<a href="#" class="btn">Подробнее</a>
+					</div>
+				</div>
+		</div>
+	</div>
+</section>
+
+<section id="block9">
+	<div class="container">
+		<p class="title_blocks">
+			Связь с нами
+		</p>
+		<div class="block9__content_contacts">
+			<div class="item adress">
+				<span>Приезжайте:</span>
+				<p>Москва, ул. Фадеева 4, <br>офис 2345  </p>
+			</div>
+			<div class="item call">
+				<span>Звоните:</span>
+				<p>+7 (911) 119-6-911</p>
+			</div>
+			<div class="item email">
+				<span>Пишите:</span>
+				<p>mail@mail.ru</p>
+			</div>
+		</div>
+			</div>	
+		<div id="map"></div>
+		<div id="map_mobile"></div>
+
+</section>
+
+<section id="block10">
+	<div class="container">
+		<div class="clb">
+		<div class="block10__left">
+		<p class="title_blocks">
+			Оставьте заявку
+		</p>
+		<form action="" class="feedback_footer">
+			<input type="hidden" name="project_name" value="Site Name">
+  <input type="hidden" name="admin_email" value="admin@mail.com">
+  <input type="hidden" name="form_subject" value="Form Subject">
+			<input type="text" name="Name" placeholder="Имя" required>
+			<input type="text" name="Phone" placeholder="Телефон" required>
+			<button>Мы позвоним вам</button>
+			<div class="good_send"><div class="good_send_yes"><div class="good_send_yes_ovr"></div></div><span>Заявка принята!</span></div>
+		</form>
+		<form>
+ 
+ 
+</form>
+		</div>
+		<div class="block10__right">
+			<div class="block10_img">
+				<img src="img/block10_img.png" alt="">
+			</div>
+		</div>
+		</div>
+	</div>
+</section>
+
+<footer>
+	<div class="container">
+		<div class="clb">
+			<div class="name">DK install</div>
+			<div class="phone"><a href="tel:+79111196911">+7 (911) 119-6-911</a></div>
+		</div>
+		<div class="line2">
+			© Все права принадлежат DK install, 2019
+		</div>
+	</div>
+</footer>
+
+<script type="text/javascript" src="js/slick.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+
+<script type="text/javascript">
+$(document).ready(function(){
+$('.single-item').slick({
+  arrows: false,
+   dots: true,
+  infinite: true,
+   responsive: [
+    {
+      breakpoint: 770,
+      settings: {        
+  adaptiveHeight: true
+      }
+    }]
+});
+$('.slider-works').slick({
+  arrows: true,
+  slidesToShow: 2,
+  slidesToScroll: 2,
+   dots: true,
+  infinite: true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    }]
+});
+
+$(".block__items_left .item a").on("click", function() {
+
+  $('.block__items_left .item a').removeClass("active");
+  $(this).addClass("active");
+
+  $('.icon_big_img').attr("src", $(this).data("icon"));
+  $('.title_big').text($(this).data("title"));
+  $('.text_big').text($(this).data("text"));
+
+});
+$(document).on("click",".burger_btn, .menu_vert",function(e) {
+  $('.menu_link').addClass("active");
+  $('header .clb_3').addClass("clb_right");
+});
+$(document).on("click",".burger_btn_close, ul.menu_active_links li a",function(e) {
+  $('.menu_link').removeClass("active");
+  $('header .clb_3').removeClass("clb_right");
+});
+$(document).on("click","ol.block7__stages_item li.item_togg",function(e) {
+  $(this).toggleClass("active");
+});
+
+$("a").click(function () {
+    var elementClick = $(this).attr("href");
+    var destination = $(elementClick).offset().top;
+    $('html, body').animate({ scrollTop: destination }, 600);
+    return false;
+});
+
+
+
+});
+</script>
+</body>
+</html>

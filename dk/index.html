@@ -13,12 +13,12 @@
 	<script type="text/javascript">
 		var mql = window.matchMedia('all and (max-width: 479px)');
 if (mql.matches) {
-        ymap.ready(init);
+        ymapm.ready(init);
 
         function init () {
             // Создание экземпляра карты и его привязка к контейнеру с
             // заданным id ("map")
-            var myMap = new ymap.Map('map_mobile', {
+            var myMap = new ymapm.Map('map_mobile', {
                     // При инициализации карты, обязательно нужно указать
                     // ее центр и коэффициент масштабирования
                     center: [55.7196,37.5971], 

@@ -13,19 +13,19 @@
 	<script type="text/javascript">
 		var mql = window.matchMedia('all and (max-width: 479px)');
 if (mql.matches) {
-        ymapm.ready(init);
+        ymap.ready(init);
 
         function init () {
             // Создание экземпляра карты и его привязка к контейнеру с
             // заданным id ("map")
-            var myMap = new ymapm.Map('map_mobile', {
+            var myMapM = new ymap.Map('map_mobile', {
                     // При инициализации карты, обязательно нужно указать
                     // ее центр и коэффициент масштабирования
                     center: [55.7196,37.5971], 
                     zoom: 16,
                     controls: []
                 });
-            myMap.setCenter([55.7196,37.5971], 16, {
+            myMapM.setCenter([55.7196,37.5971], 16, {
     checkZoomRange: true
 });
                  
@@ -43,7 +43,7 @@ if (mql.matches) {
     
 
         // Добавление метки на карту
-        myMap.geoObjects.add(myPlacemark);
+        myMapM.geoObjects.add(myPlacemark);
         
         
         }
@@ -68,7 +68,7 @@ $('.block__items_left .item a').removeAttr("href");
 });
                  
         // Создание метки 
-        var myPlacemark = new ymaps.Placemark(
+        var myPlacemarkD = new ymaps.Placemark(
         // Координаты метки
         [55.7196,37.5971] , {
                     // Свойства
@@ -83,7 +83,7 @@ $('.block__items_left .item a').removeAttr("href");
     
 
         // Добавление метки на карту
-        myMap.geoObjects.add(myPlacemark);
+        myMap.geoObjects.add(myPlacemarkD);
         
         
         }

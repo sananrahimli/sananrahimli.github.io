@@ -31,7 +31,7 @@
     loop: true,
     autoplay: true,
     position: '50% 50%',
-    posterType: 'detect',
+    posterType: 'png',
     resizing: true,
     bgColor: 'transparent',
     className: ''

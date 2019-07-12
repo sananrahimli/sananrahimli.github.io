@@ -91,11 +91,11 @@ color: rgb(54, 162, 244);
 margin-left: .25em;
 }
 
-header:after {
+header .container:after {
 	content: '';
 	position: absolute;
-	right: 3em;
-top: 18.2em;
+right: -1em;
+top: 15.6em;
 	width: 663px;
 	height: 470px;
 	background-image: url(../img/header_img1.png);
@@ -258,7 +258,7 @@ section#block4 ul.block4__select_wors li {
 section#block4 ul.block4__select_wors li h4 {
 	font-weight: 700;
 	font-size: 18px;
-	margin: 0 0 1em;
+	margin: 0 0 1em -1em;
 }
 section#block4 ul.block4__select_wors li p {
 	font-weight: 400;
@@ -333,7 +333,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4194fc', end
 	font-weight: 700;
 	font-size: 20px;
   color: rgb(7, 34, 47);
+  text-align: center;
+  
 }
+.block5__developer_technology_name__tal {text-align: left;}
 
 #block6 {
     margin-top: 1em;

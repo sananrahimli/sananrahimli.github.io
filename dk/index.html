@@ -30,13 +30,12 @@ if (mql.matches) {
 });
                  
         // Создание метки 
-        var myPlacemark = new ymapPlacemark(
-        // Координаты метки
-        [55.7196,37.5971] , {
+        var myPlacemark = new ymapPlacemark([55.7196,37.5971], {
                     // Свойства
                     // Текст метки
                     hintContent: 'DK install Москва,Ленинский проспект, 12 Москва, Россия'
                 }, {
+                	iconLayout: "default#image",
                     iconImageHref: 'https://sananrahimli.github.io/dk/img/map.png', // картинка иконки
                     iconImageSize: [67, 67], // размеры картинки
                     iconImageOffset: [-33.5, -33.5] // смещение картинки
@@ -76,6 +75,7 @@ $('.block__items_left .item a').removeAttr("href");
                     // Текст метки
                     hintContent: 'DK install Москва,Ленинский проспект, 12 Москва, Россия'
                 }, {
+                	iconLayout: "default#image",
                     iconImageHref: 'https://sananrahimli.github.io/dk/img/map.png', // картинка иконки
                     iconImageSize: [67, 67], // размеры картинки
                     iconImageOffset: [-33.5, -33.5] // смещение картинки

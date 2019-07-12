@@ -82,6 +82,12 @@ header .video {
     background: url(../img/bg_video_poster.png) no-repeat;
     background-size: cover; 
 }
+.clb_3 {
+-webkit-transition: .5s;
+-o-transition: .5s;
+transition: .5s;
+
+}
 .header__min_comp {
 	float: left;
 	width: 134px;

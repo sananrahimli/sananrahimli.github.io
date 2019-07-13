@@ -520,16 +520,11 @@ $('.block__items_left .item a').removeAttr("href");
                     zoom: 16,
                     controls: []
                 });
-            myMap.setCenter([setc], 16, {
+            myMap.setCenter([55.7185,37.5891], 16, {
     checkZoomRange: true
 });
                  
         // Создание метки 
-        if (width > 600) {
-var setc = 55.7196,37.5971;
-} else {
-var setc = 55.7185,37.5891;
-}
         var myPlacemark = new ymaps.Placemark(
         // Координаты метки
         [55.7196,37.5971] , {

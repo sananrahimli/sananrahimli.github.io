@@ -221,7 +221,20 @@ display: block;	}
 section#block3 .block3_btn_offer a {padding: 18px 47px}
 header {padding-bottom: 2em;}
 section#block2 {padding-top: 0;}
-#map {display: block;width: 100%;height: 300px;}
+#map {display: block;width: 100%;height: 300px;margin-top: 0;}
+#map:before {display: none;}
+.block9__content_contacts {position: relative;margin-top: 4em;}
+.block9__content_contacts:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -60px;
+    background-image: url(../img/block8_before.png);
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 213px;
+}
 .clb.clb_right {left: 13.8em;}
 .menu_link nav {bottom: -3em;}
 .header__bottom {z-index: 99;}

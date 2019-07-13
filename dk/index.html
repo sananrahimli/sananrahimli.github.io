@@ -507,6 +507,11 @@ $('.block__items_left .item a').removeAttr("href");
 }
 	</script>
 <script type="text/javascript">
+if (width > 600) {
+var setc = 55.7196,37.5971;
+} else {
+var setc = 55.7185,37.5891;
+}
 	 ymaps.ready(init);
 
         function init () {
@@ -519,7 +524,7 @@ $('.block__items_left .item a').removeAttr("href");
                     zoom: 16,
                     controls: []
                 });
-            myMap.setCenter([55.7185,37.5891], 16, {
+            myMap.setCenter([setc], 16, {
     checkZoomRange: true
 });
                  

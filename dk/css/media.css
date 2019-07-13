@@ -221,8 +221,7 @@ display: block;	}
 section#block3 .block3_btn_offer a {padding: 18px 47px}
 header {padding-bottom: 2em;}
 section#block2 {padding-top: 0;}
-#map {display: none;}
-#map_mobile {display: block;width: 100%;height: 300px;}
+#map {display: block;width: 100%;height: 300px;}
 .clb.clb_right {left: 13.8em;}
 .menu_link nav {bottom: -3em;}
 .header__bottom {z-index: 99;}

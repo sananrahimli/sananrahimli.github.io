@@ -7,89 +7,6 @@
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="css/media.css">
 		
-<script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://api-maps.yandex.ru/2.1/?apikey=625050a9-8614-455f-9bd7-8bff4eecca0d&lang=ru_RU" type="text/javascript"></script>
-<script src="js/jquery.vide.js"></script>  
-	<script type="text/javascript">
-		var mql = window.matchMedia('all and (max-width: 479px)');
-if (mql.matches) {
-        ymap.ready(init);
-
-        function init () {
-            // Создание экземпляра карты и его привязка к контейнеру с
-            // заданным id ("map")
-            var myMapM = new ymap.Map('map_mobile', {
-                    // При инициализации карты, обязательно нужно указать
-                    // ее центр и коэффициент масштабирования
-                    center: [55.7196,37.5971], 
-                    zoom: 16,
-                    controls: []
-                });
-            myMapM.setCenter([55.7196,37.5971], 16, {
-    checkZoomRange: true
-});
-                 
-        // Создание метки 
-        var myPlacemark = new ymapPlacemark([55.7196,37.5971], {
-                    // Свойства
-                    // Текст метки
-                    hintContent: 'DK install Москва,Ленинский проспект, 12 Москва, Россия'
-                }, {
-                	iconLayout: "default#image",
-                    iconImageHref: 'https://sananrahimli.github.io/dk/img/map.png', // картинка иконки
-                    iconImageSize: [67, 67], // размеры картинки
-                    iconImageOffset: [-33.5, -33.5] // смещение картинки
-                    });     
-    
-
-        // Добавление метки на карту
-        myMapM.geoObjects.add(myPlacemark);
-        
-        
-        }
-    // размер окна 479px или меньше
-} else {
-
-$('.block__items_left .item a').removeAttr("href");
-        ymaps.ready(init);
-
-        function init () {
-            // Создание экземпляра карты и его привязка к контейнеру с
-            // заданным id ("map")
-            var myMap = new ymaps.Map('map', {
-                    // При инициализации карты, обязательно нужно указать
-                    // ее центр и коэффициент масштабирования
-                    center: [55.7196,37.5971], 
-                    zoom: 16,
-                    controls: []
-                });
-            myMap.setCenter([55.7185,37.5891], 16, {
-    checkZoomRange: true
-});
-                 
-        // Создание метки 
-        var myPlacemarkD = new ymaps.Placemark(
-        // Координаты метки
-        [55.7196,37.5971] , {
-                    // Свойства
-                    // Текст метки
-                    hintContent: 'DK install Москва,Ленинский проспект, 12 Москва, Россия'
-                }, {
-                	iconLayout: "default#image",
-                    iconImageHref: 'https://sananrahimli.github.io/dk/img/map.png', // картинка иконки
-                    iconImageSize: [67, 67], // размеры картинки
-                    iconImageOffset: [-33.5, -33.5] // смещение картинки
-                    });     
-    
-
-        // Добавление метки на карту
-        myMap.geoObjects.add(myPlacemarkD);
-        
-        
-        }
-
-}
-	</script>
 </head>
 <body>
 
@@ -571,12 +488,62 @@ $('.block__items_left .item a').removeAttr("href");
 		</div>
 	</div>
 </footer>
+<script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=625050a9-8614-455f-9bd7-8bff4eecca0d&lang=ru_RU" type="text/javascript"></script>
+<script src="js/jquery.vide.js"></script>  
 
 <script type="text/javascript" src="js/slick.js"></script>
 
 <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+	<script type="text/javascript">
+		var mql = window.matchMedia('all and (max-width: 479px)');
+if (mql.matches) {
 
+    // размер окна 479px или меньше
+} else {
+
+$('.block__items_left .item a').removeAttr("href");
+       
+}
+	</script>
 <script type="text/javascript">
+	 ymaps.ready(init);
+
+        function init () {
+            // Создание экземпляра карты и его привязка к контейнеру с
+            // заданным id ("map")
+            var myMap = new ymaps.Map('map', {
+                    // При инициализации карты, обязательно нужно указать
+                    // ее центр и коэффициент масштабирования
+                    center: [55.7196,37.5971], 
+                    zoom: 16,
+                    controls: []
+                });
+            myMap.setCenter([55.7185,37.5891], 16, {
+    checkZoomRange: true
+});
+                 
+        // Создание метки 
+        var myPlacemark = new ymaps.Placemark(
+        // Координаты метки
+        [55.7196,37.5971] , {
+                    // Свойства
+                    // Текст метки
+                    hintContent: 'DK install Москва,Ленинский проспект, 12 Москва, Россия'
+                }, {
+                	iconLayout: "default#image",
+                    iconImageHref: 'https://sananrahimli.github.io/dk/img/map.png', // картинка иконки
+                    iconImageSize: [67, 67], // размеры картинки
+                    iconImageOffset: [-33.5, -33.5] // смещение картинки
+                    });     
+    
+
+        // Добавление метки на карту
+        myMap.geoObjects.add(myPlacemark);
+        
+        
+        }
+
 $(document).ready(function(){
 $('.single-item').slick({
   arrows: false,

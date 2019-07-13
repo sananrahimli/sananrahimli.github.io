@@ -500,16 +500,22 @@
   $(document).ready(function() {
     var w = $(window).width(); // Получаем ширину окна
     if (w <= 580) { // Если ширина окна меньше, либо равна 600
-      var zzz = 55.774472;
-      var xxx = 37.599786;
+   
     }
     else {
-      var zzz = 55.772083;
-      var xxx = 37.584677;
 
-    	$('.block__items_left .item a').removeAttr("href");
+    	
     }
   });
+      function isMobile() {
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+             var zzz = 55.772083;
+      var xxx = 37.584677; 
+        }
+          var zzz = 55.774472;
+      var xxx = 37.599786;
+      $('.block__items_left .item a').removeAttr("href");
+    }
 
 	 ymaps.ready(init);
 

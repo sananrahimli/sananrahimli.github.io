@@ -500,13 +500,13 @@
   $(document).ready(function() {
     var w = $(window).width(); // Получаем ширину окна
     if (w <= 580) { // Если ширина окна меньше, либо равна 600
-      var zzz = 55.7196;
-      var xxx = 37.5971;
+      var zzz = 55.774472;
+      var xxx = 37.599786;
     }
     else {
     	$('.block__items_left .item a').removeAttr("href");
-   		var zzz = 55.7185;
-      var xxx = 37.5891;
+      var zzz = 55.774472;
+      var xxx = 37.599786;
     }
   });
 
@@ -518,7 +518,7 @@
                 var myMap = new ymaps.Map('map', {
                     // При инициализации карты, обязательно нужно указать
                     // ее центр и коэффициент масштабирования
-                    center: [55.7196,37.5971], 
+                    center: [55.774472, 37.599786], 
                     zoom: 16,
                     controls: []
                 });
@@ -530,7 +530,7 @@
 
         var myPlacemark = new ymaps.Placemark(
         // Координаты метки
-        [55.7196,37.5971] , {
+        [55.774472, 37.599786] , {
                     // Свойства
                     // Текст метки
                     hintContent: 'DK install Москва,Ленинский проспект, 12 Москва, Россия'

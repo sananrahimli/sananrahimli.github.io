@@ -495,37 +495,31 @@
 <script type="text/javascript" src="js/slick.js"></script>
 
 <link rel="stylesheet" type="text/css" href="css/slick.css"/>
-	<script type="text/javascript">
-		var mql = window.matchMedia('all and (max-width: 479px)');
-if (mql.matches) {
 
-    // размер окна 479px или меньше
-} else {
-
-$('.block__items_left .item a').removeAttr("href");
-       
-}
-	</script>
 <script type="text/javascript">
+  $(document).ready(function() {
+    var w = $(window).width(); // Получаем ширину окна
+    if (w <= 580) { // Если ширина окна меньше, либо равна 600
+      
+    }
+    else {
+    	$('.block__items_left .item a').removeAttr("href");
+    }
+  });
 
 	 ymaps.ready(init);
 
         function init () {
             // Создание экземпляра карты и его привязка к контейнеру с
             // заданным id ("map")
-                    if (width > 600) {
-var setc = [55.7196,37.5971];
-} else {
-var setc = [55.7185,37.5891];
-}
-            var myMap = new ymaps.Map('map', {
+                var myMap = new ymaps.Map('map', {
                     // При инициализации карты, обязательно нужно указать
                     // ее центр и коэффициент масштабирования
                     center: [55.7196,37.5971], 
                     zoom: 16,
                     controls: []
                 });
-            myMap.setCenter(setc, 16, {
+            myMap.setCenter([55.7185,37.5891], 16, {
     checkZoomRange: true
 });
                  

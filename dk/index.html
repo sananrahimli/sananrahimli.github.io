@@ -513,6 +513,11 @@ $('.block__items_left .item a').removeAttr("href");
         function init () {
             // Создание экземпляра карты и его привязка к контейнеру с
             // заданным id ("map")
+                    if (width > 600) {
+var setc = [55.7196,37.5971];
+} else {
+var setc = [55.7185,37.5891];
+}
             var myMap = new ymaps.Map('map', {
                     // При инициализации карты, обязательно нужно указать
                     // ее центр и коэффициент масштабирования
@@ -520,11 +525,12 @@ $('.block__items_left .item a').removeAttr("href");
                     zoom: 16,
                     controls: []
                 });
-            myMap.setCenter([55.7185,37.5891], 16, {
+            myMap.setCenter(setc, 16, {
     checkZoomRange: true
 });
                  
         // Создание метки 
+
         var myPlacemark = new ymaps.Placemark(
         // Координаты метки
         [55.7196,37.5971] , {

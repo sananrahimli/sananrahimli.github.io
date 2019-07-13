@@ -500,13 +500,11 @@
   $(document).ready(function() {
     var w = $(window).width(); // Получаем ширину окна
     if (w <= 580) { // Если ширина окна меньше, либо равна 600
-      var zzz = 55.774472;
-      var xxx = 37.599786;
+    
     }
     else {
     	$('.block__items_left .item a').removeAttr("href");
-      var zzz = 55.772307;
-      var xxx = 37.591833;
+      
     }
   });
 
@@ -522,7 +520,7 @@
                     zoom: 16,
                     controls: []
                 });
-            myMap.setCenter(["zzz","xxx"], 16, {
+            myMap.setCenter([55.772307,37.591833], 16, {
     checkZoomRange: true
 });
                  

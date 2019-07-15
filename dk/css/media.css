@@ -43,8 +43,8 @@ background-size: 100%;}
     height: 503px;
     background-image: url(../img/block6/item_bg.png);
     background-position: center top;
-    -webkit-background-size: 100%;
-    background-size: 100%;
+    -webkit-background-size: 100% 83%;
+    background-size: 100% 83%;
     padding-left: 8.5em;
     padding-top: 4em;
     background-repeat: no-repeat;
@@ -59,6 +59,7 @@ ul.block1__two_text_and_text li:nth-child(2)::before { left: 40px;}
 
 /* Portrait tablets and small desktops */
 @media (max-width: 991px) {
+    .block3_slider__cont_text_text br {display: none;}
 	header {padding-top: 15px;}
 .header__title {font-size: 45px}
 .header__tw_block__descp_two {margin-left: 275px;margin-top: -50px;}
@@ -85,7 +86,7 @@ ul.block1__two_text_and_text li:nth-child(2) {
 ul.block1__two_text_and_text li:nth-child(2)::after {
     top: -16px;left: 15px;
 }	
-ul.block2__inst_option li {width: 100%;height: 200px;padding-left: 158px !important;}
+ul.block2__inst_option li {width: 49%;height: auto;padding-left: 158px !important;}
 ul.block2__inst_option li:nth-child(2)::before {left: -3px;}
 ul.block2__inst_option {padding-top: 50px;}
 section#block2 {padding-top: 100px;}
@@ -380,4 +381,6 @@ transform: rotate(-45deg);
 ol.block7__stages_item li.item:nth-child(6) {width: 75%;}
 .block9__content_contacts .item a {color: #000;}
 header {background-size: 200% 100%;}
+#map_mobile {display: block;}
+#map {display: none;}
 }

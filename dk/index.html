@@ -443,7 +443,9 @@
 		</div>
 			</div>	
 		<div id="map"></div>
-		<div id="map_mobile"></div>
+		<div id="map_mobile">
+			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Adc66bc9b396419990c59b10054b7a184e45836ebedbc93d6fee908a2e6acff53&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=false"></script>
+		</div>
 
 </section>
 
@@ -516,11 +518,11 @@
                 var myMap = new ymaps.Map('map', {
                     // При инициализации карты, обязательно нужно указать
                     // ее центр и коэффициент масштабирования
-                    center: [55.774472, 37.599786], 
+                    center: [55.719561, 37.597136], 
                     zoom: 16,
                     controls: []
                 });
-            myMap.setCenter([55.772307,37.591833], 16, {
+            myMap.setCenter([55.714542,37.588900], 16, {
     checkZoomRange: true
 });
                  
@@ -528,7 +530,7 @@
 
         var myPlacemark = new ymaps.Placemark(
         // Координаты метки
-        [55.774472, 37.599786] , {
+        [55.719561, 37.597136] , {
                     // Свойства
                     // Текст метки
                     hintContent: 'DK install Москва,Ленинский проспект, 12 Москва, Россия'

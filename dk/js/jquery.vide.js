@@ -30,11 +30,10 @@
     muted: true,
     loop: true,
     autoplay: true,
-    position: '50% 50%',
+    position: '0',
     posterType: 'png',
     resizing: true,
-    bgColor: 'transparent',
-    className: ''
+    bgColor: '#670b57'
   };
 
   /**

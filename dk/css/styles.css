@@ -186,10 +186,10 @@ text-transform: uppercase;
 .menu_vert:before {
 	content: '';
 	position: absolute;
-	right: 0;
-	top: 21px;
+right: 29px;
+top: 45px;
 width: 1px;
-height: 100px;
+height: 50px;
 	background: rgb(254,178,19);
 background: -moz-linear-gradient(top,  rgba(254,178,19,1) 0%, rgba(202,38,99,1) 100%);
 background: -webkit-linear-gradient(top,  rgba(254,178,19,1) 0%,rgba(202,38,99,1) 100%);
@@ -202,10 +202,10 @@ transform:matrix(-0.00,-1.00,1.00,-0.00,0,0);
 .menu_vert:after {
 	content: '';
 	position: absolute;
-left: 0;
-bottom: 45px;
+left: 66px;
+bottom: 112px;
 width: 1px;
-height: 270px;
+height: 139px;
 	background: rgb(254,178,19);
 background: -moz-linear-gradient(top,  rgba(254,178,19,1) 0%, rgba(202,38,99,1) 100%);
 background: -webkit-linear-gradient(top,  rgba(254,178,19,1) 0%,rgba(202,38,99,1) 100%);

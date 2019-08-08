@@ -194,10 +194,12 @@ section#block3 .slick-dots {
 }
 .block3_slider .cont_text {padding: 50px 35% 50px 45px}
 section#block3 .slick-list, section#block3 .slick-slider {padding:0 0 1.5em;}
-ul.block2__inst_option li {height: 170px;}
+ul.block2__inst_option li {height: 170px;width: 100%;}
 ul.block1__two_text_and_text li {height: 170px;line-height: 2.2em;padding-top: .4em;width: 100%;}
 ul.block1__two_text_and_text li::after {height: 110px;}
-ul.block1__two_text_and_text li:nth-child(2)::before {left: 0;}
+ul.block1__two_text_and_text li:before {-webkit-background-size: contain;
+background-size: contain;background-position-x: right;top: -45px;}
+ul.block1__two_text_and_text li:nth-child(2)::before {left: 0;top: -25px;}
 ul.block1__two_text_and_text li:nth-child(2)::after {left: 10px;}
 .block1__one_text_and_img img {display: none;}
 .block1__one_text_and_img_text {   padding: 0 0 3em;}

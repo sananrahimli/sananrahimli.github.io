@@ -24,6 +24,17 @@
       margin: 0;
       padding: 0;
     }
+    .container {
+      background-color: #fff;
+    }
+    h2.title_block {
+      text-align: center;
+      font-size: 24px;
+line-height: 48px;
+font-weight: 300;
+letter-spacing: 0px;
+margin-bottom: 15px;
+    }
     .swiper-container {
       width: 100%;
       height: 100%;
@@ -69,6 +80,69 @@
     .swiper-button-next:hover, .swiper-button-prev:hover {
       opacity: 1;
     }
+    .head-block {
+      padding: 30px 30px 10px;
+      border-bottom: solid 1px #ededed;
+    }
+    p.title-b {
+    font-size: 22px;
+    color: 
+    #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    }
+    p.title-block {
+    font-size: 20px;
+    color: 
+    #000;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 15px;
+    }
+    .wrap-block .str p {
+    padding: 10px 50px 10px 30px;
+    margin: 0;
+    font-size: 15px;
+    color: #000;
+    }
+    .accordion .question:nth-child(odd) {
+    background: rgba(230, 230, 230, 0.6);
+    }
+    .question .title {      
+    padding: 10px 50px 10px 30px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    cursor: pointer;
+    position: relative;
+    }
+     .question .title:before {
+      content: '+';
+      position: absolute;
+      right: 16px;
+      top: calc(50% - 8px);
+      color: #000;  
+      font-size: 17px;
+     }
+     .t-active:before {content: '-' !important;}
+    .accordion .answer {
+    padding: 0 30px 10px;
+    font-size: 14px;
+    color: #000;
+    display: none;
+    background-color: #fff;
+    }
+    p.prim {
+    font-size: 80%;
+    font-style: italic;
+    margin-top: 10px;
+    display: block;
+    margin-bottom: 20px;
+    }
+
+
     @media (max-width: 1024px) {
       .swiper-slide {height: 18em;}
     }
@@ -83,6 +157,142 @@
 
 </head>
 <body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <h2 class="title_block">Наши тарифы</h2>
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+      <div class="head-block">
+      <p class="title-b">Базовый</p>
+       <p class="title-block" itemtype="http://schema.org/AggregateOffer" itemscope="" itemprop="offers">
+          <meta content="12000" itemprop="lowPrice">
+          (от 440 <span itemprop="priceCurrency">RUB</span>/м<sup>2</sup>)</p>
+      </div>
+      <div class="wrap-block">
+          <div class="str">
+             <p><strong>Состав документации:</strong> - <span> </span></p>
+          </div>
+      </div>
+
+        <div class="accordion">
+          <div class="mfn-acc accordion_wrapper ">
+            <div class="question active">
+              <div class="title">Обмерный план</div>
+              <div class="answer">Специалисты нашей студии приезжают на объект, замеряют все стены, выполняют чертеж инженерных коммуникаций, несущих стен, балок, колонн, а также оконных и дверных проемов. Эти чертежи необходимы для дальнейшего создания планировки.</div></div>
+              <div class="question"><div class="title">Техническое задание</div>
+              <div class="answer">Самый необходимый этап: наш специалист встречается с Вами и выясняет все пожелания, предпочтения по проекту, такие как стиль будущего интерьера, цветовую гамму и многое другое. Также он проводит подробный опрос, узнавая состав семьи, количество комнат, размещение гостей, необходимое к размещению оборудование.
+              </div></div>
+              <div class="question"><div class="title">Планировочное решение*</div>
+              <div class="answer">На данном этапе мы разрабатываем до 3-х различных вариантов планировок, предлагая свое видение дизайна, основываясь на полученной от заказчика информации. На этих решениях выполнена расстановка мебели, привязка всех инженерных коммуникаций, снос и возведение стен.</div></div>
+              <div class="question"><div class="title">Фотореалистичная 3д визуализация*</div>
+              <div class="answer">3D визуализация интерьера будущего помещения, которая выглядит как настоящее фото. С помощью данных визуализаций заказчик сможет легко представить, как все будет выглядеть.</div></div>
+          </div>
+      </div>
+      
+      <p class="prim">* До 3 цикла правок по комментариям заказчика</p>
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+      <div class="head-block">
+        <p class="title-b">Оптимальный</p>
+           <p class="title-block">(от 567 руб/м<sup>2</sup>)</p>
+      </div>
+
+      <div class="wrap-block">
+        <div class="str">
+            <p><strong>Состав документации:</strong> - <span> </span></p>
+        </div>
+      </div>
+
+      <div class="accordion">
+          <div class="question">
+            <div class="title">Обмерный план</div>
+            <div class="answer">Специалисты нашей студии приезжают на объект, замеряют все стены, выполняют чертеж инженерных коммуникаций, несущих стен, балок, колонн, а также оконных и дверных проемов. Эти чертежи необходимы для дальнейшего создания планировки.</div>
+          </div>
+          <div class="question">
+            <div class="title">Техническое задание</div>
+            <div class="answer">Самый необходимый этап: наш специалист встречается с Вами и выясняет все пожелания, предпочтения по проекту, такие как стиль будущего интерьера, цветовую гамму и многое другое. Также он проводит подробный опрос, узнавая состав семьи, количество комнат, размещение гостей, необходимое к размещению оборудование.</div>
+          </div>
+          <div class="question">
+            <div class="title">Планировочное решение*</div>
+            <div class="answer">На данном этапе мы разрабатываем до 3-х различных вариантов планировок, предлагая свое видение дизайна, основываясь на полученной от заказчика информации. На этих решениях выполнена расстановка мебели, привязка всех инженерных коммуникаций, снос и возведение стен.</div>
+          </div>
+          <div class="question">
+            <div class="title">Подбор отделочных материалов</div>
+            <div class="answer">Наши специалисты будут рады помочь в подборе всех материалов. В настоящий момент на рынке представлены десятки вариантов отделки от тысяч различных компаний. Чтобы заказчик не запутался во всем этом многообразии, мы подскажем оптимальные варианты с точки зрения бюджета, качества и эстетической составляющей.</div>
+          </div>
+          <div class="question">
+            <div class="title">Бюджетирование</div>
+            <div class="answer">Планирование бюджета - один из самых сложных этапов ремонта. Мы поможем заказчику составить точную смету, организуем учет расходов на строительство.</div>
+          </div>
+          <div class="question">
+            <div class="title">Фотореалистичная 3d-визуализация*</div>
+            <div class="answer">3D визуализация интерьера будущего помещения, которая выглядит как настоящее фото. С помощью данных визуализаций заказчик сможет легко представить, как все будет выглядеть.</div>
+          </div>
+          <div class="question">
+          <div class="title">Строительные чертежи</div>
+          <div class="answer">1. Главный монтажный чертеж: стены и перегородки, дверные и оконные проемы, инженерия.<br><br>2. Схема размещения приборов освещения.<br><br>3. Схемы электрики: розетки, электровыводы, слаботочные системы, электрощит.<br><br>4. Потолочный план: типы покрытия, высота, размещение закладных, карнизов.<br><br>5. Схема раскладки напольных покрытий с указанием типа и особенностей размещения.<br><br>6. Схема установки системы теплого пола.<br><br>7. Схема установки ванны, душевой кабины, унитаза и т.д.<br><br>8. Система кондиционирования помещения: тип, размещение трасс и блоков.<br><br>9. План всех стен с разверткой.<br><br>10. Схема раскладки напольной и настенной плитки. <br><br>11. Подробное описание сложных элементов.<br><br>12. Макет кухонной мебели со всеми размерами.<br><br>13. Описание используемых отделочных материалов</div>
+          </div>
+      </div>
+
+      <p class="prim">* До 3 цикла правок по комментариям заказчика</p>
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+      <div class="head-block">
+          <p class="title-b">Премиум</p>                
+          <p class="title-block">(от 945 руб/м<sup>2</sup>)</p>
+      </div>
+
+      <div class="wrap-block">
+        <div class="str">
+          <p><strong>Состав документации</strong> - <span> </span></p>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="question">
+        <div class="title"><i class="icon-plus acc-icon-plus"></i><i class="icon-minus acc-icon-minus"></i>Обмерный план</div>
+      <div class="answer">Специалисты нашей студии приезжают на объект, замеряют все стены, выполняют чертеж инженерных коммуникаций, несущих стен, балок, колонн, а также оконных и дверных проемов. Эти чертежи необходимы для дальнейшего создания планировки.</div>
+    </div>
+<div class="question"> 
+  <div class="title">Техническое задание</div>
+    <div class="answer">Самый необходимый этап: наш специалист встречается с Вами и выясняет все пожелания, предпочтения по проекту, такие как стиль будущего интерьера, цветовую гамму и многое другое. Также он проводит подробный опрос, узнавая состав семьи, количество комнат, размещение гостей, необходимое к размещению оборудование.</div>
+  </div>
+<div class="question">
+  <div class="title">Планировочное решение*</div>
+  <div class="answer">На данном этапе мы разрабатываем до 3-х различных вариантов планировок, предлагая свое видение дизайна, основываясь на полученной от заказчика информации. На этих решениях выполнена расстановка мебели, привязка всех инженерных коммуникаций, снос и возведение стен.</div>
+</div>
+<div class="question">
+  <div class="title">Подбор отделочных материалов</div>
+  <div class="answer">Наши специалисты будут рады помочь в подборе всех материалов. В настоящий момент на рынке представлены десятки вариантов отделки от тысяч различных компаний. Чтобы заказчик не запутался во всем этом многообразии, мы подскажем оптимальные варианты с точки зрения бюджета, качества и эстетической составляющей.</div>
+</div>
+<div class="question">
+  <div class="title">Бюджетирование</div>
+  <div class="answer">Планирование бюджета - один из самых сложных этапов ремонта. Мы поможем заказчику составить точную смету, организуем учет расходов на строительство.</div>
+</div>
+<div class="question">
+  <div class="title">Фотореалистичная 3d-визуализация*</div>
+  <div class="answer">3D визуализация интерьера будущего помещения, которая выглядит как настоящее фото. С помощью данных визуализаций заказчик сможет легко представить, как все будет выглядеть.</div>
+</div>
+<div class="question">
+  <div class="title">Строительные чертежи</div>
+  <div class="answer">1. Главный монтажный чертеж: стены и перегородки, дверные и оконные проемы, инженерия.<br><br>2. Схема размещения приборов освещения.<br><br>3. Схемы электрики: розетки, электровыводы, слаботочные системы, электрощит.<br><br>4. Потолочный план: типы покрытия, высота, размещение закладных, карнизов.<br><br>5. Схема раскладки напольных покрытий с указанием типа и особенностей размещения.<br><br>6. Схема установки системы теплого пола.<br><br>7. Схема установки ванны, душевой кабины, унитаза и т.д.<br><br>8. Система кондиционирования помещения: тип, размещение трасс и блоков.<br><br>9. План всех стен с разверткой.<br><br>10. Схема раскладки напольной и настенной плитки. <br><br>11. Подробное описание сложных элементов.<br><br>12. Макет кухонной мебели со всеми размерами.<br><br>13. Описание используемых отделочных материалов</div>
+</div>
+<div class="question">
+  <div class="title">Авторский надзор</div>
+  <div class="answer">Мы будем контролировать каждый этап Вашего ремонта, решат технические вопросы, возникшие в процессе.</div>
+</div>
+<div class="question"><div class="title">Комплектация</div><div class="answer">Комплектация</div></div>
+<div class="question"><div class="title">Декорирование</div><div class="answer">Декорирование</div></div>
+</div>
+
+
+       <p class="prim">* До 3 цикла правок по комментариям заказчика</p>
+    </div>
+  </div>
+</div>
+
   <div class="container">
     <div class="row">
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -108,7 +318,7 @@
     </div>
   </div>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="swiper.min.js"></script>
 <script>
     var swiper = new Swiper('.swiper-container', {
@@ -142,6 +352,19 @@
       }
 
     });
+
+    $('.title').click(function(){
+if ( $(this).next().is(":visible")){
+$(this).next().hide('fast');
+$(this).removeClass("t-active")
+}
+else{
+$('.answer:visible').hide('fast');
+$(this).next().show('fast');
+$(this).addClass("t-active")
+
+}
+});
 </script>
 </body>
 </html>

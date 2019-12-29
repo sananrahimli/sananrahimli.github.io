@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Room';
+    src: url('subset-Room.eot');
+    src: url('subset-Room.eot?#iefix') format('embedded-opentype'),
+        url('subset-Room.woff2') format('woff2'),
+        url('subset-Room.woff') format('woff'),
+        url('subset-Room.ttf') format('truetype'),
+        url('subset-Room.svg#Room') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

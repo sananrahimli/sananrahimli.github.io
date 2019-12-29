@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
   <link rel="stylesheet" href="swiper.min.css">
-  <link rel="stylesheet" href="bootstrap-grid.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <style>
     * {
@@ -56,7 +56,7 @@ margin-bottom: 15px;
       -webkit-align-items: center;
       align-items: center;
       width: 60%;
-      height: 20em;
+      height: 35em;
       transition: all .3s cubic-bezier(.4,0,.2,1);
       border: 1px solid #000;
       -webkit-box-sizing: border-box;
@@ -66,11 +66,11 @@ margin-bottom: 15px;
       
     }
    .swiper-slide:not(.swiper-slide-active) {
-    -webkit-transform: scale(.97);
-    -moz-transform: scale(.97);
-    -ms-transform: scale(.97);
-    -o-transform: scale(.97);
-    transform: scale(.97);    
+    -webkit-transform: scale(.95);
+    -moz-transform: scale(.95);
+    -ms-transform: scale(.95);
+    -o-transform: scale(.95);
+    transform: scale(.95);    
     }
     .swiper-button-next, .swiper-button-prev {
       opacity: .6;
@@ -107,7 +107,7 @@ margin-bottom: 15px;
     font-size: 15px;
     color: #000;
     }
-    .accordion .question:nth-child(odd) {
+    #accordion .question:nth-child(odd) {
     background: rgba(230, 230, 230, 0.6);
     }
     .question .title {      
@@ -118,16 +118,18 @@ margin-bottom: 15px;
     cursor: pointer;
     position: relative;
     }
-     .question .title:before {
-      content: '+';
+#accordion .title:after {
+      content: '-';
       position: absolute;
       right: 16px;
-      top: calc(50% - 8px);
+      top: calc(50% - 13px);
       color: #000;  
       font-size: 17px;
-     }
-     .t-active:before {content: '-' !important;}
-    .accordion .answer {
+}
+#accordion .title.collapsed:after {
+    content: "+"; 
+}
+    #accordion .answer collapse {
     padding: 0 30px 10px;
     font-size: 14px;
     color: #000;
@@ -158,12 +160,14 @@ margin-bottom: 15px;
 </head>
 <body>
 
+
+<section id="accordion">
 <div class="container">
   <div class="row">
-    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+    <div class="col-12">
       <h2 class="title_block">Наши тарифы</h2>
     </div>
-    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+    <div class="col-12 col-md-4">
       <div class="head-block">
       <p class="title-b">Базовый</p>
        <p class="title-block" itemtype="http://schema.org/AggregateOffer" itemscope="" itemprop="offers">
@@ -176,24 +180,22 @@ margin-bottom: 15px;
           </div>
       </div>
 
-        <div class="accordion">
           <div class="mfn-acc accordion_wrapper ">
-            <div class="question active">
-              <div class="title">Обмерный план</div>
-              <div class="answer">Специалисты нашей студии приезжают на объект, замеряют все стены, выполняют чертеж инженерных коммуникаций, несущих стен, балок, колонн, а также оконных и дверных проемов. Эти чертежи необходимы для дальнейшего создания планировки.</div></div>
-              <div class="question"><div class="title">Техническое задание</div>
-              <div class="answer">Самый необходимый этап: наш специалист встречается с Вами и выясняет все пожелания, предпочтения по проекту, такие как стиль будущего интерьера, цветовую гамму и многое другое. Также он проводит подробный опрос, узнавая состав семьи, количество комнат, размещение гостей, необходимое к размещению оборудование.
+            <div class="question">
+              <div class="title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false">Обмерный план</div>
+              <div class="answer collapse" data-parent="#accordion" id="collapse1">Специалисты нашей студии приезжают на объект, замеряют все стены, выполняют чертеж инженерных коммуникаций, несущих стен, балок, колонн, а также оконных и дверных проемов. Эти чертежи необходимы для дальнейшего создания планировки.</div></div>
+              <div class="question"><div class="title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2">Техническое задание</div>
+              <div class="answer collapse" data-parent="#accordion" id="collapse2">Самый необходимый этап: наш специалист встречается с Вами и выясняет все пожелания, предпочтения по проекту, такие как стиль будущего интерьера, цветовую гамму и многое другое. Также он проводит подробный опрос, узнавая состав семьи, количество комнат, размещение гостей, необходимое к размещению оборудование.
               </div></div>
-              <div class="question"><div class="title">Планировочное решение*</div>
-              <div class="answer">На данном этапе мы разрабатываем до 3-х различных вариантов планировок, предлагая свое видение дизайна, основываясь на полученной от заказчика информации. На этих решениях выполнена расстановка мебели, привязка всех инженерных коммуникаций, снос и возведение стен.</div></div>
-              <div class="question"><div class="title">Фотореалистичная 3д визуализация*</div>
-              <div class="answer">3D визуализация интерьера будущего помещения, которая выглядит как настоящее фото. С помощью данных визуализаций заказчик сможет легко представить, как все будет выглядеть.</div></div>
+              <div class="question"><div class="title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse3">Планировочное решение*</div>
+              <div class="answer collapse" data-parent="#accordion" id="collapse3">На данном этапе мы разрабатываем до 3-х различных вариантов планировок, предлагая свое видение дизайна, основываясь на полученной от заказчика информации. На этих решениях выполнена расстановка мебели, привязка всех инженерных коммуникаций, снос и возведение стен.</div></div>
+              <div class="question"><div class="title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse4">Фотореалистичная 3д визуализация*</div>
+              <div class="answer collapse" data-parent="#accordion" id="collapse4">3D визуализация интерьера будущего помещения, которая выглядит как настоящее фото. С помощью данных визуализаций заказчик сможет легко представить, как все будет выглядеть.</div></div>
           </div>
-      </div>
       
       <p class="prim">* До 3 цикла правок по комментариям заказчика</p>
     </div>
-    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+    <div class="col-12 col-md-4">
       <div class="head-block">
         <p class="title-b">Оптимальный</p>
            <p class="title-block">(от 567 руб/м<sup>2</sup>)</p>
@@ -205,40 +207,38 @@ margin-bottom: 15px;
         </div>
       </div>
 
-      <div class="accordion">
           <div class="question">
-            <div class="title">Обмерный план</div>
-            <div class="answer">Специалисты нашей студии приезжают на объект, замеряют все стены, выполняют чертеж инженерных коммуникаций, несущих стен, балок, колонн, а также оконных и дверных проемов. Эти чертежи необходимы для дальнейшего создания планировки.</div>
+            <div class="title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse5">Обмерный план</div>
+            <div class="answer collapse" data-parent="#accordion" id="collapse5">Специалисты нашей студии приезжают на объект, замеряют все стены, выполняют чертеж инженерных коммуникаций, несущих стен, балок, колонн, а также оконных и дверных проемов. Эти чертежи необходимы для дальнейшего создания планировки.</div>
           </div>
           <div class="question">
-            <div class="title">Техническое задание</div>
-            <div class="answer">Самый необходимый этап: наш специалист встречается с Вами и выясняет все пожелания, предпочтения по проекту, такие как стиль будущего интерьера, цветовую гамму и многое другое. Также он проводит подробный опрос, узнавая состав семьи, количество комнат, размещение гостей, необходимое к размещению оборудование.</div>
+            <div class="title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse6">Техническое задание</div>
+            <div class="answer collapse" data-parent="#accordion" id="collapse6">Самый необходимый этап: наш специалист встречается с Вами и выясняет все пожелания, предпочтения по проекту, такие как стиль будущего интерьера, цветовую гамму и многое другое. Также он проводит подробный опрос, узнавая состав семьи, количество комнат, размещение гостей, необходимое к размещению оборудование.</div>
           </div>
           <div class="question">
-            <div class="title">Планировочное решение*</div>
-            <div class="answer">На данном этапе мы разрабатываем до 3-х различных вариантов планировок, предлагая свое видение дизайна, основываясь на полученной от заказчика информации. На этих решениях выполнена расстановка мебели, привязка всех инженерных коммуникаций, снос и возведение стен.</div>
+            <div class="title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse7">Планировочное решение*</div>
+            <div class="answer collapse" data-parent="#accordion" id="collapse7">На данном этапе мы разрабатываем до 3-х различных вариантов планировок, предлагая свое видение дизайна, основываясь на полученной от заказчика информации. На этих решениях выполнена расстановка мебели, привязка всех инженерных коммуникаций, снос и возведение стен.</div>
           </div>
           <div class="question">
-            <div class="title">Подбор отделочных материалов</div>
-            <div class="answer">Наши специалисты будут рады помочь в подборе всех материалов. В настоящий момент на рынке представлены десятки вариантов отделки от тысяч различных компаний. Чтобы заказчик не запутался во всем этом многообразии, мы подскажем оптимальные варианты с точки зрения бюджета, качества и эстетической составляющей.</div>
+            <div class="title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse8">Подбор отделочных материалов</div>
+            <div class="answer collapse" data-parent="#accordion" id="collapse8">Наши специалисты будут рады помочь в подборе всех материалов. В настоящий момент на рынке представлены десятки вариантов отделки от тысяч различных компаний. Чтобы заказчик не запутался во всем этом многообразии, мы подскажем оптимальные варианты с точки зрения бюджета, качества и эстетической составляющей.</div>
           </div>
           <div class="question">
-            <div class="title">Бюджетирование</div>
-            <div class="answer">Планирование бюджета - один из самых сложных этапов ремонта. Мы поможем заказчику составить точную смету, организуем учет расходов на строительство.</div>
+            <div class="title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse9">Бюджетирование</div>
+            <div class="answer collapse" data-parent="#accordion" id="collapse9">Планирование бюджета - один из самых сложных этапов ремонта. Мы поможем заказчику составить точную смету, организуем учет расходов на строительство.</div>
           </div>
           <div class="question">
-            <div class="title">Фотореалистичная 3d-визуализация*</div>
-            <div class="answer">3D визуализация интерьера будущего помещения, которая выглядит как настоящее фото. С помощью данных визуализаций заказчик сможет легко представить, как все будет выглядеть.</div>
+            <div class="title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse10">Фотореалистичная 3d-визуализация*</div>
+            <div class="answer collapse" data-parent="#accordion" id="collapse10">3D визуализация интерьера будущего помещения, которая выглядит как настоящее фото. С помощью данных визуализаций заказчик сможет легко представить, как все будет выглядеть.</div>
           </div>
           <div class="question">
-          <div class="title">Строительные чертежи</div>
-          <div class="answer">1. Главный монтажный чертеж: стены и перегородки, дверные и оконные проемы, инженерия.<br><br>2. Схема размещения приборов освещения.<br><br>3. Схемы электрики: розетки, электровыводы, слаботочные системы, электрощит.<br><br>4. Потолочный план: типы покрытия, высота, размещение закладных, карнизов.<br><br>5. Схема раскладки напольных покрытий с указанием типа и особенностей размещения.<br><br>6. Схема установки системы теплого пола.<br><br>7. Схема установки ванны, душевой кабины, унитаза и т.д.<br><br>8. Система кондиционирования помещения: тип, размещение трасс и блоков.<br><br>9. План всех стен с разверткой.<br><br>10. Схема раскладки напольной и настенной плитки. <br><br>11. Подробное описание сложных элементов.<br><br>12. Макет кухонной мебели со всеми размерами.<br><br>13. Описание используемых отделочных материалов</div>
+          <div class="title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse11">Строительные чертежи</div>
+          <div class="answer collapse" data-parent="#accordion" id="collapse11">1. Главный монтажный чертеж: стены и перегородки, дверные и оконные проемы, инженерия.<br><br>2. Схема размещения приборов освещения.<br><br>3. Схемы электрики: розетки, электровыводы, слаботочные системы, электрощит.<br><br>4. Потолочный план: типы покрытия, высота, размещение закладных, карнизов.<br><br>5. Схема раскладки напольных покрытий с указанием типа и особенностей размещения.<br><br>6. Схема установки системы теплого пола.<br><br>7. Схема установки ванны, душевой кабины, унитаза и т.д.<br><br>8. Система кондиционирования помещения: тип, размещение трасс и блоков.<br><br>9. План всех стен с разверткой.<br><br>10. Схема раскладки напольной и настенной плитки. <br><br>11. Подробное описание сложных элементов.<br><br>12. Макет кухонной мебели со всеми размерами.<br><br>13. Описание используемых отделочных материалов</div>
           </div>
-      </div>
 
       <p class="prim">* До 3 цикла правок по комментариям заказчика</p>
     </div>
-    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+    <div class="ccol-12 ol-md-4">
       <div class="head-block">
           <p class="title-b">Премиум</p>                
           <p class="title-block">(от 945 руб/м<sup>2</sup>)</p>
@@ -250,52 +250,51 @@ margin-bottom: 15px;
         </div>
       </div>
 
-      <div class="accordion">
         <div class="question">
-        <div class="title"><i class="icon-plus acc-icon-plus"></i><i class="icon-minus acc-icon-minus"></i>Обмерный план</div>
-      <div class="answer">Специалисты нашей студии приезжают на объект, замеряют все стены, выполняют чертеж инженерных коммуникаций, несущих стен, балок, колонн, а также оконных и дверных проемов. Эти чертежи необходимы для дальнейшего создания планировки.</div>
+        <div class="title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse12">Обмерный план</div>
+      <div class="answer collapse" data-parent="#accordion" id="collapse12">Специалисты нашей студии приезжают на объект, замеряют все стены, выполняют чертеж инженерных коммуникаций, несущих стен, балок, колонн, а также оконных и дверных проемов. Эти чертежи необходимы для дальнейшего создания планировки.</div>
     </div>
 <div class="question"> 
-  <div class="title">Техническое задание</div>
-    <div class="answer">Самый необходимый этап: наш специалист встречается с Вами и выясняет все пожелания, предпочтения по проекту, такие как стиль будущего интерьера, цветовую гамму и многое другое. Также он проводит подробный опрос, узнавая состав семьи, количество комнат, размещение гостей, необходимое к размещению оборудование.</div>
+  <div class="title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse13">Техническое задание</div>
+    <div class="answer collapse" data-parent="#accordion" id="collapse13">Самый необходимый этап: наш специалист встречается с Вами и выясняет все пожелания, предпочтения по проекту, такие как стиль будущего интерьера, цветовую гамму и многое другое. Также он проводит подробный опрос, узнавая состав семьи, количество комнат, размещение гоѠ обходимое к размещению оборудование.</div>
   </div>
 <div class="question">
-  <div class="title">Планировочное решение*</div>
-  <div class="answer">На данном этапе мы разрабатываем до 3-х различных вариантов планировок, предлагая свое видение дизайна, основываясь на полученной от заказчика информации. На этих решениях выполнена расстановка мебели, привязка всех инженерных коммуникаций, снос и возведение стен.</div>
+  <div class="title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse14">Планировочное решение*</div>
+  <div class="answer collapse" data-parent="#accordion" id="collapse14">На данном этапе мы разрабатываем до 3-х различных вариантов планировок, предлагая свое видение дизайна, основываясь на полученной от заказчика информации. На этих решениях выполнена расстановка мебели, привязка всех инженерных коммуникаций, снос и возведение стен.</div>
 </div>
 <div class="question">
-  <div class="title">Подбор отделочных материалов</div>
-  <div class="answer">Наши специалисты будут рады помочь в подборе всех материалов. В настоящий момент на рынке представлены десятки вариантов отделки от тысяч различных компаний. Чтобы заказчик не запутался во всем этом многообразии, мы подскажем оптимальные варианты с точки зрения бюджета, качества и эстетической составляющей.</div>
+  <div class="title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse15">Подбор отделочных материалов</div>
+  <div class="answer collapse" data-parent="#accordion" id="collapse15">Наши специалисты будут рады помочь в подборе всех материалов. В настоящий момент на рынке представлены десятки вариантов отделки от тысяч различных компаний. Чтобы заказчик не запутался во всем этом многообразии, мы подскажем оптимальные варианты с точки зрения бюджета, качества и эстетической составляющей.</div>
 </div>
 <div class="question">
-  <div class="title">Бюджетирование</div>
-  <div class="answer">Планирование бюджета - один из самых сложных этапов ремонта. Мы поможем заказчику составить точную смету, организуем учет расходов на строительство.</div>
+  <div class="title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse16">Бюджетирование</div>
+  <div class="answer collapse" data-parent="#accordion" id="collapse16">Планирование бюджета - один из самых сложных этапов ремонта. Мы поможем заказчику составить точную смету, организуем учет расходов на строительство.</div>
 </div>
 <div class="question">
-  <div class="title">Фотореалистичная 3d-визуализация*</div>
-  <div class="answer">3D визуализация интерьера будущего помещения, которая выглядит как настоящее фото. С помощью данных визуализаций заказчик сможет легко представить, как все будет выглядеть.</div>
+  <div class="title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse17">Фотореалистичная 3d-визуализация*</div>
+  <div class="answer collapse" data-parent="#accordion" id="collapse17">3D визуализация интерьера будущего помещения, которая выглядит как настоящее фото. С помощью данных визуализаций заказчик сможет легко представить, как все будет выглядеть.</div>
 </div>
 <div class="question">
-  <div class="title">Строительные чертежи</div>
-  <div class="answer">1. Главный монтажный чертеж: стены и перегородки, дверные и оконные проемы, инженерия.<br><br>2. Схема размещения приборов освещения.<br><br>3. Схемы электрики: розетки, электровыводы, слаботочные системы, электрощит.<br><br>4. Потолочный план: типы покрытия, высота, размещение закладных, карнизов.<br><br>5. Схема раскладки напольных покрытий с указанием типа и особенностей размещения.<br><br>6. Схема установки системы теплого пола.<br><br>7. Схема установки ванны, душевой кабины, унитаза и т.д.<br><br>8. Система кондиционирования помещения: тип, размещение трасс и блоков.<br><br>9. План всех стен с разверткой.<br><br>10. Схема раскладки напольной и настенной плитки. <br><br>11. Подробное описание сложных элементов.<br><br>12. Макет кухонной мебели со всеми размерами.<br><br>13. Описание используемых отделочных материалов</div>
+  <div class="title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse18">Строительные чертежи</div>
+  <div class="answer collapse" data-parent="#accordion" id="collapse18">1. Главный монтажный чертеж: стены и перегородки, дверные и оконные проемы, инженерия.<br><br>2. Схема размещения приборов освещения.<br><br>3. Схемы электрики: розетки, электровыводы, слаботочные системы, электрощит.<br><br>4. Потолочный план: типы покрытия, высота, размещение закладных, карнизов.<br><br>5. Схема раскладки напольных покрытий с указанием типа и особенностей размещения.<br><br>6. Схема установки системы теплого пола.<br><br>7. Схема установки ванны, душевой кабины, унитаза и т.д.<br><br>8. Система кондиционирования помещения: тип, размещение трасс и блоков.<br><br>9. План всех стен с разверткой.<br><br>10. Схема раскладки напольной и настенной плитки. <br><br>11. Подробное описание сложных элементов.<br><br>12. Макет кухонной мебели со всеми размерами.<br><br>13. Описание используемых отделочных материалов</div>
 </div>
 <div class="question">
-  <div class="title">Авторский надзор</div>
-  <div class="answer">Мы будем контролировать каждый этап Вашего ремонта, решат технические вопросы, возникшие в процессе.</div>
+  <div class="title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse19">Авторский надзор</div>
+  <div class="answer collapse" data-parent="#accordion" id="collapse19">Мы будем контролировать каждый этап Вашего ремонта, решат технические вопросы, возникшие в процессе.</div>
 </div>
-<div class="question"><div class="title">Комплектация</div><div class="answer">Комплектация</div></div>
-<div class="question"><div class="title">Декорирование</div><div class="answer">Декорирование</div></div>
-</div>
+<div class="question"><div class="title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse20">Комплектация</div><div class="answer collapse" data-parent="#accordion" id="collapse20">Комплектация</div></div>
+<div class="question"><div class="title collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse21">Декорирование</div><div class="answer collapse" data-parent="#accordion" id="collapse21">Декорирование</div></div>
 
 
        <p class="prim">* До 3 цикла правок по комментариям заказчика</p>
     </div>
   </div>
 </div>
+</section>
 
   <div class="container">
     <div class="row">
-      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <div class="col-12">
   
   <div class="swiper-container">
     <div class="swiper-wrapper">
@@ -318,7 +317,10 @@ margin-bottom: 15px;
     </div>
   </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js" integrity="sha256-4sETKhh3aSyi6NRiA+qunPaTawqSMDQca/xLWu27Hg4=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="swiper.min.js"></script>
 <script>
     var swiper = new Swiper('.swiper-container', {
@@ -353,18 +355,6 @@ margin-bottom: 15px;
 
     });
 
-    $('.title').click(function(){
-if ( $(this).next().is(":visible")){
-$(this).next().hide('fast');
-$(this).removeClass("t-active")
-}
-else{
-$('.answer:visible').hide('fast');
-$(this).next().show('fast');
-$(this).addClass("t-active")
-
-}
-});
 </script>
 </body>
 </html>

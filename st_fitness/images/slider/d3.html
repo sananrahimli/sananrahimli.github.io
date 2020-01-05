@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<title>D3</title>
+
+<style>
+body
+
+{
+position: relative;
+width: 100%;
+height: 100%;
+background: white;
+margin: 0;
+padding: 0;
+}
+
+svg 
+
+{
+position: fixed;
+top: 0;
+width: 100%;
+height: 100%;
+}
+
+circle 
+
+{
+fill: orange;
+stroke: white;
+}
+
+line 
+
+{
+stroke: #fff;
+stroke-width: 1.5;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<svg width='500' height='500'></svg>
+
+</body>
+
+<script type="text/javascript">
+
+var svg = d3.select("svg");
+
+    var web = d3.layout.force()
+    // Сила связи
+    .linkStrength(1.0)
+    // Трение
+    .friction(.9)
+    // Расстояние, на котором действует сила связи
+    .linkDistance(-10)
+    // Заряд
+    .charge(-50)
+    // Сила связи с центром картинки
+    .gravity(.07)
+    // Точность симуляции
+    .theta(0.8)
+    // Прогресс работы силового поля
+    .alpha(0.1)
+    // Вызывается на каждой итерации расчета симуляции
+    .on("tick", tick);
+
+    var webLinks = [];
+    var webParticles = [];
+
+    var underlay = svg.append("g");
+
+    var rect = underlay.selectAll("rect").data([1]);
+
+    rect.enter().append("rect").style("fill", "#454545");
+
+    // Наложение данных (чисел в коде) в D3 на реальные элементы на странице (кружки и т.д) дает следующие варианты:
+
+    // 1 ситуация - количество кружочков совпадает с количеством данных (элементов массива)
+    // Происходит обновление данных. Все кружки попадают в выборку Update
+
+    // 2 ситуация - количество кружочков меньше, чем количество данных (элементов массива)
+    // Недостающие кружки попадают в выборку Enter
+
+    // 3 ситуация - количество кружочков больше, чем количество данных (элементов массива)
+    // Лишние кружки попадают в выборку Exit
+
+    var depth = 7;
+    var segments = 20;
+    var n = segments * depth; // Число точек
+    var rSmall = 3;
+    var radius;
+
+    var step = (2 * Math.PI) / segments;
+
+    /* Рисуем окружность из точек. Исходные данные - радиус большой окружности,
+     радиус маленьких точек и их количество на перифирии */
+
+    var points = d3.range(n + 1); // Массив из 20 значений [0..19]
+
+    var height = window.innerHeight;
+    var width = window.innerWidth;
+
+    web.size([width, height]);
+
+    rect.attr("width", width)
+        .attr("height", height);
+
+    radius = Math.min(width, height) / 2;
+
+    var origin = {
+        x: width / 2,
+        y: height / 2
+    };
+
+    var radiusStep = radius / n;
+
+    points.forEach(function (p, i) {
+
+        if (i !== points.length - 1) {
+
+            var angle = i * step;
+
+            // Все время уменьшающийся радиус
+            var shrinkingRadius = radius - radiusStep * i;
+
+            webParticles.push({
+                x: origin.x + Math.cos(angle) * shrinkingRadius,
+                y: origin.y + Math.sin(angle) * shrinkingRadius,
+                fixed: (i < segments) && (i % 3 == 0) // каждая третья, но только из первых 20.
+                // Если fixed = true, точка не участвует в симуляции
+            });
+
+
+
+
+            if (i < points.length - 1 && i + 1 !== points.length - 1) // Условие, не допускающее выхода за пределы допустимого диапазона
+
+            webLinks.push({
+                source: i,
+                target: i + 1
+            });
+
+            var off = i + segments;
+
+            if (off < n - 1) 
+            	webLinks.push({
+                source: i,
+                target: off
+            });
+            else webLinks.push({
+                source: i,
+                target: n - 1
+            });
+        }
+
+    });
+
+    // Соединим первую точку и 19, последнюю для "первого круга" спирали
+
+    webLinks.push({
+        source: 0,
+        target: segments - 1
+    });
+
+    var drag = web.drag();
+    
+
+
+
+    var svgWebLinks = underlay.selectAll("line").data(webLinks);
+    svgWebLinks.enter().append("line");
+
+    var svgWebNodes = underlay.selectAll("circle").data(webParticles);
+
+    svgWebNodes.enter().append("circle")
+        .attr("r", rSmall)
+        .style("fill", "orange")
+      // .call(drag);
+
+    web.nodes(webParticles)
+        .links(webLinks)
+        .start();
+
+    function tick() {
+
+        svgWebLinks.attr('x1', function (d) { return d.source.x})
+            .attr('y1', function (d) {return d.source.y})
+            .attr('x2', function (d) {return d.target.x})
+            .attr('y2', function (d) {return d.target.y});
+
+        svgWebNodes.attr("cx", function (d) {return d.x})
+            .attr("cy", function (d) {return d.y});
+    }
+
+// Теперь можно запустить симуляцию следующим кодом
+
+</script>
+</html>

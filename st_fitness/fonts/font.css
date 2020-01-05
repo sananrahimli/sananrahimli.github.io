@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Room';
+    src: url('Room-Bold.eot');
+    src: url('Room-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Room-Bold.woff2') format('woff2'),
+        url('Room-Bold.woff') format('woff'),
+        url('Room-Bold.ttf') format('truetype'),
+        url('Room-Bold.svg#Room-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Room';
+    src: url('Room-Thin.eot');
+    src: url('Room-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Room-Thin.woff2') format('woff2'),
+        url('Room-Thin.woff') format('woff'),
+        url('Room-Thin.ttf') format('truetype'),
+        url('Room-Thin.svg#Room-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+

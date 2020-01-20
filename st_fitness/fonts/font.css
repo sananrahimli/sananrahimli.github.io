@@ -22,3 +22,15 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Coral waves';
+    src: url('Coralwaves-Regular.eot');
+    src: url('Coralwaves-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Coralwaves-Regular.woff2') format('woff2'),
+        url('Coralwaves-Regular.woff') format('woff'),
+        url('Coralwaves-Regular.ttf') format('truetype'),
+        url('Coralwaves-Regular.svg#Coralwaves-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

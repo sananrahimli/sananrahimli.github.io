@@ -1,9 +1,9 @@
-	/*
-  	Flaticon icon font: Flaticon
-  	Creation date: 20/01/2020 17:24
-  	*/
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 20/01/2020 17:24
+    */
 
-@font-face {
+    @font-face {
   font-family: "Flaticon";
   src: url("./Flaticon.eot");
   src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
@@ -22,15 +22,22 @@
   }
 }
 
-[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
-  font-family: Flaticon;
-        font-size: 20px;
-font-style: normal;
-margin-left: 20px;
-}
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
 
-.flaticon-envelope:before { content: "\f100"; }
+    .flaticon-envelope:before { content: "\f100"; }
 .flaticon-phone-call:before { content: "\f101"; }
 .flaticon-russia:before { content: "\f102"; }
 .flaticon-facebook-logo:before { content: "\f103"; }
@@ -46,3 +53,20 @@ margin-left: 20px;
 .flaticon-ui:before { content: "\f10d"; }
 .flaticon-history:before { content: "\f10e"; }
 .flaticon-question:before { content: "\f10f"; }
+    
+    $font-Flaticon-envelope: "\f100";
+    $font-Flaticon-phone-call: "\f101";
+    $font-Flaticon-russia: "\f102";
+    $font-Flaticon-facebook-logo: "\f103";
+    $font-Flaticon-instagram: "\f104";
+    $font-Flaticon-runner: "\f105";
+    $font-Flaticon-diet: "\f106";
+    $font-Flaticon-sports-and-competition: "\f107";
+    $font-Flaticon-diet-1: "\f108";
+    $font-Flaticon-gym: "\f109";
+    $font-Flaticon-woman: "\f10a";
+    $font-Flaticon-running: "\f10b";
+    $font-Flaticon-maps-and-flags: "\f10c";
+    $font-Flaticon-ui: "\f10d";
+    $font-Flaticon-history: "\f10e";
+    $font-Flaticon-question: "\f10f";

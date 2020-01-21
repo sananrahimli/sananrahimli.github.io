@@ -1,6 +1,6 @@
     /*
     Flaticon icon font: Flaticon
-    Creation date: 20/01/2020 17:24
+    Creation date: 21/01/2020 20:42
     */
 
     @font-face {
@@ -53,6 +53,8 @@
 .flaticon-ui:before { content: "\f10d"; }
 .flaticon-history:before { content: "\f10e"; }
 .flaticon-question:before { content: "\f10f"; }
+.flaticon-debit-card:before { content: "\f110"; }
+.flaticon-browser:before { content: "\f111"; }
     
     $font-Flaticon-envelope: "\f100";
     $font-Flaticon-phone-call: "\f101";
@@ -70,3 +72,5 @@
     $font-Flaticon-ui: "\f10d";
     $font-Flaticon-history: "\f10e";
     $font-Flaticon-question: "\f10f";
+    $font-Flaticon-debit-card: "\f110";
+    $font-Flaticon-browser: "\f111";

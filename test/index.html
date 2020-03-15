@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/bootstrap-grid.css">
 </head>
 <body>
-<nav class="nav-menu">
+<nav id="nav-menu">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-6 col-md-3">
@@ -1085,6 +1085,23 @@
 		</div>
 	</div>
 </section>
+
+<div id="big-menu">
+	<ul class="big-menu-list">
+		<li><a href="">Новости</a></li>
+		<li><a href="">Акции</a></li>
+		<li><a href="">Абонентам</a></li>
+		<li><a href="">О компании</a></li>
+		<li><a href="">Личный кабинет</a></li>
+		<li><a href="">Контакты</a></li>
+	</ul>
+</div>
+<div id="big-search">
+	<form action="">
+		<input type="text" placeholder="Напишите что вас интересует">
+		<button><i class="flaticon-search"></i></button>
+	</form>
+</div>
 <link rel="stylesheet" href="css/swiper.min.css">
 <script src="js/swiper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -1156,7 +1173,33 @@
 	  };
 	}
 
+
+	// jquery
 	// Scroll Menu
+	$(window).scroll(function(){
+	    if ($(this).scrollTop() > 50) {
+	       $('#nav-menu').css({'height' : '0', 'padding-top': '0', 'overflow': 'hidden'});
+	    } else {
+	       $('#nav-menu').css({'height' : 'auto', 'padding-top': 'calc(.5em + 1px)', 'overflow': 'hidden'});
+	    }
+
+	    if ($(this).scrollTop() > 380) {
+	       $('#nav-menu').addClass('nav-menu-fixed');
+	    } else {
+	       $('#nav-menu').removeClass('nav-menu-fixed');
+	    }
+	});
+	$( ".burger-menu-btn" ).on( "click", function(e) {
+	event.preventDefault();
+	  $('body').toggleClass('active-menu');
+	  $(this).toggleClass('active');
+	  $('.burger-menu, #big-menu').toggleClass('active');
+	});
+	$( ".nav-search-btn" ).on( "click", function(e) {
+	event.preventDefault();
+	  $('body').toggleClass('active-menu-search');
+	  $('#big-search').toggleClass('active');
+	});
 
 </script>
 </body>

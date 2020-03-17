@@ -567,6 +567,41 @@ section#trafic .swiper-slide:hover {
 transform: scale(1.02);
 z-index: 99;
 }
+section#trafic .swiper-slide .svg-animation {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	text-align: center;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content:space-around;
+}
+section#trafic .swiper-slide .svg-animation > .svg-animation-num {
+overflow: hidden;
+-webkit-transition: .5s;
+-o-transition: .5s;
+transition: .5s;
+height: 0;
+font-size: 1.3rem;
+color: #ccc;
+}
+section#trafic .swiper-slide .svg-animation > .svg-animation-num span {
+	font-size: 2.3rem;
+	font-weight: bold;	
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+section#trafic .swiper-slide:hover > .svg-animation > .svg-animation-num {
+height: 40px;
+
+}
 section#trafic .swiper-slide h4 {
 	font-size: 1.5rem;
     letter-spacing: .15em;
@@ -585,22 +620,18 @@ section#trafic .swiper-slide h4 {
 	border-top-right-radius: 5px;	
 	
 }
-section#trafic .swiper-slide:nth-child(2n) > h4, section#trafic .swiper-slide:nth-child(2n) > .btn-pur a, section#trafic .swiper-slide:nth-child(2n) > .price span.num {
+section#trafic .swiper-slide:nth-child(2n) > h4, section#trafic .swiper-slide:nth-child(2n) > .btn-pur a, section#trafic .swiper-slide:nth-child(2n) > .price span.num, section#trafic .swiper-slide:nth-child(2n) > .svg-animation > .svg-animation-num > span {
 	    background-color: #c280bf!important;
     background-image: linear-gradient(to right,rgba(128,115,178,1) 0,#c280bf 100%);
 }
-section#trafic .swiper-slide:nth-child(2n+1) > h4, section#trafic .swiper-slide:nth-child(2n+1) > .btn-pur a, section#trafic .swiper-slide:nth-child(2n+1) > .price span.num {
+section#trafic .swiper-slide:nth-child(2n+1) > h4, section#trafic .swiper-slide:nth-child(2n+1) > .btn-pur a, section#trafic .swiper-slide:nth-child(2n+1) > .price span.num, section#trafic .swiper-slide:nth-child(2n+1) > .svg-animation > .svg-animation-num > span {
 
 background-color: #FF9A8B;
 background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
 }
-section#trafic .swiper-slide:nth-child(2n+3) > h4, section#trafic .swiper-slide:nth-child(2n+3) > .btn-pur a, section#trafic .swiper-slide:nth-child(2n+3) > .price span.num, .swiper-button-next-trafic i:before, .swiper-button-prev-trafic i:before {
+section#trafic .swiper-slide:nth-child(2n+3) > h4, section#trafic .swiper-slide:nth-child(2n+3) > .btn-pur a, section#trafic .swiper-slide:nth-child(2n+3) > .price span.num, .swiper-button-next-trafic i:before, .swiper-button-prev-trafic i:before, section#trafic .swiper-slide:nth-child(2n+3) > .svg-animation > .svg-animation-num > span {
     background-color: #0093E9;
     background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-}
-section#trafic .swiper-slide .svg-animation {
-	text-align: center;
-	display: block;	
 }
 section#trafic .swiper-slide .svg-animation svg {
 	width: 40%;
@@ -1116,13 +1147,14 @@ section#trafic .swiper-slide .btn-pur a {
 }
 
 p.trafic-block-descr {
-	margin: .5em 0 2em;
+	margin: .5em 0 .3em;
 	opacity: .6;
 	font-size: .85rem
 }
+p.trafic-block-descr a {color: #212529;}
 h3.title-block-h3 {
 	font-size: 1.6rem;
-	margin-top: 1.3em;
+	margin-top: 2.3em;
 }
 .swiper-button-next-trafic i:before, .swiper-button-prev-trafic i:before {
 	font-size: 4rem;

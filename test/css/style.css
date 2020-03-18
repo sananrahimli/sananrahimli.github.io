@@ -50,6 +50,7 @@ ul.nav-menu li {
 	margin-right: 3em;
 	padding-top: 1em;
 }
+ul.nav-menu li:last-child {margin-right: 0;}
 ul.nav-menu li a {
 	color: #fff;
 	font-size: 1.15rem;
@@ -92,7 +93,7 @@ ul.nav-menu li:last-child:before {display: none;}
 a.nav-search-btn i:before, a.nav-account-btn i:before {
 	color: #fff;
 	font-size: 1.6rem;
-	padding-right: 2px;
+	padding: 0 2px;
 }
 a.nav-search-btn, a.nav-account-btn {
 	display: -webkit-flex;
@@ -225,15 +226,19 @@ header:before {
 header > .container {
 	overflow: hidden;
 	margin-top: 4em;
+	
 }
-header .swiper-container {
+/*header .swiper-container {
 	height: calc(92vh - 4em);	
-}
+}*/
+
+header > .container, header > .container > .row, header > .container > .row >.col-12, .swiper-container, .swiper-container-vertical > .swiper-wrapper {height:calc(100% - 2em);}
 header .swiper-slide > .row {
 	height: 100%;
 	-ms-align-items: center;
 	align-items: center;
 }
+header .swiper-slide {opacity: 0;} .swiper-slide.swiper-slide-active {opacity: 1;}
 header .swiper-slide svg, .swiper-slide img {
 	width: 100%;
 	height: auto;
@@ -292,12 +297,24 @@ header a.slider_btn_more:hover:after {
 header > .header_footer {
 	display: inline-block;
 	width: 100%;
-	height: 8vh;
-background-image: -webkit-linear-gradient(153deg, #b2d7fd 25%, rgba(225, 206, 243, 0.0) 100%);
-background-image: -o-linear-gradient(153deg, #b2d7fd 25%, rgba(225, 206, 243, 0.0) 100%);
-background-image: linear-gradient(243deg, #b2d7fd 25%, rgba(225, 206, 243, 0.0) 100%);
-
+	min-height: 55px;
+	background-image: -webkit-linear-gradient(153deg, #b2d7fd 25%, rgba(225, 206, 243, 0.0) 100%);
+	background-image: -o-linear-gradient(153deg, #b2d7fd 25%, rgba(225, 206, 243, 0.0) 100%);
+	background-image: linear-gradient(243deg, #b2d7fd 25%, rgba(225, 206, 243, 0.0) 100%);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 9;
 }
+header > .header_footer a.scroll_icon {
+	position: absolute;
+	left: 0;
+	top: -20px;
+	-webkit-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+}
+header > .header_footer a.scroll_icon:hover {top: -15px;}
 header > .header_footer a.scroll_icon i:before {
 	font-size: 3.1em;
 	color: #fff;
@@ -307,8 +324,6 @@ header > .header_footer a.scroll_icon i:before {
 -ms-transform: rotate(90deg);
 transform: rotate(90deg);
 display: inline-block;
-top: -20px;
-left: -20px;
 opacity: .8;
 }
 header > .header_footer ul.header_footer_soc {
@@ -321,6 +336,7 @@ header > .header_footer ul.header_footer_soc {
 	-ms-align-items: center;
 	align-items: center;
 	height: 100%;
+	min-height: 55px;
 }
 header > .header_footer ul.header_footer_soc li {margin-left: 1.6em;}
 header > .header_footer ul.header_footer_soc li a {
@@ -337,11 +353,6 @@ header > .header_footer ul.header_footer_soc li a {
 	-ms-align-items: center;
 	align-items: center;
 	justify-content: center;
-	-webkit-transform: translateY(-25%);
-	-moz-transform: translateY(-25%);
-	-ms-transform: translateY(-25%);
-	-o-transform: translateY(-25%);
-	transform: translateY(-25%);
 	
 }
 header > .header_footer ul.header_footer_soc li a i:before {
@@ -1312,6 +1323,17 @@ footer h4 {
 	text-transform: uppercase;
 	
 }
+footer ul.footer-docs {margin-top: 1em;}
+footer ul.footer-docs li > a {
+	font-size: 15px;
+	color: #c280bf;
+	font-weight: normal;
+	
+}
+footer ul.footer-docs li > a > i:before {
+	font-size: 17px;
+	color: #3197d4;
+}
 footer ul.footer-links li {
 	border-bottom: 1px solid rgba(76,76,76,.1);
 }
@@ -1324,6 +1346,48 @@ footer ul.footer-links li a {
 	font-size: 1.1rem;
 	font-weight: normal;
 	
+}
+footer ul.footer-social-links {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: center;
+	margin-top: 2em;
+}
+footer ul.footer-social-links > li {margin: 0 0.5em;}
+footer ul.footer-social-links > li > a {
+    border: 1px solid #c280bf;
+    color: #c280bf;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+    -webkit-transform: translateY(-25%);
+    -moz-transform: translateY(-25%);
+    -ms-transform: translateY(-25%);
+    -o-transform: translateY(-25%);
+    transform: translateY(-25%);	
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+}
+footer ul.footer-social-links > li:nth-child(3) > a > i:before {font-size: 18px;}
+footer ul.footer-social-links > li:nth-child(1) > a > i:before {top:2px;}
+footer ul.footer-social-links > li > a:hover {
+
+	color: #fff;
+	background-color: #c280bf;
 }
 footer ul.footer-links li a:hover {
 	color: #3197d4;
@@ -1500,3 +1564,50 @@ border: none;
 color: #fff;
 }
 #big-search button > i:before {font-size: 2rem;cursor: pointer;}
+
+
+/*Adaptiv*/
+@media (max-width: 1100px) {
+	section#trafic .swiper-slide h4 {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+}
+@media (max-width: 992px) {
+	.nav-logo i::before {margin-left: 0;}
+	ul.nav-menu li {margin-right: 1.7em;} ul.nav-menu li::before {right: -0.85em;}
+	a.nav-search-btn p, a.nav-account-btn p {display: none;}
+	section#package .package-item {height: auto;}
+	section#package .package-item div:first-child {padding: 2em 0 2em 1.5em;}
+	section#package .package-item div > i {
+		position: absolute;
+		right: -20%;
+		opacity: .4;
+	}
+	section#package .package-item i::before {font-size:9rem;}
+	section#package .package-item div h4 {font-size: 1.5rem;}
+	section#trafic .swiper-slide .svg-animation > .svg-animation-num {height: auto !important;}
+	section#trafic .swiper-slide ul {padding: 0.2em 2em 1.2em;}
+	section#trafic .swiper-slide .btn-pur {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+	footer h4 {font-size: 1.2rem;}
+	footer ul.footer-links li a {font-size: 1rem;}
+	footer ul.footer-docs li > a {font-size: 14px;}
+}
+@media (max-width: 768px) {
+	.col-nav-menu, .swiper-slide .parallax-mouse {display: none;}
+	.home-news-posts-left, footer .footer-adress a {margin-bottom: 1em;}
+	footer .footer-adress a {display: block;}
+	footer h4 {margin-bottom: 10px;}
+	footer {padding: 3em 0 1.5em;}
+	footer ul.footer-links li a {padding: 10px 0 10px 20px;}
+	.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {margin: 0 .7em}
+}
+@media (max-width: 576px) {
+	header .slider-text h3 {font-size: 2.3rem}
+	section#services .d-flex p {font-size: 0.8rem;}
+	section#services .d-flex i {margin-bottom: 1em;}
+}

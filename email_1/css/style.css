@@ -16495,5 +16495,5 @@ header .contacts a > i {margin-right: .6em;}
     .content .text-content {padding: 30px 15px 5em;}
     .team_block_items > .team_item_box {width: 100%;}
     .mmenu #menu_link i {font-size: 1.7rem}
-    .contacts-mob a {border: none;}
+    .contacts-mob a {border: none !important;}
 }

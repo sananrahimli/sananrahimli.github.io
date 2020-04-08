@@ -23,6 +23,20 @@
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="243" />
     <meta property="og:image:height" content="113" />
+
+    <style type="text/css">#hellopreloader_preload{display: block;position: fixed;z-index: 99999;top: 0;left: 0;width: 100%;height: 100%;
+    background-color: #000;
+    background-image: url(./img/logo.png), url('./img/puff.svg');
+    background-position: center center, center center;
+    -webkit-background-size: 223px 93px, 83px;
+    background-size: 223px 93px, 83px;
+    background-repeat: no-repeat;
+    
+    
+    }</style>
+    <div id="hellopreloader"><div id="hellopreloader_preload"></div></div>
+    <script type="text/javascript">var hellopreloader = document.getElementById("hellopreloader_preload");function fadeOutnojquery(el){el.style.opacity = 1;var interhellopreloader = setInterval(function(){el.style.opacity = el.style.opacity - 0.05;if (el.style.opacity <=0.05){ clearInterval(interhellopreloader);hellopreloader.style.display = "none";}},16);}window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1000);};</script>
+
   </head>
   <body class="home">
     <div class="bg-preload">
@@ -48,7 +62,7 @@
                   </button>
                 </div>
                 <ul class="first-level"></ul>
-                <div class="contacts">
+                <div class="contacts contacts-mob">
                   <a href="tel:+78314237042">
                   <i class="fa fa-phone" aria-hidden="true"></i>+7 (831) 423-70-42</a>
                   <a href="mailto:bagstroy@inbox.ru">

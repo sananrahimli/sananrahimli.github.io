@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'Formular';
+    src: url('Formular.eot');
+    src: url('Formular.eot?#iefix') format('embedded-opentype'),
+        url('Formular.woff2') format('woff2'),
+        url('Formular.woff') format('woff'),
+        url('Formular.ttf') format('truetype'),
+        url('Formular.svg#Formular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Formular';
+    src: url('Formular-Medium.eot');
+    src: url('Formular-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Formular-Medium.woff2') format('woff2'),
+        url('Formular-Medium.woff') format('woff'),
+        url('Formular-Medium.ttf') format('truetype'),
+        url('Formular-Medium.svg#Formular-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Formular';
+    src: url('Formular-MediumItalic.eot');
+    src: url('Formular-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('Formular-MediumItalic.woff2') format('woff2'),
+        url('Formular-MediumItalic.woff') format('woff'),
+        url('Formular-MediumItalic.ttf') format('truetype'),
+        url('Formular-MediumItalic.svg#Formular-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Formular';
+    src: url('Formular-Black.eot');
+    src: url('Formular-Black.eot?#iefix') format('embedded-opentype'),
+        url('Formular-Black.woff2') format('woff2'),
+        url('Formular-Black.woff') format('woff'),
+        url('Formular-Black.ttf') format('truetype'),
+        url('Formular-Black.svg#Formular-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Formular';
+    src: url('Formular-BlackItalic.eot');
+    src: url('Formular-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('Formular-BlackItalic.woff2') format('woff2'),
+        url('Formular-BlackItalic.woff') format('woff'),
+        url('Formular-BlackItalic.ttf') format('truetype'),
+        url('Formular-BlackItalic.svg#Formular-BlackItalic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Formular';
+    src: url('Formular-Bold.eot');
+    src: url('Formular-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Formular-Bold.woff2') format('woff2'),
+        url('Formular-Bold.woff') format('woff'),
+        url('Formular-Bold.ttf') format('truetype'),
+        url('Formular-Bold.svg#Formular-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Formular';
+    src: url('Formular-Light.eot');
+    src: url('Formular-Light.eot?#iefix') format('embedded-opentype'),
+        url('Formular-Light.woff2') format('woff2'),
+        url('Formular-Light.woff') format('woff'),
+        url('Formular-Light.ttf') format('truetype'),
+        url('Formular-Light.svg#Formular-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Formular';
+    src: url('Formular-Italic.eot');
+    src: url('Formular-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Formular-Italic.woff2') format('woff2'),
+        url('Formular-Italic.woff') format('woff'),
+        url('Formular-Italic.ttf') format('truetype'),
+        url('Formular-Italic.svg#Formular-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Formular';
+    src: url('Formular-BoldItalic.eot');
+    src: url('Formular-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Formular-BoldItalic.woff2') format('woff2'),
+        url('Formular-BoldItalic.woff') format('woff'),
+        url('Formular-BoldItalic.ttf') format('truetype'),
+        url('Formular-BoldItalic.svg#Formular-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Formular';
+    src: url('Formular-LightItalic.eot');
+    src: url('Formular-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Formular-LightItalic.woff2') format('woff2'),
+        url('Formular-LightItalic.woff') format('woff'),
+        url('Formular-LightItalic.ttf') format('truetype'),
+        url('Formular-LightItalic.svg#Formular-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+

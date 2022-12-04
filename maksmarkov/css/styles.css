@@ -1,26 +1,350 @@
 @import url(../fonts/font.css);
 
-
-html, body {
+html,
+body {
 	margin: 0;
 	padding: 0;
 	font-size: 16px;
 	font-family: 'Poiret One';
+	background-color: #060a0e;
+	color: #fff;
+	min-width: 1200px;
 }
-* {
+
+*,
+ul,
+h1,
+h2,
+h3,
+h4 {
 	position: relative;
-	
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+section,
+header,
+nav {
+	display: inline-block;
+	width: 100%;
+	height: auto;
 }
 
 .container {
-	width: 120px;
+	width: 1200px;
 	display: block;
 	margin: 0 auto;
 }
 
 header {
-	height: 100vh;
+	background-color: #0a0d1f;
+	margin-bottom: -5px;
+}
+
+header .logo {
+	height: 818px;
+	width: 1100px;
+	background-image: url(images/logo.png);
+	background-size: cover;
+	display: block;
+	margin: 0 auto;
+}
+
+header .lines {
+	position: absolute;
+	left: 0;
+	bottom: 0;
 	width: 100%;
+	height: 51px;
 	display: inline-block;
 	background-color: #0a0d1f;
+	border-top: 1px solid rgba(255, 255, 255, 0.4);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+header .lines:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 15px;
+	width: 100%;
+	height: 1px;
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+nav {
+	padding: 5em 0;
+}
+
+nav ul.menu {
+	display: block;
+	margin: 0 auto;
+	width: 90%;
+	height: 550px;
+	background-image: url(images/menu_bg.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+nav ul.menu li a {
+	font-size: 35px;
+	color: #fff;
+	line-height: 1.2;
+	text-align: justifyLeft;
+	text-decoration: none;
+}
+
+nav ul.menu li {
+	position: relative;
+	display: inline-block;
+}
+
+nav ul.menu li:nth-child(1) {
+	left: 1.5em;
+	top: 3em;
+}
+
+nav ul.menu li:nth-child(2) {
+	left: 8em;
+	top: 4em;
+}
+
+nav ul.menu li:nth-child(3) {
+	left: 16em;
+}
+
+nav ul.menu li:nth-child(4) {
+	left: 27em;
+	top: -2em;
+}
+
+nav ul.menu li:nth-child(5) {
+	left: 26em;
+	top: 4.5em;
+}
+
+nav ul.menu li:nth-child(6) {
+	left: -2em;
+	top: 13em;
+}
+
+nav ul.menu li:nth-child(7) {
+	left: 24em;
+	top: 18em;
+	position: absolute;
+}
+
+nav ul.menu li:nth-child(8) {
+	left: 13em;
+	top: 15em;
+	position: absolute;
+}
+
+section#about {
+	padding-bottom: 8em;
+}
+
+section#about h2 {
+	font-size: 50px;
+	margin-bottom: 1.5em;
+}
+
+section#about p {
+	font-size: 18px;
+	color: #7e7e7e;
+	margin-bottom: 1em;
+}
+
+section#about .container {
+	display: flex;
+	align-items: flex-start;
+}
+
+section#about .container div {
+	flex-grow: 1;
+	padding-left: 2em;
+}
+
+section#about .container div:nth-child(2) {
+	flex-grow: 2;
+}
+
+section#about .container div:nth-child(2) .about_photo {
+	width: 450px;
+	display: inline-block;
+}
+
+section#about .container div:nth-child(2) .about_photo:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: -0.5em;
+	border: 2px solid #727272;
+	opacity: .34;
+	background-color: transparent;
+	width: 100%;
+	height: calc(130%);
+	-moz-transform: rotate(10deg);
+	-webkit-transform: rotate(10deg);
+	-o-transform: rotate(10deg);
+	-ms-transform: rotate(10deg);
+	transform: rotate(10deg);
+}
+
+section#about .container div:nth-child(2) .about_photo img {
+	width: 100%;
+}
+
+section#about .lines {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 15px;
+	width: 100%;
+	border-top: 1px solid #fff;
+	border-bottom: 10px solid rgba(255, 255, 255, 0.5);
+}
+
+section#afisha {
+	background: #0c0f1c;
+	background: -moz-radial-gradient(center, ellipse cover, #0c0f1c 0%, #000000 100%);
+	background: -webkit-radial-gradient(center, ellipse cover, #0c0f1c 0%, #000000 100%);
+	background: radial-gradient(ellipse at center, #0c0f1c 0%, #000000 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0c0f1c', endColorstr='#000000', GradientType=1);
+	padding: 4em 0 1em;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+section#afisha .container {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+section#afisha .container div.afisha_item {
+	width: 500px;
+	font-size: 18px;
+	color: #7e7e7e;
+}
+
+section#afisha .container div.afisha_item img {
+	margin-bottom: 2em;
+}
+
+section#home_audio {
+	padding-bottom: 5.5em;
+}
+
+section#home_audio h3 {
+	font-size: 50px;
+	margin-bottom: 2em;
+}
+
+section#home_audio p {
+	font-size: 18px;
+	color: #7e7e7e;
+	margin-bottom: 2em;
+}
+
+section#home_audio .audio_item {
+	margin-bottom: .5em;
+}
+
+section#home_audio .audio_item p {
+	font-size: 24px;
+	color: #7e7e7e;
+	margin-bottom: .3em;
+}
+
+section#home_audio .audio_item audio {
+	width: 35%;
+}
+
+section#home_audio .lines {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 51px;
+	display: inline-block;
+	background-color: transparent;
+	border-top: 1px solid rgba(255, 255, 255, 0.4);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+section#home_audio .lines:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 15px;
+	width: 100%;
+	height: 1px;
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+footer {
+	padding: 2em 0 4em;
+	background: -moz-linear-gradient(top, rgba(0, 183, 234, 0) 0%, #0c0f1c 100%);
+	background: -webkit-linear-gradient(top, rgba(0, 183, 234, 0) 0%, #0c0f1c 100%);
+	background: linear-gradient(to bottom, rgba(0, 183, 234, 0) 0%, #0c0f1c 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0000b7ea', endColorstr='#0c0f1c', GradientType=0);
+	color: #c3c3c3;
+	font-size: 18px;
+}
+
+footer .container {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+footer .container ul.soc li {
+	display: inline-block;
+	margin-right: -2em;
+	transition: .5s;
+	opacity: .63;
+	-moz-transform: scale(0.6);
+	-webkit-transform: scale(0.6);
+	-o-transform: scale(0.6);
+	-ms-transform: scale(0.6);
+	transform: scale(0.6);
+}
+
+footer .container ul.soc li a {
+	background: url('images/sprite.png') no-repeat 0 0;
+	width: 95px;
+	height: 96px;
+	display: block;
+}
+
+footer .container ul.soc li:nth-child(2) a {
+	background-position: -131px 0;
+}
+
+footer .container ul.soc li:nth-child(3) a {
+	background-position: -261px 0;
+}
+
+footer .container ul.soc li:nth-child(4) a {
+	background-position: -393px 0;
+}
+
+footer .container ul.soc li:hover {
+	opacity: 1;
+}
+
+footer .container .copywriting {
+	text-align: right;
+	margin-top: .4em;
+}
+
+footer .container .copywriting a {
+	display: block;
+	color: #c3c3c3;
 }

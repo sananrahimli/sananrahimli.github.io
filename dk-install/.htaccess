@@ -1,7 +1,0 @@
-AddDefaultCharset utf-8
-DirectoryIndex index.html
-
-RewriteEngine On
-
-# Ðåäèðåêòû
-RewriteRule ^page/([0-9]+)(/?)$ index.html [L]

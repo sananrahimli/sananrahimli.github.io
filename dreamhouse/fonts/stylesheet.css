@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Anglecia Pro Display';
+    src: url('AngleciaProDisplay.eot');
+    src: url('AngleciaProDisplay.eot?#iefix') format('embedded-opentype'),
+        url('AngleciaProDisplay.woff2') format('woff2'),
+        url('AngleciaProDisplay.woff') format('woff'),
+        url('AngleciaProDisplay.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

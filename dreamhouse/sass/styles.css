@@ -827,7 +827,7 @@ footer .copyrating {
     width: 100%;
     text-align: center;
   }
-  section#bookingForm .container .bookingForm__inputs form label input {
+  section#bookingForm .container .bookingForm__inputs form label input:not([type=submit]) {
     width: 100% !important;
     max-width: 90% !important;
     margin: 0.4em 0 0 4%;
@@ -853,5 +853,38 @@ footer .copyrating {
   .leftBar {
     font-size: 0.8rem;
     text-align: center;
+  }
+  section#bookingForm .container .bookingForm__inputs form label {
+    width: 47% !important;
+  }
+  section#bookingForm .container .bookingForm__inputs form label.labelButton {
+    width: 100% !important;
+  }
+  section#roomwow {
+    margin-top: 4em;
+  }
+  section#roomwow .container {
+    padding: 0 10px;
+  }
+  section#roomwow .container > .d-flex .roomwow_block {
+    width: 100%;
+    margin: 0 !important;
+    flex-direction: column;
+  }
+  section#roomwow .container > .d-flex .roomwow_block:nth-child(3) .roomwow_item {
+    width: 100%;
+    margin: 0 0 1em !important;
+  }
+  section#mapContacts .d-flex .contacts .contacts__content h3 {
+    font-size: 1.8rem;
+  }
+  section#mapContacts .d-flex .contacts .contacts__content ul li {
+    font-size: 0.9rem;
+  }
+  section#mapContacts .d-flex .contacts .contacts__content ul li i {
+    font-size: 0.9rem;
+  }
+  section#mapContacts .d-flex .contacts .contacts__content ul li a {
+    font-size: 0.9rem;
   }
 }/*# sourceMappingURL=styles.css.map */

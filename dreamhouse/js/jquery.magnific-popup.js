@@ -1131,7 +1131,7 @@ $.magnificPopup.registerModule('image', {
 	options: {
 		markup: '<div class="mfp-figure">'+
 					'<div class="mfp-close"></div>'+
-					'<figure><div class="instbar"><a href="https://www.instagram.com/dreamhousegabala"><img src="./images/gallery/instLogo.jpeg"> Dreamhouse</a></div>'+
+					'<figure><div class="instbar"><a href="https://www.instagram.com/dreamhousegabala"><img src="./images/gallery/instLogo.jpg"> Dreamhouse</a></div>'+
 						'<div class="mfp-img"></div>'+
 						'<figcaption>'+
 							'<div class="mfp-bottom-bar">'+

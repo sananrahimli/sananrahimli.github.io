@@ -450,4 +450,10 @@ img {
     font-size: clamp(.8rem, (1vw + 1vh) / 1.1, 2rem); 
   }
   .sidebar .sidebar__soclinks li {margin-bottom: 0;}
+  .sidebar .sidebar__buttonsBlock {height: 40vh;}
+  .swiper-slide .container {height: 100vh;}
+  .sidebar .sidebar__buttonsBlock .btn a i {font-size: 1rem;}
+  .sidebar .sidebar__soclinks li a i {
+    font-size: .9rem;
+  }
 }

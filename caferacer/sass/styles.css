@@ -442,10 +442,11 @@ img {
 }
 @media screen and (max-width: 640px) {
   .swiper-slide .container .blurBlock {
-    width: calc(100% - 25vw);
+    width: calc(100% - 30vw);
   }
   .swiper-slide .container h2.caferacerTitle {
     font-size: clamp(1rem, 11.5vh, 3rem);
+    left: 5px;
   }
   .footer ul {
     padding: 0;
@@ -453,19 +454,40 @@ img {
   }
   .footer ul li {
     height: 100%;
+    display: flex;
+    align-items: center;
   }
   .footer ul li a {
-    height: 100%;
+    font-size: 0.9rem;
     width: 100%;
     padding: 0;
-    display: block;
     text-align: left;
-    line-height: 28px;
   }
   .sidebar .sidebar__buttonsBlock .btn a i {
     font-size: clamp(0.8rem, (1vw + 1vh) / 1.1, 2rem);
   }
   .sidebar .sidebar__soclinks li {
     margin-bottom: 0;
+  }
+  .sidebar .sidebar__buttonsBlock {
+    height: 40vh;
+  }
+  .swiper-slide .container {
+    height: 100vh;
+  }
+  .sidebar .sidebar__buttonsBlock .btn a i {
+    font-size: 1.14rem;
+  }
+  .sidebar .sidebar__soclinks li a i {
+    font-size: 1.1rem;
+  }
+  .swiper-slide .container .blurBlock .blurBlock__content .description {
+    max-height: auto;
+  }
+  .swiper-slide .container .blurBlock .blurBlock__content .description p {
+    height: auto;
+  }
+  .swiper-slide .container .blurBlock .blurBlock__content {
+    justify-content: space-around;
   }
 }/*# sourceMappingURL=styles.css.map */

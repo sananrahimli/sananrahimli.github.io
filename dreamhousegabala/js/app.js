@@ -1,28 +1,28 @@
 $('.open-popup-photo').magnificPopup({
     items: [
       {
-        src: '../images/gallery/gallery1.webp'
+        src: './images/gallery/gallery1.webp'
       },
       {
-        src: '../images/gallery/gallery2.webp'
+        src: './images/gallery/gallery2.webp'
       },
       {
-        src: '../images/gallery/gallery3.webp'
+        src: './images/gallery/gallery3.webp'
       },
       {
-        src: '../images/gallery/gallery4.webp'
+        src: './images/gallery/gallery4.webp'
       },
       {
-        src: '../images/gallery/gallery5.webp'
+        src: './images/gallery/gallery5.webp'
       },
       {
-        src: '../images/gallery/gallery6.webp'
+        src: './images/gallery/gallery6.webp'
       },
       {
-        src: '../images/gallery/gallery7.webp'
+        src: './images/gallery/gallery7.webp'
       },
       {
-        src: '../images/gallery/gallery8.webp'
+        src: './images/gallery/gallery8.webp'
       }
     ],
     callbacks: {

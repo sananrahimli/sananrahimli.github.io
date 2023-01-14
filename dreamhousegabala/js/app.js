@@ -57,3 +57,14 @@ $(document).ready(function() {
 	});
 
 });
+
+
+function calcDays() {
+  let inputGelish = document.querySelector('#gelishtarixi').value
+  let inputGedish = document.querySelector('#gedishtarixi').value
+  let gunSayi = document.querySelector('label.day > span > i')
+
+  gunSayi.innerHTML = inputGedish - inputGelish
+
+}
+// parseInt(inputGedish) - parseInt(inputGedish)

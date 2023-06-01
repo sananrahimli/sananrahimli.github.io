@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товары</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+<div id="top" name="top"></div>
+
+<div id="allEffect">
+
+<section id="topHeader" class="py-1 bg-[#eee]">
+    <div class="container">
+        <div class="flex items-center">
+            <div class="location pr-6
+            "><a href="#" class="flex items-center"><i class="icon-flag mr-2"></i> <span class="font-bold text-sm">Москва</span></a></div>
+
+            <ul class="topHeader__nav flex items-center gap-2 px-2 pl-6">
+                <li><a href="">О нас</a></li>
+                <li><a href="">Акции</a></li>
+                <li><a href="">Новинки</a></li>
+                <li><a href="">Доставка</a></li>
+                <li><a href="">Возврат</a></li>
+                <li><a href="">Оплата</a></li>
+                <li><a href="">Отзывы и предложения</a></li>
+                <li><a href="">Гарантия на товар</a></li>
+                <li><a href="">Оптовые предажи</a></li>
+                <li><a href="">Контакты</a></li>
+            </ul>
+
+            <div class="moreLinkTop relative">
+                <button class="moreLinkTop__click">&#8226;&#8226;&#8226;</button>
+                <ul class="moreLinkTop__menu">                    
+                </ul>
+            </div>
+
+            <div class="callBack ml-auto"><a href="#" class="flex items-center openModalLink" data-modal="modal1"><i class="icon-phone mr-2"></i> <span class="text-sm">Заказать обратный звонок</span></a></div>
+        </div>
+    </div>
+</section>
+
+<header id="headerTemel" class="py-8">
+    <div class="container">
+        <div class="flex items-center gap-2">
+            <div class="logo mr-12">
+                <a href="/">
+                <svg width="164" height="30" viewBox="0 0 164 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.647 25.6358C15.5611 25.6358 17.2614 24.9135 18.7477 23.469H24.7605C23.4543 25.4018 21.8216 26.9685 19.8624 28.1689C17.9032 29.3489 15.8314 29.939 13.647 29.939C11.1698 29.939 8.88404 29.2675 6.7897 27.9247C4.69537 26.5819 3.04016 24.7609 1.8241 22.4619C0.608033 20.1628 0 17.6602 0 14.9542C0 12.2482 0.608033 9.74568 1.8241 7.44659C3.04016 5.14751 4.69537 3.33672 6.7897 2.01424C8.88404 0.671414 11.1698 0 13.647 0C15.8314 0 17.9032 0.600203 19.8624 1.80061C21.8216 2.98067 23.4543 4.53713 24.7605 6.46999H18.7477C17.2389 5.00509 15.5386 4.27263 13.647 4.27263C11.3274 4.27263 9.32317 5.33062 7.63419 7.44659C5.96773 9.54222 5.1345 12.0448 5.1345 14.9542C5.1345 17.8637 5.96773 20.3764 7.63419 22.4924C9.32317 24.588 11.3274 25.6358 13.647 25.6358Z" fill="#222222"/>
+                    <path d="M35.1646 2.01424C37.2589 0.671414 39.5447 0 42.0218 0C44.499 0 46.7848 0.671414 48.8791 2.01424C50.9734 3.33672 52.6286 5.14751 53.8447 7.44659C55.0608 9.74568 55.6688 12.2482 55.6688 14.9542C55.6688 17.6602 55.0608 20.1628 53.8447 22.4619C52.6286 24.7609 50.9734 26.5819 48.8791 27.9247C46.7848 29.2675 44.499 29.939 42.0218 29.939C39.5447 29.939 37.2589 29.2675 35.1646 27.9247C33.0702 26.5819 31.415 24.7609 30.199 22.4619C28.9829 20.1628 28.3749 17.6602 28.3749 14.9542C28.3749 12.2482 28.9829 9.74568 30.199 7.44659C31.415 5.14751 33.0702 3.33672 35.1646 2.01424ZM36.0091 22.4924C37.698 24.588 39.7023 25.6358 42.0218 25.6358C44.3414 25.6358 46.3344 24.588 48.0008 22.4924C49.6898 20.3764 50.5343 17.8637 50.5343 14.9542C50.5343 12.0448 49.6898 9.54222 48.0008 7.44659C46.3344 5.33062 44.3414 4.27263 42.0218 4.27263C39.7023 4.27263 37.698 5.33062 36.0091 7.44659C34.3426 9.54222 33.5094 12.0448 33.5094 14.9542C33.5094 17.8637 34.3426 20.3764 36.0091 22.4924Z" fill="#222222"/>
+                    <path d="M81.6791 8.57579C81.6791 11.1597 80.6094 13.3062 78.47 15.0153C80.5869 16.7243 81.6566 18.8199 81.6791 21.3021V30H76.95V21.4242C76.95 20.2442 76.4883 19.237 75.565 18.4028C74.6417 17.5687 73.5157 17.1516 72.187 17.1516H64.1475V30H59.3846V12.8789H72.187C73.4932 12.8789 74.6079 12.4619 75.5312 11.6277C76.477 10.7935 76.95 9.7762 76.95 8.57579C76.95 7.39573 76.4883 6.38861 75.565 5.55443C74.6417 4.72024 73.5157 4.30315 72.187 4.30315H59.3846V0H72.187C74.7993 0 77.0288 0.844354 78.8754 2.53306C80.7445 4.20142 81.6791 6.21567 81.6791 8.57579Z" fill="#222222"/>
+                    <path d="M107.216 0H112.419L101.575 30H96.2381L85.3949 0H90.5969L98.9067 22.9807L107.216 0Z" fill="#222222"/>
+                    <path d="M116.067 0H164V4.30315H153.495V30H148.732V4.30315H116.067V0ZM116.067 12.8789H137.719V17.1516H120.83V25.7274H137.719V30H118.431H116.067V12.8789Z" fill="#222222"/>
+                </svg>                
+                </a>
+            </div>
+    
+            <nav class="headerTemel_navigation mr-24">
+                <ul class="navigation__topMenu flex items-center gap-10">
+                    <li class="bigMenu-btn"><a href="#" id="bigMenu-btn_click" class="text-sm"><span><i></i><i></i><i></i></span> Каталог мебели</a></li>
+                    <li><a href="" class="text-sm">Кровати, матрасы</a></li>
+                    <li><a href="" class="text-sm">Шкафы, стеллажи</a></li>
+                    <li><a href="" class="text-sm">Диваны, пуфы</a></li>
+                    <li><a href="" class="text-sm">Столы, стулья</a></li>
+                    <li><a href="" class="text-sm">&#8226;&#8226;&#8226;</a></li>
+                </ul>
+            </nav>
+            
+            <div class="headerTemel_search mr-9">
+                <form action="" class="flex items-center justify-center relative" id="formSearch">
+                    <div class="inputFocus absolute"><input type="text" placeholder="Поиск по сайту"><span id="closeActiveSearch" class="closeBtn"><i></i><i></i></span></div>
+                    <span class="font-[500]" id="searchName">Поиск</span>
+                    <button class="buttonSearch flex items-center justify-center ml-4">
+                        <i class="searchButton">
+                            <i></i>
+                            <i></i>
+                        </i>
+                    </button>
+                </form>
+            </div>
+
+            <ul class="headerTemel_socialLinks flex gap-3 mr-9">
+                <li><a href=""><span class="icon-wp text-2xl"></span></a></li>
+                <li><a href=""><span class="icon-tg text-2xl"></span></a></li>
+                <li><a href=""><span class="icon-vaber text-2xl"></span></a></li>
+            </ul>
+            <div class="headerTemel_phone mr-9">
+                <a href="tel:89051496662" class="font-[500]">8 (905) 149-66-62</a>
+            </div>
+            <ul class="headerTemel_uiLinks flex gap-5">
+                <li><a href=""><span class="icon-profil text-2xl"></span></a></li>
+                <li><a href=""><span class="icon-fav text-2xl"></span></a></li>
+                <li><a href="" class="relative inline-block"><span class="icon-cart text-2xl"></span><span class="num bg-orange w-5 h-5 rounded-full inline-block flex items-center justify-center absolute -top-1 -right-3"><i class="text-[#fff] not-italic">1</i></span></a></li>
+            </ul>
+        </div>
+
+
+    </div>
+
+
+    <div id="header_bigMenu">
+        <div class="container">
+            <div class="flex justify-between items-start bigMenu_content">
+                <div class="contentLeft">
+                    <div class="buttonTypes flex justify-around items-center">
+                        <button class="typeButton" data-target="products">Товары</button>
+                        <button class="typeButton active" data-target="rooms">Комнаты</button>
+                    </div>
+                    <div class="contentTypes">
+                        <div id="productsContent" class="contentTypes">
+                            <ul>
+                                <li><button class="contentTypeButton" data-content="content1">Стенки</button></li>
+                                <li><button class="contentTypeButton" data-content="content2">Шкафы, комоды</button></li>
+                                <li><button class="contentTypeButton" data-content="content3">Кровати</button></li>
+                                <li><button class="contentTypeButton" data-content="content4">Диваны, пуфы</button></li>
+                                <li><button class="contentTypeButton" data-content="content5">Столы, кухни</button></li>
+                            </ul>
+                        </div>
+
+                        <div id="roomsContent" class="contentTypes active">
+                                <ul>
+                                    <li><button class="contentTypeButton active" data-content="content6">Акции</button></li>
+                                    <li><button class="contentTypeButton" data-content="content7">Спальни</button></li>
+                                    <li><button class="contentTypeButton" data-content="content8">Гостиные</button></li>
+                                    <li><button class="contentTypeButton" data-content="content9">Детские</button></li>
+                                    <li><button class="contentTypeButton" data-content="content10">Прихожие</button></li>
+                                </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="contentRight">
+                    <div id="content1" class="content">
+                        <ul class="flex flex-wrap linksItems">
+                            <li class="item">
+                                <h5 class="name">Стенки</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Стенки</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Стенки</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Стенки</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="content2" class="content">
+                        <ul class="flex flex-wrap linksItems">
+                            <li class="item">
+                                <h5 class="name">Шкафы</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Шкафы</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Шкафы</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Шкафы</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="content3" class="content">
+                        <ul class="flex flex-wrap linksItems">
+                            <li class="item">
+                                <h5 class="name">Кровати</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Кровати</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Кровати</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Кровати</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="content4" class="content">
+                        <ul class="flex flex-wrap linksItems">
+                            <li class="item">
+                                <h5 class="name">Диваны</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Диваны</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Диваны</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Диваны</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="content5" class="content">
+                        <ul class="flex flex-wrap linksItems">
+                            <li class="item">
+                                <h5 class="name">Столы</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Столы</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Столы</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Столы</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Комнаты -->
+                    
+                    <div id="content6" class="content active">
+                        <ul class="flex flex-wrap linksItems">
+                            <li class="item">
+                                <h5 class="name">Акции</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Акции</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Акции</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Акции</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="content7" class="content">
+                        <ul class="flex flex-wrap linksItems">
+                            <li class="item">
+                                <h5 class="name">Спальны</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Спальны</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Спальны</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Спальны</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="content8" class="content">
+                        <ul class="flex flex-wrap linksItems">
+                            <li class="item">
+                                <h5 class="name">Гостиные</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Гостиные</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Гостиные</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Гостиные</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="content9" class="content">
+                        <ul class="flex flex-wrap linksItems">
+                            <li class="item">
+                                <h5 class="name">Детские</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Детские</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Детские</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Детские</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="content10" class="content">
+                        <ul class="flex flex-wrap linksItems">
+                            <li class="item">
+                                <h5 class="name">Прихожие</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Прихожие</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Прихожие</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <h5 class="name">Прихожие</h5>
+                                <ul class="links">
+                                    <li><a href="">Комплекты спален</a></li>
+                                    <li><a href="">Банкетки</a></li>
+                                    <li><a href="">Комоды</a></li>
+                                    <li><a href="">Шкафы</a></li>
+                                    <li><a href="">Зеркала</a></li>
+                                    <li><a href="">Столы</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+<section id="blurEffects">
+
+<section id="page-product">
+    <div class="container">
+        <div class="roadLinks">
+            <ul class="flex gap-2">
+                <li><a href="#">Главная</a></li>
+                <li><span>/</span></li>
+                <li><a href="#">Каталог</a></li>
+                <li><span>/</span></li>
+                <li><a href="#">Гостиные</a></li>
+                <li><span>/</span></li>
+                <li><a href="#">МК 65 (орех)</a></li>
+                <li><span>/</span></li>
+                <li>Изделие №451 Комод (МК 65)</li>
+            </ul>
+        </div>
+
+        <h1 class="namePage">Изделие №451 Комод (МК 65)</h1>
+
+
+        <div class="productContent">
+            <div class="flex items-start">
+                <div class="productGallery">
+                    <div class="galleryPhoto flex">
+                    <div thumbsSlider="" class="swiper product__gallery-navigation">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="./img/productImage/item-1.png" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/productImage/item-2.png" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/productImage/item-4.png" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/productImage/item-1.png" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/productImage/item-2.png" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/productImage/item-4.png" alt=""></div>
+                      </div>
+
+                      <div class="sliderButtonSr">
+                        <div class="swiper-button-next product__gallery-navigation-next"></div>
+                        <div class="swiper-button-prev product__gallery-navigation-prev"></div>
+                        </div>
+                    </div>
+                    <div class="swiper product__gallery">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./img/productImage/item-1.png" alt=""></div>
+                            <div class="swiper-slide"><img src="./img/productImage/item-2.png" alt=""></div>
+                            <div class="swiper-slide"><img src="./img/productImage/item-4.png" alt=""></div>
+                            <div class="swiper-slide"><img src="./img/productImage/item-1.png" alt=""></div>
+                            <div class="swiper-slide"><img src="./img/productImage/item-2.png" alt=""></div>
+                            <div class="swiper-slide"><img src="./img/productImage/item-4.png" alt=""></div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="productBottomInformer">
+                        <div class="tabs">
+                            <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+                            <label for="tab-btn-1">Описание </label>
+                            <input type="radio" name="tab-btn" id="tab-btn-2" value="">
+                            <label for="tab-btn-2">Характеристики</label>
+                            <input type="radio" name="tab-btn" id="tab-btn-3" value="">
+                            <label for="tab-btn-3">Отзывы</label>
+                        
+                            <div id="content-1">
+                                Комод подойдёт для любого помещения – прихожей, спальни, гостиной, кухни или детской. В прихожей он будет удобен для хранения в его нижних ящиках, например, обуви, в верхних – зонтов, шапок, перчаток, ключей, а над столешницей можно прикрепить зеркало. Комод в спальне может быть использован для хранения постельных принадлежностей, мелких вещей и пр. 
+                                <br><br>
+                                К примеру, в ящике, размер которого – 90х60 см, высота – 24 см, можно легко поместить две подушки, простыню и одеяло. В комодах часто держат различные виды одежды: свитера (в глубоких ящиках), блузки, носки, носовые платки, трикотаж и др. (в неглубоких ящиках).
+                                <br><br>
+                                «Распределив обязанности» между выдвижными секциями комода, находящегося в гостиной, можно хранить в них компакт-диски, видеокассеты и пр.
+                                Расположенные в гостиных комоды часто используются для хранения в них домашних раритетов, драгоценностей, писем и пр. А на столешнице может стоять цветов в красивом декоративном кашпо или телевизор.
+                            </div>
+                            <div id="content-2">
+                                Характеристики 2...
+                            </div>
+                            <div id="content-3">
+                                Отзывы 3...
+                            </div>
+                          </div>
+                    </div>
+                    
+                </div>
+                <div class="productAction">
+                    <p class="productPrice">15 030 Р. <span>30 060 Р.</span></p>
+                    <div class="productCredit flex"><span>Рассрочка от <strong>9 999 Р. в мес.</strong></span><a href="">Оформить</a></div>
+                    <div class="productAdd">
+
+                        <div class="add__colors">
+                            <span class="name">Цвет:</span>
+                            <ul class="productColors flex gap-[12px]">
+                                <li><button class="colorBtn col-1"></button></li>
+                                <li><button class="colorBtn col-2"></button></li>
+                                <li><button class="colorBtn col-3"></button></li>
+                                <li><button class="colorBtn col-4"></button></li>
+                                <li><button class="colorBtn col-5"></button></li>
+                                <li><button class="colorBtn col-6"></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="add__sleeping">
+                            <button class="toggle-button">Спальное место: <span id="sleeping_check">200 х 90</span></button>
+                            <div class="toggle-content">
+                                <button>001 x 01</button><br><button>002 x 02</button><br><button>003 x 03</button><br><button>004 x 04</button><br><button>005 x 05</button>
+                            </div>
+                        </div>
+
+                        <div class="add__options">
+                            <button class="toggle-button">Опции: <span class="options_check">Выбрать</span> </button>
+                            <div class="toggle-content">
+                                --------
+                            </div>
+                        </div>
+
+                        <div class="add__goods">
+                            <span class="name">Добавить сопутствующие товары: </span>
+                            <ul>
+                                <li><a href="#" class="flex openModalLink" data-modal="modal2"><i>+</i><span>Матрас</span></a></li>
+                                <li><a href="#" class="flex openModalLink" data-modal="modal2"><i>+</i><span>Чехол</span></a></li>
+                                <li><a href="#" class="flex openModalLink" data-modal="modal2"><i>+</i><span>Подушка для сна</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="productButton"><button class="productAddCard">В корзину</button><button class="productBuyOneClick">Купить в один клик</button></div>
+       
+                </div>
+            </div>
+        </div>
+        
+
+
+
+<section id="collection">
+        <h3 class="titleBlock">Из этой коллекции</h3>
+        <div class="collectionSlider">
+            <div class="swiper productPageCollectionCatalog">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="hitPicture"><img src="./img/hits/hits1.png" alt=""></div>
+                        <h4 class="name">Буфет Каньон, 3 ящика</h4>
+                        <p class="price">34 740 Р. <span>69 480 Р.</span></p>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="hitPicture"><img src="./img/hits/hits2.png" alt=""></div>
+                        <h4 class="name">МК 64 Изделие 429 стол</h4>
+                        <p class="price">12 940 Р. <span>25 880 Р.</span></p>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="hitPicture"><img src="./img/hits/hits3.png" alt=""></div>
+                        <h4 class="name">Изд.467 Комод</h4>
+                        <p class="price">12 170 Р.  <span>24 480 Р.</span></p>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="hitPicture"><img src="./img/hits/hits4.png" alt=""></div>
+                        <h4 class="name">Изделие №527 кровать с ПМ VELUTO 16</h4>
+                        <p class="price">23 130 Р. <span>30 304 Р.</span></p>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="hitPicture"><img src="./img/hits/hits5.png" alt=""></div>
+                        <h4 class="name">Комод Изделие №547 3D 4 ящ., белый</h4>
+                        <p class="price">9 430 Р.  <span>18 860 Р.</span></p>
+                      </div><div class="swiper-slide">
+                        <div class="hitPicture"><img src="./img/hits/hits1.png" alt=""></div>
+                        <h4 class="name">Буфет Каньон, 3 ящика</h4>
+                        <p class="price">34 740 Р. <span>69 480 Р.</span></p>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="hitPicture"><img src="./img/hits/hits2.png" alt=""></div>
+                        <h4 class="name">МК 64 Изделие 429 стол</h4>
+                        <p class="price">12 940 Р. <span>25 880 Р.</span></p>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="hitPicture"><img src="./img/hits/hits3.png" alt=""></div>
+                        <h4 class="name">Изд.467 Комод</h4>
+                        <p class="price">12 170 Р.  <span>24 480 Р.</span></p>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="hitPicture"><img src="./img/hits/hits4.png" alt=""></div>
+                        <h4 class="name">Изделие №527 кровать с ПМ VELUTO 16</h4>
+                        <p class="price">23 130 Р. <span>30 304 Р.</span></p>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="hitPicture"><img src="./img/hits/hits5.png" alt=""></div>
+                        <h4 class="name">Комод Изделие №547 3D 4 ящ., белый</h4>
+                        <p class="price">9 430 Р.  <span>18 860 Р.</span></p>
+                      </div>
+                </div>
+              </div>
+              <div class="sliderButtonSr">
+                <div class="swiper-button-next CollectionSwiper-button-next"></div>
+                <div class="swiper-button-prev CollectionSwiper-button-prev"></div>
+                </div>
+        </div>
+</section>  
+
+
+<section id="recomend">
+        <h3 class="titleBlock">Рекомендуем посмотреть</h3>
+        <div class="recomendSlider">
+            <div class="swiper productPageRecomendCatalog">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="hitPicture"><img src="./img/hits/hits1.png" alt=""></div>
+                        <h4 class="name">Буфет Каньон, 3 ящика</h4>
+                        <p class="price">34 740 Р. <span>69 480 Р.</span></p>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="hitPicture"><img src="./img/hits/hits2.png" alt=""></div>
+                        <h4 class="name">МК 64 Изделие 429 стол</h4>
+                        <p class="price">12 940 Р. <span>25 880 Р.</span></p>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="hitPicture"><img src="./img/hits/hits3.png" alt=""></div>
+                        <h4 class="name">Изд.467 Комод</h4>
+                        <p class="price">12 170 Р.  <span>24 480 Р.</span></p>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="hitPicture"><img src="./img/hits/hits4.png" alt=""></div>
+                        <h4 class="name">Изделие №527 кровать с ПМ VELUTO 16</h4>
+                        <p class="price">23 130 Р. <span>30 304 Р.</span></p>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="hitPicture"><img src="./img/hits/hits5.png" alt=""></div>
+                        <h4 class="name">Комод Изделие №547 3D 4 ящ., белый</h4>
+                        <p class="price">9 430 Р.  <span>18 860 Р.</span></p>
+                      </div><div class="swiper-slide">
+                        <div class="hitPicture"><img src="./img/hits/hits1.png" alt=""></div>
+                        <h4 class="name">Буфет Каньон, 3 ящика</h4>
+                        <p class="price">34 740 Р. <span>69 480 Р.</span></p>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="hitPicture"><img src="./img/hits/hits2.png" alt=""></div>
+                        <h4 class="name">МК 64 Изделие 429 стол</h4>
+                        <p class="price">12 940 Р. <span>25 880 Р.</span></p>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="hitPicture"><img src="./img/hits/hits3.png" alt=""></div>
+                        <h4 class="name">Изд.467 Комод</h4>
+                        <p class="price">12 170 Р.  <span>24 480 Р.</span></p>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="hitPicture"><img src="./img/hits/hits4.png" alt=""></div>
+                        <h4 class="name">Изделие №527 кровать с ПМ VELUTO 16</h4>
+                        <p class="price">23 130 Р. <span>30 304 Р.</span></p>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="hitPicture"><img src="./img/hits/hits5.png" alt=""></div>
+                        <h4 class="name">Комод Изделие №547 3D 4 ящ., белый</h4>
+                        <p class="price">9 430 Р.  <span>18 860 Р.</span></p>
+                      </div>
+                </div>
+              </div>
+              <div class="sliderButtonSr">
+                <div class="swiper-button-next RecomendSwiper-button-next"></div>
+                <div class="swiper-button-prev RecomendSwiper-button-prev"></div>
+               </div>
+        </div>
+</section>  
+
+
+     </div><!--  end container -->
+</section>
+    
+<footer id="mainFooter">
+    <div class="container">
+        <div class="flex items-start">
+            <div class="footerLeftContent flex">
+                <ul class="footerLinks">
+                    <li class="nameBlock">О нас</li>
+                    <li class="linkUrl"><a href="#">Покупателям</a></li>
+                    <li class="linkUrl"><a href="#">Дилерам</a></li>
+                    <li class="linkUrl"><a href="#">Доставка и возврат</a></li>
+                    <li class="linkUrl"><a href="#">Акции</a></li>
+                </ul>
+                <ul class="footerLinks">
+                    <li class="nameBlock">Поддержка</li>
+                    <li class="linkUrl"><a href="#">Контакты</a></li>
+                    <li class="linkUrl"><a href="#">Личный кабинет</a></li>
+                    <li class="linkUrl"><a href="#">Отзывы и предложения</a></li>
+                    <li class="linkUrl"><a href="#">Гарантия на товар</a></li>
+                    <li class="linkUrl"><a href="#">Карта сайта</a></li>
+                </ul>
+                <ul class="footerLinks">
+                    <li class="nameBlock">Контакты</li>
+                    <li class="descName">Розничные продажи</li>
+                    <li class="contactPhone"><a href="tel:84993501242">8 (499) 350-12-42</a></li>
+                    <li class="contactMail"><a href="mailto:sale@corvet.ru">sale@corvet.ru</a></li>
+                    <li class="contactButton openModalLink" data-modal="modal1"><a href="">Заказать звонок</a></li>
+                </ul>
+                <ul class="footerLinks rightLinks">
+                    <li class="descName">Оптовые продажи</li>
+                    <li class="contactPhone"><a href="tel:89040387666">8 (904) 038-76-66</a></li>
+                    <li class="contactMail"><a href="mailto:opt@corvet.ru">opt@corvet.ru</a></li>
+                    <li class="socialLinks flex gap-3">
+                        <a href=""><span class="icon-wp"></span></a>
+                        <a href=""><span class="icon-tg"></span></a>
+                        <a href=""><span class="icon-vaber"></span></a>
+                    </li>
+                    <li class="socialInstagram"><a href="" class="flex items-center"><i class="icon-ins"></i> <span>Мы в инстаграм</span></a></li>
+                </ul>
+            </div>
+            
+            <div class="footerRightContent">
+                <div class="footerContacts flex flex-wrap">
+                    <a href="#top" id="topBtn" class="topButton flex flex-col justify-center items-center px-2 py-3">
+                        <i class="icon"><i></i><i></i></i>
+                        <span>вверх</span>
+                    </a>
+                    <ul class="contactsList">
+                        <li class="nameBlock">Магазин в Москве</li>
+                        <li class="text">МКАД, 8-й километр, 3, корп. 1</li>
+                        <li class="links">
+                           <a href="tel:84993501242">8-499-350-12-42</a> <a href="mailto:sale@corvet.ru">sale@corvet.ru</a>
+                        </li>
+                        <li class="text">пн-пт с 11:00 до 20:00</li>
+                        <li class="text">сб-вс с 10:00 до 20:00</li>
+                    </ul>
+                    <ul class="contactsList">
+                        <li class="nameBlock">Реквизиты</li>
+                        <li class="text">ИП Малинкина Н.Б.</li>                        
+                        <li class="text">ОГРНИП: 313334034500024</li>
+                        <li class="text">ИНН: 332910956335</li>
+                    </ul>
+                    <ul class="contactsList">
+                        <li class="nameBlock">Производство и выставочный зал</li>
+                        <li class="text">г. Владимир, ул. Полины Осипенко д. 66 «Б»</li>
+                        <li class="links">
+                           <a href="tel:89051496662">8 905-149-66-62</a> <a href="mailto:sale@corvet.ru">sale@corvet.ru</a>
+                        </li>
+                        <li class="text">пн-пт с 8:00 до 17:00</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footerTextSection">
+            <div class="flex gap-12 items-center">
+                <div class="logoSite">
+                    <svg width="164" height="30" viewBox="0 0 164 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.647 25.6358C15.5611 25.6358 17.2614 24.9135 18.7477 23.469H24.7605C23.4543 25.4018 21.8216 26.9685 19.8624 28.1689C17.9032 29.3489 15.8314 29.939 13.647 29.939C11.1698 29.939 8.88404 29.2675 6.7897 27.9247C4.69537 26.5819 3.04016 24.7609 1.8241 22.4619C0.608033 20.1628 0 17.6602 0 14.9542C0 12.2482 0.608033 9.74568 1.8241 7.44659C3.04016 5.14751 4.69537 3.33672 6.7897 2.01424C8.88404 0.671414 11.1698 0 13.647 0C15.8314 0 17.9032 0.600204 19.8624 1.80061C21.8216 2.98067 23.4543 4.53713 24.7605 6.46999H18.7477C17.2389 5.00509 15.5386 4.27263 13.647 4.27263C11.3274 4.27263 9.32317 5.33062 7.63419 7.44659C5.96773 9.54222 5.1345 12.0448 5.1345 14.9542C5.1345 17.8637 5.96773 20.3764 7.63419 22.4924C9.32317 24.588 11.3274 25.6358 13.647 25.6358Z" fill="#222222"/>
+                        <path d="M35.1646 2.01424C37.2589 0.671414 39.5447 0 42.0218 0C44.499 0 46.7848 0.671414 48.8791 2.01424C50.9734 3.33672 52.6286 5.14751 53.8447 7.44659C55.0608 9.74568 55.6688 12.2482 55.6688 14.9542C55.6688 17.6602 55.0608 20.1628 53.8447 22.4619C52.6286 24.7609 50.9734 26.5819 48.8791 27.9247C46.7848 29.2675 44.499 29.939 42.0218 29.939C39.5447 29.939 37.2589 29.2675 35.1646 27.9247C33.0702 26.5819 31.415 24.7609 30.199 22.4619C28.9829 20.1628 28.3749 17.6602 28.3749 14.9542C28.3749 12.2482 28.9829 9.74568 30.199 7.44659C31.415 5.14751 33.0702 3.33672 35.1646 2.01424ZM36.0091 22.4924C37.698 24.588 39.7023 25.6358 42.0218 25.6358C44.3414 25.6358 46.3344 24.588 48.0008 22.4924C49.6898 20.3764 50.5343 17.8637 50.5343 14.9542C50.5343 12.0448 49.6898 9.54222 48.0008 7.44659C46.3344 5.33062 44.3414 4.27263 42.0218 4.27263C39.7023 4.27263 37.698 5.33062 36.0091 7.44659C34.3426 9.54222 33.5094 12.0448 33.5094 14.9542C33.5094 17.8637 34.3426 20.3764 36.0091 22.4924Z" fill="#222222"/>
+                        <path d="M81.6791 8.57579C81.6791 11.1597 80.6094 13.3062 78.47 15.0153C80.5869 16.7243 81.6566 18.8199 81.6791 21.3021V30H76.95V21.4242C76.95 20.2442 76.4883 19.237 75.565 18.4028C74.6417 17.5687 73.5157 17.1516 72.187 17.1516H64.1475V30H59.3846V12.8789H72.187C73.4932 12.8789 74.6079 12.4619 75.5312 11.6277C76.477 10.7935 76.95 9.7762 76.95 8.57579C76.95 7.39573 76.4883 6.38861 75.565 5.55443C74.6417 4.72024 73.5157 4.30315 72.187 4.30315H59.3846V0H72.187C74.7993 0 77.0288 0.844354 78.8754 2.53306C80.7445 4.20142 81.6791 6.21567 81.6791 8.57579Z" fill="#222222"/>
+                        <path d="M107.216 0H112.419L101.575 30H96.2381L85.3949 0H90.5969L98.9067 22.9807L107.216 0Z" fill="#222222"/>
+                        <path d="M116.067 0H164V4.30315H153.495V30H148.732V4.30315H116.067V0ZM116.067 12.8789H137.719V17.1516H120.83V25.7274H137.719V30H118.431H116.067V12.8789Z" fill="#222222"/>
+                        </svg>
+                        
+                </div>
+                <div class="descriptionSite">
+                    Магазин недорогой мебели. Производство корпусной мебели Интернет-магазин мебели группы <br> независимых фабрик. Мы сотрудничаем с лучшими магазинами корпусной мебели Москвы
+                </div>
+            </div>
+            <div class="bigTextFooter">
+               <p>Информация на сайте предоставлена в ознакомительных целях. Не является публичной офертой. Политика конфиденциальности</p> 
+               <br> <p>
+                Производитель оставляет за собой право ввести изменения в цветовую гамму, дизайн, размеры , функции предлагаемой продукции. Каталог не является предложением в правовом понимании и публикуется исключительно для информационных целей. 
+                В связи с полиграфической технологией печати каталога расцветка представленной мебели может отличаться от действительной.                       </p>
+            </div>
+        </div>
+
+
+        <div class="footerBottom">
+            <div class="flex items-center">
+                <div class="copyrating">Поддержка сайта "Бизнес-Медиа"</div>
+                <ul class="flex gap-8">
+                    <li><a href="#">Политика конфиденциальности </a></li>
+                    <li><a href="#">Договор оферты для физических лиц </a></li>
+                    <li><a href="#">Договор оферты для юридических лиц</a></li>
+                </ul>
+                <div class="bottomPay ml-auto flex items-center gap-6">
+                    <img src="./img/pay.svg" alt="Мы принимаем" title="Мы принимаем">
+                    <span>© 2006-2023. Все права защищены.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</section><!-- Blur effect end -->
+
+</div> <!-- All effect end -->
+
+<div class="overlay" id="overlay" style="opacity: 0;">
+    <div class="modal" id="modal1">
+    <button class="close-btn" id="closeModalBtn"><i></i><i></i></button>
+        <div class="modal-content">
+            <div class="tab-container">
+                <div class="linerButtons flex">
+                <a href="#" class="tablinks" onclick="openTab(event, 'tab1')">Позвонить</a>
+                <a href="#" class="tablinks" onclick="openTab(event, 'tab2')">Написат</a>
+                <i></i>
+                </div>
+              
+                <div id="tab1" class="tabcontent">
+                  <h3>Заказать обратный звонок</h3>
+                  <div class="form">
+                    <form action="" class="flex flex-col justify-center items-center">
+                        <input type="text" placeholder="Имя">
+                        <input type="phone" placeholder="Телефон">
+                        <p class="confidentiality">
+                            Отправляя заявку, я соглашаюсь с условиями <a href=""> Политики конфиденциальности</a>
+                        </p>
+                        <button>Заказать звонок</button>
+                    </form>
+                  </div>
+                </div>
+              
+                <div id="tab2" class="tabcontent">
+                    <h3>Отправить сообщение</h3>
+                    <div class="form">
+                      <form action="" class="flex flex-col justify-center items-center">
+                          <input type="text" placeholder="Имя">
+                          <input type="email" placeholder="E-mail">
+                          <textarea name="" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
+                          <p class="confidentiality">
+                              Отправляя заявку, я соглашаюсь с условиями <a href=""> Политики конфиденциальности</a>
+                          </p>
+                          <button>Отправить сообщение</button>
+                      </form>
+                    </div>
+                </div>
+              </div>
+              
+
+        </div>
+    </div>
+    <div class="modal" id="modal2">
+        <div class="modal-content">
+            <div class="name flex justify-between items-center">
+                <h4 class="name">Чехол</h4>
+                <button class="close-btn" id="closeModalBtn"><i></i><i></i></button>
+            </div>
+            <ul class="modalProduct">
+                <li class="flex">
+                    <div class="picture">
+                        <img src="./img/chexol/chexol-1.png" alt="">
+                    </div>
+                        <div class="info">
+                            <p class="name">Чехол для матраса Экспо</p>
+                            <p class="size">Размер: <span>200 х 90</span></p>
+                            <p class="price">15 030 Р. <span>30 060 Р.</span></p>
+                            <div class="buttons"><button class="addCard">Добавить</button></div>
+                        </div>
+                </li>
+                <li class="flex">
+                    <div class="picture">
+                        <img src="./img/chexol/chexol-2.png" alt="">
+                    </div>
+                        <div class="info">
+                            <p class="name">Чехол для матраса Мадонна</p>
+                            <p class="size">Размер: <span>200 х 90</span></p>
+                            <p class="price">15 030 Р. <span>30 060 Р.</span></p>
+                            <div class="buttons"><button class="addCard">Добавить</button></div>
+                        </div>
+                </li>
+                <li class="flex">
+                    <div class="picture">
+                        <img src="./img/chexol/chexol-3.png" alt="">
+                    </div>
+                        <div class="info">
+                            <p class="name">Чехол для матраса Тортуга</p>
+                            <p class="size">Размер: <span>200 х 90</span></p>
+                            <p class="price">15 030 Р. <span>30 060 Р.</span></p>
+                            <div class="buttons"><button class="addCard">Добавить</button></div>
+                        </div>
+                </li>
+                <li class="flex">
+                    <div class="picture">
+                        <img src="./img/chexol/chexol-4.png" alt="">
+                    </div>
+                        <div class="info">
+                            <p class="name">Чехол для матраса Мартиника</p>
+                            <p class="size">Размер: <span>200 х 90</span></p>
+                            <p class="price">15 030 Р. <span>30 060 Р.</span></p>
+                            <div class="buttons"><button class="addCard">Добавить</button></div>
+                        </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="overlayCloseModal"></div>
+</div>
+
+<script src="./js/app.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<script src="./js/product-page.js"></script>
+</body>
+</html>

@@ -1,0 +1,627 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+    outline: 0;
+}
+body {
+    background-color: #5E6873;
+    padding: 1.5em;
+}
+.flex {
+    display: flex;
+}
+#main {
+    background-color: #242529;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border-radius: 30px;
+    min-height: calc(100vh - 3em);
+    color: #fff;
+    & > .flex {
+        height: 100%;
+        overflow: hidden;
+        min-height: calc(100vh - 4em);
+        padding-bottom: 2rem;
+    }
+
+    .sidebar {
+        border-right: 1px solid #2E3034;
+        width: 15%;
+        min-width: 250px;
+        margin-right: 2em;
+        padding: 0 0;
+        .logo {
+            margin: 4em 0 8em;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0 1em;
+            img {
+                width: 45px;
+                height: 45px;
+                margin-right: 0.5em;
+            }
+            h3 {
+                font-weight: 400;
+                p {
+                    font-weight: 100;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+        nav {
+            ul {
+                display: flex;
+                flex-direction: column;
+                padding: 0 1em;
+                list-style: none;
+                row-gap: 10px;
+                li {
+                    button {
+                        background: #363538;
+                        color: #fff;
+                        transition: 0.5s ease-in-out;
+                        cursor: pointer;
+                        border: 1px solid transparent;
+                        border-radius: 100px;
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        text-align: left;
+                        padding: 1em 1em;
+                        span {
+                            margin-right: 0.5em;
+                        }
+                        &:hover {
+                            background: #29282a;
+                        }
+                        &.active {
+                            border-color: rgba(#FFF37A, .4);
+                            background: #29282a;
+                        }
+                    }
+                }
+            }
+              
+        }
+        
+        
+    }
+
+    .content {
+        width: 100%;
+        padding: 0 2rem 2em 0;
+
+        header {
+            padding: 2rem 2rem 2rem 0;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #2e303492;
+            &>.flex {
+                justify-content: space-between;
+                #dateTime {
+                    #date {
+                        font-weight: 400;
+                        font-size: 1.5rem;
+                        opacity: 0.5;
+                    }
+                    #time {
+                        font-weight: 700;
+                        font-size: 1.6rem;
+                        background-color: #FFF37A;
+                        color: #242529;
+                        padding: 2px 10px 6px;
+                        border-radius: 15px;
+                    }
+                }
+            }
+
+              
+        }
+
+        main {
+            width: 100%;
+            height: 100%;
+            overflow-y: scroll;
+            padding-bottom: 3rem;
+        }
+        .mainContent {
+            position: relative;
+            height: 100%;
+            display: none;
+            .blockBack-page {
+                margin-bottom: 1rem;    
+                button {
+                    background: none;
+                    border: none;
+                    display: flex;
+                    align-items: center;
+                    color: #fff;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                    span {
+                        font-size: 2rem;
+                        margin-right: 0.5rem;
+                        transition: all 0.5s;
+                    }
+                    &:hover {
+                        span {
+                            transform: translateX(-5px);
+                        }
+                    }
+                }
+            }
+            &.contentHome {
+                .flex {
+                    height: 100%;
+                    flex-wrap: wrap;
+                    justify-content: flex-end;
+                    .contentBlock {
+                        width: 31%;
+                        height: 47%;
+                        perspective: 1000px;
+                        perspective-origin: 25% 25%;
+                        margin-left: 2%;
+                        button {
+                            height: 100%;
+                            width: 100%;
+                            background-color:#35363D;
+                            color: #fff;
+                            line-height: 1.4;
+                            border-radius: 25px;
+                            padding: 0 2rem;
+                            margin: 0;
+                            border: none;
+                            text-align: left;
+                            cursor: pointer;
+                            overflow: hidden;
+                            transform-style: preserve-3d; /* Задаем стиль 3D-трансформации */
+                            transition: all 0.3s;
+                            &:hover {
+                                transform: rotateX(8deg);                                
+                                box-shadow: rgba(#000, .3) 0px 30px 70px -20px, rgba(0, 0, 0, 0.9) 0px 30px 60px -30px;
+                            }
+
+    
+                            h2 {
+                                font-size: 2.3rem;
+                                margin: 0;
+                                &.time {
+                                    font-size: 1.8rem;
+                                    font-weight: 400;
+                                }
+                            }
+                            p {
+                                font-size: 1.6rem;
+                                &.time {
+                                    color: #FFF37A;
+                                    font-weight: 700;
+                                    font-size: 3rem;
+                                }
+                            }
+                            span {
+                                font-size: 15rem;
+                                position: absolute;
+                                right: 0;
+                                top: 0;
+                                z-index: 0;
+                                opacity: 0.1;
+                            }
+
+                            &.pageOne {
+                                background-color: #FFF37A;
+                                color: #35363D;
+                            }
+                            &.pageThree {
+                                background-color: #DCDCDC;
+                                color: #26272A;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+
+
+
+            .formAll {
+                & > .flex {
+                    justify-content: space-between;
+                    .formAll__left {
+                        width: 49%;
+                    }
+                    .formAll__right {
+                        width: 49%;
+                    }
+                }
+                .inputBlock {
+                    width: 100%;
+                    label {
+                        display: block;
+                        color: #FFF37A;
+                        margin: 1em 0 0.5rem;
+                        font-size: 1.2rem;
+                    }
+                    &.image {
+                        .pic {
+                            background-color: rgba(#fff, .1);
+                            height: 250px;
+                            width: 100%;
+                            border-radius: 20px;
+                            text-align: right;
+                            button {
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                background-color: #FFF37A;
+                                padding: 5px 10px;
+                                border-radius: 50px;
+                                font-weight: 700;
+                                font-size: 1.1rem;
+                                border: none;
+                                cursor: pointer;
+                                display: flex;
+                                align-items: center;
+                                transition: transform 0.5s;
+                                &:hover {
+                                    transform: scale(1.02);
+                                }
+                            }
+                        }
+                        img {
+                            max-height: 250px;
+                        }
+                    }
+                    textarea, input {
+                        width: 100%;
+                        background: none;
+                        border: 1px solid rgba(#fff, .3);
+                        padding: 10px;
+                        font-size: 1.2rem;
+                        border-radius: 10px;
+                        height: 300px;
+                        color: #fff;
+                        transition: border-color 0.5s;
+                        &:focus {
+                            border-color: #FFF37A;
+                        }
+                    }
+                    input {
+                        height: auto;
+                    }
+                    .file-input-wrapper {
+                        position: relative;
+                        display: block;
+                      }
+                      
+                      .file-input-label {
+                        display: block;
+                        width: 100%;
+                        border: 1px dashed rgba(#fff, 0.4);
+                        border-radius: 10px;
+                        text-align: center;
+                        cursor: pointer;
+                        padding: 1em 0;
+                        transition: all .5s;
+                        &:hover {
+                            border-color: #FFF37A;
+                        }
+                      }
+                      
+                      .file-input-label.active {
+                        border-color: #FFF37A;
+                      }
+                      
+                      .file-input {
+                        display: none;
+                      }
+                      
+                      .selected-file-name {
+                        display: block;
+                        margin-top: 10px;
+                        font-size: 14px;
+                      }
+                }
+
+                .formAll_bottom {
+                    justify-content: flex-end;
+                    margin-top: 2rem;
+                    button {
+                        font-size: 1.2rem;
+                        color: #26272A;
+                        font-weight: 700;
+                        padding: 0.4em 1rem;
+                        border-radius: 50px;
+                        border: none;
+                        margin-left: 1rem;
+                        cursor: pointer;
+                    }
+                    .formAll_bottom-close {
+                        font-weight: 400;
+                    }
+                    .btnSend {
+                        background: #FFF37A;
+                    }
+                }
+            }
+
+
+            &#contentInformer {
+                & > .flex {
+                    justify-content: space-between;
+                    .informer__left {
+                        width: 40%;
+                        h2 {
+                            margin-bottom: 1em;
+                        }
+                        .inputBlock {
+                            margin-bottom: 1rem;
+                            label {
+                                display: block;
+                                color: #FFF37A;
+                                font-weight: 300;
+                                padding-left: 4px;
+                                margin-bottom: 0.3em;
+                            }
+
+                            input {
+                                background: none;
+                                border: 1px solid #FFF37A;
+                                padding: 10px;
+                                border-radius: 25px;
+                                display: block;
+                                width: 100%;
+                                color: #fff;
+                                transition: transform 0.6s;
+                                &:focus {
+                                    border-color: #FFF37A;
+                                }
+                                &:placeholder-shown {
+                                    border-color: rgba(#FFF37A, .3);
+                                }
+                            }
+                            &.flex {
+                                div {
+                                    display: flex;
+                                    align-items: center;
+                                    input {
+                                        display: none;
+                                        &:checked + label {
+                                            color: #FFF37A;
+                                            &::before {
+                                                color: #FFF37A;
+                                            }
+                                        }
+                                    }
+                                    label {
+                                        display: flex;
+                                        align-items: center;
+                                        color: #ccc;
+                                        cursor: pointer;
+                                        &::before {
+                                            content: '\e19f';
+                                            font-family: 'Material Symbols Outlined';
+                                            font-size: 2rem;
+                                            background: transparent;
+                                            display: inline-block;
+                                            border-radius: 5px;
+                                            margin-right: 0.5rem;
+                                            color: #ccc;
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+                        button.btn {
+                            display: block;
+                            width: 100%;
+                            font-weight: 700;
+                            text-align: center;
+                            padding: 14px;
+                            font-size: 1.2rem;
+                            background-color: #FFF37A;
+                            border: none;
+                            margin-top: 1rem;
+                            border-radius: 25px;
+                        }
+                        
+                    }
+
+                    .informer__right {
+                        
+                        width: 59%;
+                        .accordion-item {
+                            margin-bottom: 1.5rem;
+                          }
+                          
+                          .accordion-header {
+                            background-color: #FFF37A;
+                            border: 1px solid #FFF37A;
+                            border-radius: 15px;
+                            padding: 10px;
+                            cursor: pointer;
+                            align-items: center;
+                            justify-content: space-between;
+                            .info {
+                                align-items: center;
+                            }
+                            
+                            .pic {
+                                width: 130px;
+                                height: 50px;
+                                margin-right: 2rem;
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: contain;
+                                }
+                            }
+                            span {
+                                color: #26272A;
+                                text-transform: uppercase;
+                            }
+                            .icon {
+                                display: flex;
+                                align-items: center;
+                                &::before {
+                                    content: 'Открыть';
+                                    font-size: 1.1rem;
+                                    font-weight: 700;
+                                    color: #35363D;
+                                }
+                                &::after {
+                                    content: '\e5cf';
+                                    font-family: "Material Symbols Outlined";
+                                    text-align: center;
+                                    color: #35363D;
+                                    font-size: 1.3rem;
+                                }
+                            }
+                            &.active {
+                                border-bottom: none;
+                                border-bottom-left-radius: 0;
+                                border-bottom-right-radius: 0;
+                                .icon {
+                                    &::before {
+                                        content: 'Закрыть';
+
+                                    }
+                                    &::after {
+                                        content: '\e5ce';
+                                    }
+                                }
+                            }
+                            
+
+                            
+                          }
+                          
+                          .accordion-content {
+                            max-height: 0;
+                            overflow: hidden;
+                            padding: 0 10px;
+                            background-color: #35363D;
+                            transition: all 0.3s ease;
+
+                            .inputBlock {
+                                margin-bottom: 1rem;
+                                label {
+                                    display: block;
+                                    color: #FFF37A;
+                                    font-weight: 300;
+                                    padding-left: 4px;
+                                    margin-bottom: 0.3em;
+                                }
+    
+                                input {
+                                    background: none;
+                                    border: 1px solid #FFF37A;
+                                    padding: 10px;
+                                    border-radius: 25px;
+                                    display: block;
+                                    width: 100%;
+                                    color: #fff;
+                                    transition: transform 0.6s;
+                                    &:focus {
+                                        border-color: #FFF37A;
+                                    }
+                                    &:placeholder-shown {
+                                        border-color: rgba(#FFF37A, .3);
+                                    }
+                                }
+                                &.flex {
+                                    div {
+                                        display: flex;
+                                        align-items: center;
+                                        input {
+                                            display: none;
+                                            &:checked + label {
+                                                color: #FFF37A;
+                                                &::before {
+                                                    color: #FFF37A;
+                                                }
+                                            }
+                                        }
+                                        label {
+                                            display: flex;
+                                            align-items: center;
+                                            color: #ccc;
+                                            cursor: pointer;
+                                            &::before {
+                                                content: '\e19f';
+                                                font-family: 'Material Symbols Outlined';
+                                                font-size: 2rem;
+                                                background: transparent;
+                                                display: inline-block;
+                                                border-radius: 5px;
+                                                margin-right: 0.5rem;
+                                                color: #ccc;
+                                            }
+                                        }
+                                    }
+                                }
+    
+                            }
+                            .bottom__btns {
+                                display: flex;
+                                justify-content: space-between;
+                                
+                                button.btn {
+                                    display: block;
+                                    width: 40%;
+                                    font-weight: 700;
+                                    text-align: center;
+                                    padding: 14px;
+                                    font-size: 1rem;
+                                    background-color: #FFF37A;
+                                    border: none;
+                                    margin-top: 1rem;
+                                    border-radius: 25px;
+                                    &.btn-delete {
+                                        font-weight: 400;
+                                        background-color: #DCDCDC;
+                                    }
+                                }
+                            }
+                          }
+                          
+                          .accordion-content.active {
+                            padding: 1.4rem 10px 3rem;
+                            border: 1px solid #FFF37A;
+                            border-top: none;
+                            border-bottom-left-radius: 15px;
+                            border-bottom-right-radius: 15px;
+                          }
+                          
+                    }
+                }
+            }
+        }
+        
+        .mainContent.active {
+            display: block;
+        }
+        
+        .mainContent.slide-in {
+            animation: slideInRight 0.5s forwards;
+        }
+        
+        
+        @keyframes slideInRight {
+            from {
+            transform: translateX(100%);
+            opacity: 0;
+            }
+            to {
+            transform: translateX(0);
+            opacity: 1;
+            }
+        }
+        
+
+    }
+}
+

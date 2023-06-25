@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@joeattardi/emoji-button": "^4.6.4",
+    "emoji-picker-textarea": "^1.0.1",
+    "rm-emoji-picker": "^1.0.0"
+  }
+}

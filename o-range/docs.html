@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Стартовый шаблон | ВебКадеми</title>
+		<link rel="stylesheet" href="./css/main.css" />
+
+		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
+	</head>
+
+	<body>
+		<header class="header">
+			<div class="container">
+				<div class="header__row">
+					<div class="logo">ВебКадеми</div>
+					<nav class="header__nav nav">
+						<ul class="nav__list">
+							<li><a href="index.html" class="active">Главная</a></li>
+							<li><a href="docs.html">Документация</a></li>
+						</ul>
+					</nav>
+					<button class="mobile-nav-btn">
+						<div class="nav-icon"></div>
+					</button>
+				</div>
+			</div>
+		</header>
+		<div class="mobile-nav">
+			<ul class="mobile-nav__list">
+				<li><a href="index.html">Главная</a></li>
+				<li><a href="docs.html">Документация</a></li>
+			</ul>
+		</div>
+
+		<main class="docs">
+			<section>
+				<div class="container">
+					<h1 class="title-1">Документация</h1>
+					<p>Документация и&#160;возможности сборки и&#160;стартового шаблона</p>
+
+					<p>
+						Запуск в&#160;режиме разработки: <code>gulp</code><br />
+						Сборка оптимизированной версии для продакшена: <code>gulp docs</code>
+					</p>
+
+					<h3 class="title-3">Возможности стартового шаблона</h3>
+					<ul>
+						<li>Готовые стили для CSS контейнеров на&#160;все случаи жизни.</li>
+						<li>Миксины и&#160;сниппеты для адаптива.</li>
+						<li>Миксин и&#160;сниппет для CSS retina фоновых изображений.</li>
+					</ul>
+
+					<h3 class="title-3">Возможности сборки</h3>
+
+					<ul>
+						<li>
+							Автоисправление путей. Смело используйте подсказки редактора при указании пути к&#160;файлу. Сборка сама удалит лишние поднятия на&#160;уровень вверх
+							<code>../../</code> в&#160;src HTML и background-image в&#160;SCSS.
+						</li>
+						<li>Автоматическая генерация SVG спрайтов. Подробнее см.&#160;ниже.</li>
+					</ul>
+
+					<h3 class="title-3">Особенности сборки для продакшена gulp docs</h3>
+					<ul>
+						<li>Автоматическое сжатие jpg изображений</li>
+						<li>Автоматическая генерация webp графики и&#160;указания webp формата в&#160;HTML.</li>
+						<li>
+							При прописывании тега img не&#160;обязательно прописывать srcset с&#160;2x. Плагин 'gulp-webp-retina-html' в&#160;таске 'html: dev' автоматически
+							добавляет тег picture и&#160;source для 2x изображений. Обязательно сохранять картинки в&#160;@2x разрешении.
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<div class="container">
+					<h2 class="title-2">Автогенерация шрифтов и&#160;CSS подключения</h2>
+
+					<ol>
+						<li>Размещаем TTF и&#160;OTF шрифты в&#160;<code>src/fonts/</code></li>
+						<li>При запуске сборки OTF конвертируется в&#160;TTF внутри <code>src/fonts/</code>.</li>
+						<li>Затем TTF в&#160;WOFF и&#160;WOFF2 из&#160;<code>src/fonts/</code> в&#160;<code>build/fonts/</code>.</li>
+						<li>
+							Генерируются CSS стили подключения внутри <code>src/scss/base/_fontsAutoGen.scss</code>.<br />
+							Важно! Этот файл генерируется и&#160;перезаписывается автоматически.
+						</li>
+					</ol>
+
+					<p>
+						Пример:
+					</p>
+
+					<p class="font-1">Hello, world! Привет, мир!</p>
+					<p class="font-2">Hello, world! Привет, мир!</p>
+				</div>
+			</section>
+			<section>
+				<div class="container">
+					<h2 class="title-2">Полезные сниппеты</h2>
+					<p>Сниппеты хранятся в&#160;папке <code>.vscode</code> в&#160;файле <code>webCademy.code-snippets</code></p>
+					<h4 class="title-4">SCSS сниппеты для медиазапросов</h4>
+
+					<p>Код вызова: <code>tablet</code></p>
+					<pre class="code">@include tablet { ... }</pre>
+
+					<p>Код вызова: <code>mobile</code></p>
+					<pre class="code">@include mobile { ... }</pre>
+
+					<p>Retina background-image через медиа запрос. Код вызова: <code>mediaBg</code></p>
+					<pre class="code">
+@include mediaBg() {
+	background-image: url('./../img/example@2x.jpg');
+}</pre
+					>
+
+					<p>Retina background-image через image-set. Код вызова: <code>imgSet</code></p>
+					<pre class="code">
+background-image: image-set(
+	url('./../img/bg.jpg') 1x,
+	url('./../img/bg@2x.jpg') 2x);</pre
+					>
+
+					<h4 class="title-4">HTML сниппет для svg иконок из&#160;спрайта</h4>
+					<p>Код вызова: <code>svgIcon</code></p>
+					<pre class="code">
+&lt;svg class="icon icon--heart-line"&gt;
+	&lt;use href="./img/svgsprite/sprite.symbol.svg#heart-line"&gt;&lt;/use&gt;
+&lt;/svg&gt;
+</pre
+					>
+				</div>
+			</section>
+			<section>
+				<div class="container">
+					<h2 class="title-2">SVG спрайты</h2>
+
+					<div class="icons-wrapper">
+						<svg class="icon icon--heart-line">
+							<use href="./img/svgsprite/sprite.symbol.svg#heart-line"></use>
+						</svg>
+
+						<svg class="icon icon--id-card-line">
+							<use href="./img/svgsprite/sprite.symbol.svg#id-card-line"></use>
+						</svg>
+						<svg class="icon icon--search-line">
+							<use href="./img/svgsprite/sprite.symbol.svg#search-line"></use>
+						</svg>
+						<svg class="icon icon--user-star">
+							<use href="./img/svgsprite/sprite.symbol.svg#user-star-line"></use>
+						</svg>
+					</div>
+
+					<p>Иконки размещаем в&#160;папку: <code>src/img/svgicons</code></p>
+					<p>Готовый файл со&#160;спрайтом собирается в: <code>build/img/svgsprite/sprite.symbol.svg</code></p>
+
+					<h4 class="title-4">HTML код</h4>
+					<pre class="code">
+&lt;svg class="icon icon heart-line"&gt;
+	&lt;use href="./img/svgsprite/sprite.symbol.svg#heart-line"&gt;&lt;/use&gt;
+&lt;/svg&gt;</pre
+					>
+
+					<h4 class="title-4">CSS код</h4>
+					<pre class="code">
+.icon {
+	fill: transparent;
+	stroke: transparent;
+	width: 62px;
+	height: 62px;
+}
+
+.heart-line {
+	fill: rgb(241, 68, 131);
+}
+
+.id-card-line {
+	fill: rgb(51, 51, 51);
+}
+
+.search-line {
+	fill: rgb(28, 176, 80);
+}
+
+.icon--user-star {
+	fill: rgb(26, 134, 235);
+}</pre
+					>
+				</div>
+			</section>
+			<section>
+				<div class="container">
+					<h2 class="title-2">Шпаргалка gulp-file-include</h2>
+					<p>
+						<a href="https://opalescent-side-463.notion.site/Gulp-file-include-ae5885e857cc4658987dd30f40b77e74?pvs=4" target="_blank">
+							Ссылка на&#160;шпаргалку.
+						</a>
+					</p>
+				</div>
+			</section>
+			<section>
+				<div class="container">
+					<h2 class="title-2">Пример работы типографа</h2>
+
+					<h4 class="title-4">Русский язык</h4>
+					<p>
+						Раздобудь к&#160;утру ковёр&#160;&#8212; Шитый золотом узор!.. Государственное дело,&#160;&#8212; Расшибись, а&#160;будь добёр! Чтоб на&#160;ём&#160;была
+						видна, Как на&#160;карте, вся страна, Потому как мне с&#160;балкону Нет обзору ни&#160;хрена! Леонид Филатов &#171;Про Федота-стрельца&#187;.
+					</p>
+
+					<h4 class="title-4">Английский язык</h4>
+
+					<p>
+						Get a&#160;carpet by&#160;morning&#160;&#8212; A&#160;pattern embroidered in&#160;gold! So&#160;that the whole country can be&#160;seen on&#160;it, Like
+						on&#160;a&#160;map, Because from the balcony I&#160;have no&#160;view of&#160;anything! Leonid Filatov &#171;About Fedot the Sagittarius&#187;
+					</p>
+				</div>
+			</section>
+			<section>
+				<div class="container">
+					<h2 class="title-2">Контейнеры</h2>
+				</div>
+
+				<div class="container">
+					<p>Стандартный контейнер <code>.container</code></p>
+					<div class="content-demo">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit obcaecati, nesciunt, nam illum nemo, quod hic tenetur velit quae animi tempore
+							error&#160;at. Cumque, nisi. Laudantium deserunt quis vitae voluptas?
+						</p>
+					</div>
+				</div>
+
+				<div class="container-full">
+					<p>Контейнер на&#160;всю ширину<code>.container-full</code></p>
+					<div class="content-demo">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit obcaecati, nesciunt, nam illum nemo, quod hic tenetur velit quae animi tempore
+							error&#160;at. Cumque, nisi. Laudantium deserunt quis vitae voluptas?
+						</p>
+					</div>
+				</div>
+
+				<div class="container-left-50">
+					<p>Контейнер слева на&#160;50%<code>.container-left-50</code></p>
+					<div class="content-demo">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit obcaecati, nesciunt, nam illum nemo, quod hic tenetur velit quae animi tempore
+							error&#160;at. Cumque, nisi. Laudantium deserunt quis vitae voluptas?
+						</p>
+					</div>
+				</div>
+
+				<div class="container-right-50">
+					<p>Контейнер справа на&#160;50%<code>.container-right-50</code></p>
+					<div class="content-demo">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit obcaecati, nesciunt, nam illum nemo, quod hic tenetur velit quae animi tempore
+							error&#160;at. Cumque, nisi. Laudantium deserunt quis vitae voluptas?
+						</p>
+					</div>
+				</div>
+
+				<div class="container-left">
+					<p>Контейнер слева до&#160;размера контейнера <code>.container-left</code></p>
+					<div class="content-demo">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit obcaecati, nesciunt, nam illum nemo, quod hic tenetur velit quae animi tempore
+							error&#160;at. Cumque, nisi. Laudantium deserunt quis vitae voluptas?
+						</p>
+					</div>
+				</div>
+
+				<div class="container-right">
+					<p>Контейнер вправо<code>.container-right</code></p>
+					<div class="content-demo">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit obcaecati, nesciunt, nam illum nemo, quod hic tenetur velit quae animi tempore
+							error&#160;at. Cumque, nisi. Laudantium deserunt quis vitae voluptas?
+						</p>
+					</div>
+				</div>
+
+				<div class="container-half-left">
+					<p>Контейнер на&#160;половину слева <code>.container-half-left</code></p>
+					<div class="content-demo">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit obcaecati, nesciunt, nam illum nemo, quod hic tenetur velit quae animi tempore
+							error&#160;at. Cumque, nisi. Laudantium deserunt quis vitae voluptas?
+						</p>
+					</div>
+				</div>
+
+				<div class="container-half-right">
+					<p>Контейнер на&#160;половину справа <code>.container-half-right</code></p>
+					<div class="content-demo">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit obcaecati, nesciunt, nam illum nemo, quod hic tenetur velit quae animi tempore
+							error&#160;at. Cumque, nisi. Laudantium deserunt quis vitae voluptas?
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer id="main-footer">
+			<div class="container">
+				<div class="footer-top flex">
+					<div class="footer-callNum flex">
+						Остались еще вопросы?
+						<a href="">+7&#160;950&#160;000-00-00</a>
+						<div class="icon">
+							<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M40.8877 51.8255C36.5184 50.7309 27.5736 47.6446 19.4644 39.5355C11.3554 31.4265 8.26919 22.4817 7.17446 18.1123C6.54535 15.6014 7.67823 13.1783 9.59915 11.8062L14.635 8.2092C17.5815 6.10456 21.6805 6.81874 23.7416 9.79589L26.9119 14.3754C28.2577 16.3193 27.7936 18.9836 25.8696 20.3578L23.3417 22.1635C23.7243 23.627 24.9142 26.6323 28.641 30.3591C32.3677 34.0858 35.3731 35.2756 36.8366 35.6583L38.6422 33.1302C40.0165 31.2065 42.6808 30.7421 44.6246 32.0879L49.2042 35.2583C52.1813 37.3196 52.8955 41.4184 50.7907 44.3649L47.1938 49.4009C45.8216 51.3218 43.3987 52.4547 40.8877 51.8255ZM22.5233 36.4767C29.8977 43.851 38.0355 46.6514 41.9389 47.6294C42.5095 47.7722 43.1993 47.5505 43.6736 46.8865L47.2708 41.8505C47.9722 40.8686 47.7343 39.5022 46.7417 38.8151L42.1623 35.6446L40.2246 38.3576C39.4327 39.4663 37.9682 40.3358 36.2629 39.9679C34.1346 39.5087 30.2002 38.036 25.5822 33.4179C20.9641 28.7998 19.4913 24.8654 19.0321 22.7371C18.6642 21.0319 19.5338 19.5674 20.6424 18.7755L23.3553 16.8377L20.1849 12.2582C19.4979 11.2658 18.1315 11.0278 17.1494 11.7293L12.1135 15.3264C11.4494 15.8007 11.2277 16.4905 11.3706 17.061C12.3487 20.9646 15.149 29.1024 22.5233 36.4767Z"
+									fill="#FFBE0C"
+								/>
+							</svg>
+						</div>
+					</div>
+					<div class="footer-feedbackBtn">
+						<a class="modal" href="#">Оставить заявку</a>
+					</div>
+				</div>
+
+				<div class="footer-content">
+					<div class="flex">
+						<div class="navigation flex wow animate__animated animate__fadeInUp" data-wow-delay="0.05s">
+							<ul>
+								<li><a href="">Главная</a></li>
+								<li><a href="">О&#160;компании</a></li>
+								<li><a href="">Отзывы</a></li>
+								<li><a href="">Наши работы</a></li>
+								<li><a href="">Контакты</a></li>
+							</ul>
+
+							<ul>
+								<li><a href="">Главная</a></li>
+								<li>
+									<ul>
+										<li><a href="">Главная</a></li>
+										<li><a href="">О&#160;компании</a></li>
+										<li><a href="">Отзывы</a></li>
+										<li><a href="">Наши работы</a></li>
+										<li><a href="">Контакты</a></li>
+									</ul>
+								</li>
+
+								<li><a href="">Наши работы</a></li>
+								<li><a href="">Контакты</a></li>
+							</ul>
+
+							<ul>
+								<li><a href="">Главная</a></li>
+								<li><a href="">О&#160;компании</a></li>
+								<li><a href="">Отзывы</a></li>
+								<li><a href="">Наши работы</a></li>
+								<li><a href="">Контакты</a></li>
+							</ul>
+						</div>
+
+						<div class="callCenter wow animate__animated animate__fadeInUp" data-wow-delay="0.1s">
+							<div class="flex">
+								<div class="cc-info">
+									<h4>Хотите уточнить вопрос?</h4>
+									<div class="name">
+										<p>Наталья Иванова</p>
+										<span>менеджер по&#160;клиентам</span>
+									</div>
+									<a href="#">+7&#160;950&#160;000-00-00</a>
+									<a href="#">sales@o-range.ru</a>
+								</div>
+								<div class="cc-picture">
+									<picture>
+										<source srcset="./img/callCenter.webp 1x" type="image/webp" />
+										<source srcset="./img/callCenter.png 1x" type="image/png" />
+										<img src="./img/callCenter.png" alt="" />
+									</picture>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="footer-bottom">
+				<div class="container">
+					<div class="flex">
+						<span class="wow animate__animated animate__fadeInUp" data-wow-delay="0.1s">&#169; 2024&#160;&#8212; ООО&#160;&#171;O-RANGE&#187; Все права защищены</span>
+						<ul class="soc-links flex wow animate__animated animate__fadeInUp" data-wow-delay="0.15s">
+							<li>
+								<a href="#">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M19.5467 4.81998C19.3217 5.52748 19.0183 6.14331 18.6383 6.70248L18.6542 6.67748C18.2808 7.2997 17.835 8.01859 17.3167 8.83415C16.8722 9.47804 16.6369 9.81137 16.6108 9.83415C16.4958 9.97831 16.4158 10.155 16.3883 10.3491L16.3875 10.355C16.41 10.5316 16.4917 10.6858 16.6108 10.8008L16.9442 11.1725C18.7275 13.0053 19.7306 14.2686 19.9533 14.9625C19.9825 15.0391 19.9992 15.1275 19.9992 15.22C19.9992 15.3816 19.9475 15.5308 19.86 15.6533L19.8617 15.6508C19.715 15.8016 19.51 15.895 19.2833 15.895C19.2583 15.895 19.2325 15.8941 19.2083 15.8916H19.2117H17.0192C17.0183 15.8916 17.0167 15.8916 17.015 15.8916C16.7342 15.8916 16.4758 15.7933 16.2733 15.63L16.2758 15.6316C15.9808 15.3891 15.7183 15.1266 15.4833 14.8416L15.4758 14.8316C15.0919 14.3978 14.7514 14.0325 14.4542 13.7358C13.4642 12.7947 12.7336 12.3241 12.2625 12.3241C12.245 12.3225 12.225 12.3216 12.2042 12.3216C12.0667 12.3216 11.9383 12.3641 11.8325 12.4366L11.835 12.435C11.7483 12.5433 11.6958 12.6833 11.6958 12.8341C11.6958 12.8641 11.6975 12.8925 11.7017 12.9216V12.9183C11.6792 13.18 11.6658 13.4841 11.6658 13.7916C11.6658 13.8908 11.6675 13.9891 11.67 14.0875V14.0733V15.0391C11.6783 15.0783 11.6833 15.1233 11.6833 15.1691C11.6833 15.3708 11.5917 15.5508 11.4483 15.67L11.4475 15.6708C11.125 15.8183 10.7483 15.905 10.3508 15.905C10.2658 15.905 10.1825 15.9008 10.1 15.8933L10.1108 15.8941C8.79917 15.8691 7.5825 15.485 6.54833 14.8375L6.5775 14.8541C5.31833 14.0891 4.275 13.0933 3.48 11.9166L3.4575 11.8816C2.7025 10.88 1.99833 9.74831 1.39833 8.55498L1.34 8.42665C0.989166 7.75831 0.625833 6.93665 0.3125 6.09165L0.2625 5.93748C0.135 5.55748 0.0424996 5.11581 0.00416625 4.65831L0.00249958 4.63748C0.00249958 4.21637 0.250277 4.00581 0.745833 4.00581H2.9375C2.9575 4.00415 2.98083 4.00331 3.005 4.00331C3.21167 4.00331 3.4025 4.07415 3.55333 4.19331L3.55167 4.19165C3.71833 4.37415 3.84167 4.59831 3.9025 4.84831L3.905 4.85831C4.30833 5.99748 4.73583 6.95415 5.2275 7.87081L5.17167 7.75665C5.57333 8.56498 6.0175 9.26081 6.52417 9.90331L6.505 9.87748C6.94944 10.423 7.29611 10.6958 7.545 10.6958C7.5525 10.6966 7.56167 10.6966 7.57167 10.6966C7.695 10.6966 7.8025 10.63 7.86083 10.53L7.86167 10.5283C7.92333 10.37 7.95917 10.1858 7.95917 9.99415C7.95917 9.95331 7.9575 9.91248 7.95417 9.87248V9.87748V6.64498C7.93667 6.26415 7.84333 5.90831 7.6875 5.58915L7.69417 5.60498C7.59083 5.38498 7.46667 5.19498 7.31917 5.02581L7.32167 5.02915C7.185 4.89248 7.09167 4.71331 7.0625 4.51331L7.06167 4.50831C7.06167 4.36665 7.12667 4.23915 7.22833 4.15581L7.22917 4.15498C7.33 4.06248 7.465 4.00665 7.6125 4.00665H7.61917H11.0742C11.0925 4.00415 11.1133 4.00331 11.135 4.00331C11.2975 4.00331 11.4433 4.07665 11.54 4.19165L11.5408 4.19248C11.6267 4.34915 11.6775 4.53665 11.6775 4.73498C11.6775 4.76665 11.6758 4.79748 11.6733 4.82831V4.82415V9.13498C11.6717 9.15498 11.6708 9.17831 11.6708 9.20165C11.6708 9.35498 11.7133 9.49915 11.7867 9.62165L11.785 9.61831C11.8458 9.70831 11.9475 9.76665 12.0625 9.76665C12.2092 9.75665 12.3433 9.70831 12.4558 9.63165L12.4533 9.63331C12.68 9.47748 12.875 9.29998 13.0442 9.09915L13.0475 9.09498C13.5533 8.52331 14.02 7.89165 14.4267 7.21998L14.4592 7.16165C14.7458 6.68665 15.0558 6.10165 15.3367 5.50081L15.3883 5.37831L15.76 4.63498C15.8892 4.26331 16.2358 4.00165 16.6433 4.00165C16.6592 4.00165 16.675 4.00165 16.6908 4.00248H16.6883H18.8808C19.4731 4.00248 19.6953 4.27498 19.5475 4.81998H19.5467Z"
+											fill="white"
+										></path>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M15.9727 3.90625H9.02656C7.66889 3.90728 6.36712 4.44708 5.4071 5.4071C4.44708 6.36712 3.90728 7.66889 3.90625 9.02656V15.9727C3.90708 17.3305 4.44678 18.6324 5.40682 19.5926C6.36686 20.5528 7.66875 21.0927 9.02656 21.0938H15.9727C17.3304 21.0925 18.6322 20.5525 19.5922 19.5924C20.5522 18.6323 21.0919 17.3304 21.093 15.9727V9.02656C21.0924 7.66876 20.5527 6.36675 19.5926 5.40664C18.6325 4.44653 17.3305 3.90687 15.9727 3.90625ZM19.3648 15.9727C19.3646 16.8723 19.0072 17.735 18.3711 18.3711C17.735 19.0072 16.8723 19.3646 15.9727 19.3648H9.02656C8.58113 19.3648 8.14006 19.2771 7.72855 19.1066C7.31703 18.9361 6.94313 18.6863 6.6282 18.3712C6.31327 18.0562 6.06348 17.6823 5.89309 17.2707C5.7227 16.8592 5.63505 16.4181 5.63516 15.9727V9.02656C5.63505 8.58117 5.72271 8.14012 5.8931 7.72861C6.0635 7.3171 6.31331 6.94319 6.62825 6.62825C6.94319 6.31331 7.3171 6.0635 7.72861 5.8931C8.14012 5.7227 8.58117 5.63505 9.02656 5.63516H15.9727C16.8721 5.63536 17.7345 5.99274 18.3705 6.6287C19.0065 7.26467 19.3639 8.12717 19.3641 9.02656L19.3648 15.9727Z"
+											fill="white"
+										></path>
+										<path
+											d="M12.5 8.05626C10.0484 8.05626 8.05625 10.0492 8.05625 12.5C8.05625 14.9508 10.0492 16.9438 12.5 16.9438C14.9508 16.9438 16.9438 14.9508 16.9438 12.5C16.9438 10.0492 14.9516 8.05626 12.5 8.05626ZM12.5 15.2149C11.78 15.215 11.0894 14.929 10.5802 14.42C10.071 13.9109 9.78487 13.2204 9.78477 12.5004C9.78466 11.7804 10.0706 11.0898 10.5796 10.5806C11.0887 10.0714 11.7792 9.78527 12.4992 9.78517C13.2192 9.78506 13.9098 10.071 14.419 10.5801C14.9282 11.0891 15.2144 11.7796 15.2145 12.4996C15.2146 13.2196 14.9286 13.9102 14.4196 14.4194C13.9105 14.9286 13.22 15.2148 12.5 15.2149ZM16.9531 7.02423C17.1637 7.02439 17.3694 7.08695 17.5444 7.20401C17.7194 7.32108 17.8558 7.48739 17.9363 7.68194C18.0168 7.87648 18.0378 8.09052 17.9967 8.29701C17.9556 8.50349 17.8542 8.69316 17.7053 8.84203C17.5564 8.99091 17.3668 9.09231 17.1603 9.13342C16.9538 9.17453 16.7398 9.15351 16.5452 9.07301C16.3507 8.99251 16.1844 8.85615 16.0673 8.68116C15.9502 8.50616 15.8877 8.3004 15.8875 8.08986C15.8875 7.50236 16.2859 7.02423 16.9531 7.02423Z"
+											fill="white"
+										></path>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_16_141)">
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M16.6667 0.833313C18.0474 0.833313 19.1667 1.9526 19.1667 3.33331V16.6666C19.1667 18.0474 18.0474 19.1666 16.6667 19.1666H3.33334C1.95263 19.1666 0.833336 18.0474 0.833336 16.6666V3.33331C0.833336 1.9526 1.95263 0.833313 3.33334 0.833313H16.6667ZM16.6667 2.49998C17.1269 2.49998 17.5 2.87308 17.5 3.33331V16.6666C17.5 17.1269 17.1269 17.5 16.6667 17.5H12.5V11.6666H14.2302C14.5888 11.6666 14.9073 11.4371 15.0208 11.0967L15.3899 9.98923C15.5248 9.58448 15.2236 9.16656 14.797 9.16656H12.5V7.49991C12.5 7.08325 12.9167 6.66658 13.3333 6.66658H15C15.4603 6.66658 15.8333 6.29348 15.8333 5.83325V5.26159C15.8333 4.9924 15.6614 4.75106 15.4011 4.68237C14.3088 4.3941 13.3333 4.3941 13.3333 4.3941C11.25 4.3941 10 5.83325 10 7.08325V9.16656H8.33334C7.8731 9.16656 7.5 9.53965 7.5 9.9999V10.8332C7.5 11.2935 7.87309 11.6666 8.33334 11.6666H10V17.5H3.33334C2.8731 17.5 2.5 17.1269 2.5 16.6666V3.33331C2.5 2.87308 2.8731 2.49998 3.33334 2.49998H16.6667Z"
+												fill="white"
+											></path>
+										</g>
+										<defs>
+											<clipPath id="clip0_16_141">
+												<rect width="20" height="20" fill="white"></rect>
+											</clipPath>
+										</defs>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="./js/index.bundle.js"></script>
+	</body>
+</html>

@@ -307,6 +307,7 @@ section#main-Highlights .Highlights-leftBlock .swiper-button-prev-Highlights {
 section#main-Highlights .Highlights-leftBlock .swiper-button-prev-Highlights:hover svg {
   transform: translateX(-2px) scale(1.1);
 }
+
 section#main-Highlights .btn-feedback {
   background-color: #333;
   color: #fff;
@@ -382,6 +383,7 @@ section#main-Highlights .swiper-Highlights .swiper-slide figure {
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 5px;
+  opacity: 0;
 }
 section#main-Highlights .swiper-Highlights .swiper-slide figure img {
   width: 100%;
@@ -399,7 +401,10 @@ section#main-Highlights .swiper-Highlights .swiper-slide .info {
   min-height: 267px;
   padding: 2rem 2rem;
   color: #fff;
+  opacity: 0;
 }
+
+
 section#main-Highlights .swiper-Highlights .swiper-slide .info h2.title {
   text-transform: uppercase;
   font-size: 2.1rem;
